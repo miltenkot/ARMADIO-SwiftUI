@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  Armadio
+
+  Created by Bartłomiej on 28/10/2022.
+  
+*/
+
+/* GetStartedView */
+"GetStartedView_Armadio" = "Armadio";
+"GetStartedView_Welcome" = "Welcome to Armadio";
+"GetStartedView_Enjoy" = "Enjoy new app make great fun and lot of nice things owsome owsome owsome and great 😀";
+"GetStartedView_Get" = "Get Started";
+
+/* LoginOptionsView */
+"LoginOptionsView_Get" = "Get started with Armadio";
+"LoginOptionsView_Please" = "Please choose how you want to continue setting up your account 🤗";
+"LoginOptionsView_Please_visit" = "Please visit Wolt Privacy Statement in English to learn about personal data processing at Wolt. You can access your local Privacy Statement related to your Wolt account in the next phase of registration after you have provided the country and lanquage preferences applicable to you.";
+"LoginOptionsView_Apple" = "Continue with Apple";
+"LoginOptionsView_Facebook" = "Continue with Facebook";
+"LoginOptionsView_Google" = "Continue with Google";
+"LoginOptionsView_email" = "Continue with email";
+"LoginOptionsView_guest" = "Continue with guest";
+
+/* CheckboxView */
+"CheckboxView_Statement" = "I've read and agree iwht the user Terms and condition. I understand that my person data wil be proceed in accordance with Armadio Privacy Statement.";
+"CheckboxView_Read" = "Read more";
+
+/* SelectYourCountryView */
+"SelectYourCountryView_Welcome" = "Welcome!";
+"SelectYourCountryView_Please" = "Please choose the country where you'll primarily use Wolt.";
+"SelectYourCountryView_Armadio" = "Armadio Country";
+"SelectYourCountryView_Continue" = "Continue";
