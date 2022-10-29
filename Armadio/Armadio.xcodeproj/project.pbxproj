@@ -28,7 +28,7 @@
 		13873033290ADC9A0049D1D2 /* GetStartedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873032290ADC9A0049D1D2 /* GetStartedTests.swift */; };
 		13873035290ADCB70049D1D2 /* PreviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873034290ADCB70049D1D2 /* PreviewTests.swift */; };
 		13873037290AEA250049D1D2 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873036290AEA250049D1D2 /* CheckboxView.swift */; };
-		1387303A290AF6170049D1D2 /* CountryFlagService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873039290AF6170049D1D2 /* CountryFlagService.swift */; };
+		1387303A290AF6170049D1D2 /* CountryFlagProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873039290AF6170049D1D2 /* CountryFlagProvider.swift */; };
 		1387303E290AF7E60049D1D2 /* SelectYourCountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1387303D290AF7E60049D1D2 /* SelectYourCountryViewModel.swift */; };
 		13873040290AF9430049D1D2 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1387303F290AF9430049D1D2 /* CountryListViewModel.swift */; };
 		13873043290BE5B10049D1D2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873042290BE5B10049D1D2 /* Color.swift */; };
@@ -37,6 +37,7 @@
 		13873049290C225A0049D1D2 /* LoginOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873048290C225A0049D1D2 /* LoginOptionsViewModel.swift */; };
 		13A3A920290D0A9900A49D99 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A91F290D0A9900A49D99 /* Shake.swift */; };
 		13A3A924290D10B800A49D99 /* RequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A923290D10B800A49D99 /* RequiredView.swift */; };
+		13A3A927290D2B1C00A49D99 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A926290D2B1C00A49D99 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +73,7 @@
 		13873032290ADC9A0049D1D2 /* GetStartedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedTests.swift; sourceTree = "<group>"; };
 		13873034290ADCB70049D1D2 /* PreviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTests.swift; sourceTree = "<group>"; };
 		13873036290AEA250049D1D2 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
-		13873039290AF6170049D1D2 /* CountryFlagService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlagService.swift; sourceTree = "<group>"; };
+		13873039290AF6170049D1D2 /* CountryFlagProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlagProvider.swift; sourceTree = "<group>"; };
 		1387303D290AF7E60049D1D2 /* SelectYourCountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectYourCountryViewModel.swift; sourceTree = "<group>"; };
 		1387303F290AF9430049D1D2 /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
 		13873042290BE5B10049D1D2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		13873048290C225A0049D1D2 /* LoginOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsViewModel.swift; sourceTree = "<group>"; };
 		13A3A91F290D0A9900A49D99 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		13A3A923290D10B800A49D99 /* RequiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredView.swift; sourceTree = "<group>"; };
+		13A3A926290D2B1C00A49D99 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 		13873018290ADB0F0049D1D2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				13A3A925290D2AD500A49D99 /* Home */,
 				1387301C290ADB310049D1D2 /* Login */,
 				1387301B290ADB290049D1D2 /* GetStarted */,
 				1387301A290ADB220049D1D2 /* LoginOptions */,
@@ -283,7 +286,7 @@
 		13873038290AF5EC0049D1D2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				13873039290AF6170049D1D2 /* CountryFlagService.swift */,
+				13873039290AF6170049D1D2 /* CountryFlagProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -313,6 +316,14 @@
 				13A3A91F290D0A9900A49D99 /* Shake.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		13A3A925290D2AD500A49D99 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				13A3A926290D2B1C00A49D99 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,9 +449,10 @@
 				13A3A924290D10B800A49D99 /* RequiredView.swift in Sources */,
 				13873026290ADBFE0049D1D2 /* SelectYourCountryView.swift in Sources */,
 				1387301E290ADB7B0049D1D2 /* LoginView.swift in Sources */,
-				1387303A290AF6170049D1D2 /* CountryFlagService.swift in Sources */,
+				1387303A290AF6170049D1D2 /* CountryFlagProvider.swift in Sources */,
 				13873037290AEA250049D1D2 /* CheckboxView.swift in Sources */,
 				13873024290ADBD60049D1D2 /* LoginOptionsView.swift in Sources */,
+				13A3A927290D2B1C00A49D99 /* HomeView.swift in Sources */,
 				13872FED290ACA7E0049D1D2 /* ArmadioApp.swift in Sources */,
 				13873040290AF9430049D1D2 /* CountryListViewModel.swift in Sources */,
 				13873043290BE5B10049D1D2 /* Color.swift in Sources */,

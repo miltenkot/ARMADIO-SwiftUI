@@ -40,6 +40,6 @@ struct CountryListView: View {
 
 struct CountryListView_Previews: PreviewProvider {
     static var previews: some View {
-        CountryListView(viewModel: CountryListViewModel(countryFlagService: CountryFlagServiceImpl()), selectedFlag: .constant(nil))
+        CountryListView(viewModel: CountryListViewModel(countryFlagService: CountryFlagProviderImpl()), selectedFlag: .constant(nil))
     }
 }

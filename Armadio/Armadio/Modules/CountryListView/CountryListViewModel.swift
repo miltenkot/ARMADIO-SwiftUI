@@ -8,17 +8,17 @@
 import Foundation
 
 final class CountryListViewModel: ObservableObject {
-    let countryFlagService: CountryFlagService
+    let countryFlagService: CountryFlagProvider
     
-    init(countryFlagService: CountryFlagService) {
+    init(countryFlagService: CountryFlagProvider) {
         self.countryFlagService = countryFlagService
     }
     
     func getCountryFlag(_ countryCode: String?) -> String {
-        countryFlagService.countryFlag(countryCode ?? "")
+        countryFlagService.countryFlag(countryCode)
     }
     
     func getCountryName(_ countryCode: String?) -> String {
-        countryFlagService.countryName(countryCode ?? "")
+        countryFlagService.countryName(countryCode)
     }
 }

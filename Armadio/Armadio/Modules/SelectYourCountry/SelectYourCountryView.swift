@@ -10,7 +10,6 @@ import SwiftUI
 struct SelectYourCountryView: View {
     @Environment(\.dismiss) var dismiss
     @ObservedObject var viewModel: SelectYourCountryViewModel
-    @State private var numberOfShakes = 0.0
     
     var body: some View {
         NavigationView {
@@ -34,7 +33,7 @@ struct SelectYourCountryView: View {
                                 Text(viewModel.getCountryFlag())
                                 Text(viewModel.getCountryName())
                                     .textStyle(NormalStyle())
-                                    
+                                
                             }
                         }
                         
@@ -52,7 +51,7 @@ struct SelectYourCountryView: View {
                 )
                 .padding()
                 .sheet(isPresented: $viewModel.isDisplayed) {
-                    CountryListView(viewModel: CountryListViewModel(countryFlagService: CountryFlagServiceImpl()), selectedFlag: $viewModel.countryCode)
+                    CountryListView(viewModel: CountryListViewModel(countryFlagService: CountryFlagProviderImpl()), selectedFlag: $viewModel.countryCode)
                         .presentationDetents([.large])
                         .presentationDragIndicator(.visible)
                     
@@ -61,11 +60,11 @@ struct SelectYourCountryView: View {
                     HStack {
                         CheckboxView(readMoreAction: {
                         }, checkState: $viewModel.checkboxState)
-                        .shake(with: numberOfShakes)
+                        .shake(with: viewModel.numberOfShakes)
                         Spacer()
                     }
                     
-                    if numberOfShakes > 0 {
+                    if viewModel.numberOfShakes > 0 {
                         withAnimation {
                             RequiredView().transition(.fadeAndSlide)
                             
@@ -82,12 +81,16 @@ struct SelectYourCountryView: View {
                                imageName: nil) {
                     if viewModel.checkboxState == false {
                         withAnimation {
-                            numberOfShakes += 3
+                            viewModel.startShakeAnimate()
                         }
                     } else {
-                        numberOfShakes = 0
+                        viewModel.clearShakeAnimate()
+                        viewModel.isMainViewPresented.toggle()
                     }
                 }
+                               .fullScreenCover(isPresented: $viewModel.isMainViewPresented) {
+                                   HomeView()
+                               }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -95,7 +98,7 @@ struct SelectYourCountryView: View {
                         dismiss()
                     }
                 }
-        }
+            }
         }
     }
     
@@ -103,7 +106,7 @@ struct SelectYourCountryView: View {
 
 struct SelectYourCountryView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectYourCountryView(viewModel: SelectYourCountryViewModel(countryFlagService: CountryFlagServiceImpl()))
+        SelectYourCountryView(viewModel: SelectYourCountryViewModel(countryFlagService: CountryFlagProviderImpl()))
     }
 }
 

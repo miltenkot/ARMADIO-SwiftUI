@@ -66,7 +66,7 @@ struct LoginOptionsView: View {
                             
                         }
                                        .fullScreenCover(isPresented: $viewModel.isPresented) {
-                                           SelectYourCountryView(viewModel: SelectYourCountryViewModel(countryFlagService: CountryFlagServiceImpl()))
+                                           SelectYourCountryView(viewModel: SelectYourCountryViewModel(countryFlagService: CountryFlagProviderImpl()))
                                        }
                         
                     }

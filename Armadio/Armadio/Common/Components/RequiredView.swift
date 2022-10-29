@@ -14,7 +14,7 @@ struct RequiredView: View {
                 .foregroundColor(Color.themeColor(.primaryButtonFColor))
                 .background(.red)
                 .cornerRadius(45)
-            Text("Required")
+            Text("RequiredView_Required".localized)
                 .textStyle(NormalStyle())
         }
     }

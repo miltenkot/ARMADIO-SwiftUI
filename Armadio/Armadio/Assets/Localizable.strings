@@ -31,3 +31,13 @@
 "SelectYourCountryView_Please" = "Please choose the country where you'll primarily use Wolt.";
 "SelectYourCountryView_Armadio" = "Armadio Country";
 "SelectYourCountryView_Continue" = "Continue";
+
+/* RequiredView */
+"RequiredView_Required" = "Required";
+
+/* HomeView */
+"HomeView_Now" = "Now";
+"HomeView_Wardrobe" = "Wardrobe";
+"HomeView_Marketplace" = "Marketplace";
+"HomeView_Chat" = "Chat";
+"HomeView_Profile" = "Profile";
