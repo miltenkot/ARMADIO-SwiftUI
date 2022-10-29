@@ -10,6 +10,7 @@ import SwiftUI
 struct SelectYourCountryView: View {
     @Environment(\.dismiss) var dismiss
     @ObservedObject var viewModel: SelectYourCountryViewModel
+    @State private var numberOfShakes = 0.0
     
     var body: some View {
         NavigationView {
@@ -56,10 +57,20 @@ struct SelectYourCountryView: View {
                         .presentationDragIndicator(.visible)
                     
                 }
-                HStack {
-                    CheckboxView(readMoreAction: {
-                    }, checkState: $viewModel.checkboxState)
-                    Spacer()
+                VStack() {
+                    HStack {
+                        CheckboxView(readMoreAction: {
+                        }, checkState: $viewModel.checkboxState)
+                        .shake(with: numberOfShakes)
+                        Spacer()
+                    }
+                    
+                    if numberOfShakes > 0 {
+                        withAnimation {
+                            RequiredView().transition(.fadeAndSlide)
+                            
+                        }
+                    }
                 }
                 .padding()
                 
@@ -69,6 +80,13 @@ struct SelectYourCountryView: View {
                                foregroundColor: Color.themeColor(.primaryButtonFColor),
                                backgroundColor: .blue,
                                imageName: nil) {
+                    if viewModel.checkboxState == false {
+                        withAnimation {
+                            numberOfShakes += 3
+                        }
+                    } else {
+                        numberOfShakes = 0
+                    }
                 }
             }
             .toolbar {
@@ -86,5 +104,11 @@ struct SelectYourCountryView: View {
 struct SelectYourCountryView_Previews: PreviewProvider {
     static var previews: some View {
         SelectYourCountryView(viewModel: SelectYourCountryViewModel(countryFlagService: CountryFlagServiceImpl()))
+    }
+}
+
+extension AnyTransition {
+    static var fadeAndSlide: AnyTransition {
+        AnyTransition.opacity.combined(with: .move(edge: .trailing))
     }
 }
