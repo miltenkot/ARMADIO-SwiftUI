@@ -38,6 +38,10 @@
 		13A3A920290D0A9900A49D99 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A91F290D0A9900A49D99 /* Shake.swift */; };
 		13A3A924290D10B800A49D99 /* RequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A923290D10B800A49D99 /* RequiredView.swift */; };
 		13A3A927290D2B1C00A49D99 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A926290D2B1C00A49D99 /* HomeView.swift */; };
+		2AA4849A290E70E900EC4814 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 2AA48499290E70E900EC4814 /* Factory */; };
+		2AA4849C290E77DE00EC4814 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4849B290E77DE00EC4814 /* Injection.swift */; };
+		2AE863D2290FB57B00EA1B4B /* SelectYourCountryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE863D1290FB57B00EA1B4B /* SelectYourCountryViewModelTests.swift */; };
+		2AE863D5290FB9A800EA1B4B /* CountryListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE863D4290FB9A800EA1B4B /* CountryListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,9 @@
 		13A3A91F290D0A9900A49D99 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		13A3A923290D10B800A49D99 /* RequiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredView.swift; sourceTree = "<group>"; };
 		13A3A926290D2B1C00A49D99 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2AA4849B290E77DE00EC4814 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		2AE863D1290FB57B00EA1B4B /* SelectYourCountryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectYourCountryViewModelTests.swift; sourceTree = "<group>"; };
+		2AE863D4290FB9A800EA1B4B /* CountryListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA4849A290E70E900EC4814 /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,13 +112,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		135D0C3A290D0639002FB82C /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
 		13872FE0290ACA7E0049D1D2 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +140,7 @@
 				1387300A290ADA740049D1D2 /* Common */,
 				13872FEC290ACA7E0049D1D2 /* ArmadioApp.swift */,
 				13872FEE290ACA7E0049D1D2 /* ContentView.swift */,
+				2AA4849B290E77DE00EC4814 /* Injection.swift */,
 			);
 			path = Armadio;
 			sourceTree = "<group>";
@@ -154,7 +156,6 @@
 		13872FFF290ACAFD0049D1D2 /* ArmadioUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				135D0C3A290D0639002FB82C /* Mocks */,
 				1387302C290ADC610049D1D2 /* Modules */,
 				13873029290ADC3A0049D1D2 /* Helpers */,
 			);
@@ -260,6 +261,8 @@
 		1387302C290ADC610049D1D2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2AE863D3290FB98B00EA1B4B /* CountryList */,
+				2AE863D0290FB56A00EA1B4B /* SelectYourCountry */,
 				13873031290ADC8E0049D1D2 /* GetStarted */,
 				1387302D290ADC680049D1D2 /* LoginOptions */,
 				13873034290ADCB70049D1D2 /* PreviewTests.swift */,
@@ -326,6 +329,22 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		2AE863D0290FB56A00EA1B4B /* SelectYourCountry */ = {
+			isa = PBXGroup;
+			children = (
+				2AE863D1290FB57B00EA1B4B /* SelectYourCountryViewModelTests.swift */,
+			);
+			path = SelectYourCountry;
+			sourceTree = "<group>";
+		};
+		2AE863D3290FB98B00EA1B4B /* CountryList */ = {
+			isa = PBXGroup;
+			children = (
+				2AE863D4290FB9A800EA1B4B /* CountryListViewModelTests.swift */,
+			);
+			path = CountryList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -342,6 +361,9 @@
 			dependencies = (
 			);
 			name = Armadio;
+			packageProductDependencies = (
+				2AA48499290E70E900EC4814 /* Factory */,
+			);
 			productName = Armadio;
 			productReference = 13872FE9290ACA7E0049D1D2 /* Armadio.app */;
 			productType = "com.apple.product-type.application";
@@ -397,6 +419,7 @@
 			mainGroup = 13872FE0290ACA7E0049D1D2;
 			packageReferences = (
 				13873007290ACB1A0049D1D2 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				2AA48498290E70E900EC4814 /* XCRemoteSwiftPackageReference "Factory" */,
 			);
 			productRefGroup = 13872FEA290ACA7E0049D1D2 /* Products */;
 			projectDirPath = "";
@@ -454,6 +477,7 @@
 				13873024290ADBD60049D1D2 /* LoginOptionsView.swift in Sources */,
 				13A3A927290D2B1C00A49D99 /* HomeView.swift in Sources */,
 				13872FED290ACA7E0049D1D2 /* ArmadioApp.swift in Sources */,
+				2AA4849C290E77DE00EC4814 /* Injection.swift in Sources */,
 				13873040290AF9430049D1D2 /* CountryListViewModel.swift in Sources */,
 				13873043290BE5B10049D1D2 /* Color.swift in Sources */,
 			);
@@ -467,6 +491,8 @@
 				1387302B290ADC490049D1D2 /* Inspection+Extension.swift in Sources */,
 				13873035290ADCB70049D1D2 /* PreviewTests.swift in Sources */,
 				13873030290ADC7E0049D1D2 /* LoginOptionsViewTests.swift in Sources */,
+				2AE863D2290FB57B00EA1B4B /* SelectYourCountryViewModelTests.swift in Sources */,
+				2AE863D5290FB9A800EA1B4B /* CountryListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,6 +756,14 @@
 				minimumVersion = 0.9.2;
 			};
 		};
+		2AA48498290E70E900EC4814 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -737,6 +771,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 13873007290ACB1A0049D1D2 /* XCRemoteSwiftPackageReference "ViewInspector" */;
 			productName = ViewInspector;
+		};
+		2AA48499290E70E900EC4814 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AA48498290E70E900EC4814 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

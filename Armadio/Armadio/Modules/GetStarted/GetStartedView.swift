@@ -10,7 +10,7 @@ import Combine
 
 struct GetStartedView: View {
     @Environment(\.colorScheme) var colorScheme
-    @ObservedObject var viewModel: GetStartedViewModel
+    @StateObject var viewModel = GetStartedViewModel()
     internal let inspection = Inspection<Self>()
     
     var body: some View {
@@ -43,7 +43,7 @@ struct GetStartedView: View {
                         viewModel.showingSheet.toggle()
                     }
                     .sheet(isPresented: $viewModel.showingSheet) {
-                        LoginOptionsView(viewModel: LoginOptionsViewModel())
+                        LoginOptionsView()
                             .presentationDetents([.large])
                             .presentationDragIndicator(.visible)
                     }
@@ -72,6 +72,6 @@ struct GetStartedView: View {
 
 struct GetStartedView_Previews: PreviewProvider {
     static var previews: some View {
-        GetStartedView(viewModel: GetStartedViewModel())
+        GetStartedView()
     }
 }

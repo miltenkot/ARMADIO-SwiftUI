@@ -6,19 +6,16 @@
 //
 
 import Foundation
+import Factory
 
 final class CountryListViewModel: ObservableObject {
-    let countryFlagService: CountryFlagProvider
-    
-    init(countryFlagService: CountryFlagProvider) {
-        self.countryFlagService = countryFlagService
-    }
+    @Injected(Container.countryFlagProvider) private var countryFlagProvider
     
     func getCountryFlag(_ countryCode: String?) -> String {
-        countryFlagService.countryFlag(countryCode)
+        countryFlagProvider.countryFlag(countryCode)
     }
     
     func getCountryName(_ countryCode: String?) -> String {
-        countryFlagService.countryName(countryCode)
+        countryFlagProvider.countryName(countryCode)
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CountryListView: View {
     @Environment(\.dismiss) var dismiss
-    @ObservedObject var viewModel: CountryListViewModel
+    @StateObject var viewModel = CountryListViewModel()
     @Binding var selectedFlag: String?
     
     var body: some View {
@@ -40,6 +40,6 @@ struct CountryListView: View {
 
 struct CountryListView_Previews: PreviewProvider {
     static var previews: some View {
-        CountryListView(viewModel: CountryListViewModel(countryFlagService: CountryFlagProviderImpl()), selectedFlag: .constant(nil))
+        CountryListView(selectedFlag: .constant(nil))
     }
 }

@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import Factory
 
 struct SelectYourCountryView: View {
     @Environment(\.dismiss) var dismiss
-    @ObservedObject var viewModel: SelectYourCountryViewModel
+    @StateObject var viewModel = SelectYourCountryViewModel()
     
     var body: some View {
         NavigationView {
@@ -51,7 +52,7 @@ struct SelectYourCountryView: View {
                 )
                 .padding()
                 .sheet(isPresented: $viewModel.isDisplayed) {
-                    CountryListView(viewModel: CountryListViewModel(countryFlagService: CountryFlagProviderImpl()), selectedFlag: $viewModel.countryCode)
+                    CountryListView(selectedFlag: $viewModel.countryCode)
                         .presentationDetents([.large])
                         .presentationDragIndicator(.visible)
                     
@@ -104,14 +105,14 @@ struct SelectYourCountryView: View {
     
 }
 
-struct SelectYourCountryView_Previews: PreviewProvider {
-    static var previews: some View {
-        SelectYourCountryView(viewModel: SelectYourCountryViewModel(countryFlagService: CountryFlagProviderImpl()))
-    }
-}
-
 extension AnyTransition {
     static var fadeAndSlide: AnyTransition {
         AnyTransition.opacity.combined(with: .move(edge: .trailing))
+    }
+}
+
+struct SelectYourCountryView_Previews: PreviewProvider {
+    static var previews: some View {
+        SelectYourCountryView()
     }
 }

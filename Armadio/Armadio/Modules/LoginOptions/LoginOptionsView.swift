@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginOptionsView: View {
     @Environment(\.dismiss) var dismiss
-    @ObservedObject var viewModel: LoginOptionsViewModel
+    @StateObject var viewModel = LoginOptionsViewModel()
     
     var body: some View {
         NavigationView {
@@ -66,7 +66,7 @@ struct LoginOptionsView: View {
                             
                         }
                                        .fullScreenCover(isPresented: $viewModel.isPresented) {
-                                           SelectYourCountryView(viewModel: SelectYourCountryViewModel(countryFlagService: CountryFlagProviderImpl()))
+                                           SelectYourCountryView()
                                        }
                         
                     }
@@ -85,6 +85,6 @@ struct LoginOptionsView: View {
 
 struct LoginOptionsView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginOptionsView(viewModel: LoginOptionsViewModel())
+        LoginOptionsView()
     }
 }

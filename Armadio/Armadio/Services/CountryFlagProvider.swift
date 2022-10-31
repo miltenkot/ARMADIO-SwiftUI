@@ -26,3 +26,17 @@ final class CountryFlagProviderImpl: CountryFlagProvider {
         }))
     }
 }
+
+// MARK: - Mocks
+
+final class CountryFlagProviderMock: CountryFlagProvider {
+    func countryFlag(_ countryCode: String?) -> String {
+        String(String.UnicodeScalarView("AT".unicodeScalars.compactMap {
+            UnicodeScalar(127397 + $0.value)
+        }))
+    }
+    
+    func countryName(_ countryCode: String?) -> String {
+        Locale.current.localizedString(forRegionCode: "AT") ?? ""
+    }
+}
