@@ -14,7 +14,7 @@ struct HomeView: View {
                 .tabItem {
                     Label("HomeView_Now".localized, systemImage: "figure.wave")
                 }
-            Text("Wardrobe")
+            WardrobeView()
                 .tabItem {
                     Label("HomeView_Wardrobe".localized, systemImage: "cabinet.fill")
                 }

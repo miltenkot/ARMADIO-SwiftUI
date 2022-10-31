@@ -41,3 +41,6 @@
 "HomeView_Marketplace" = "Marketplace";
 "HomeView_Chat" = "Chat";
 "HomeView_Profile" = "Profile";
+
+/* WardrobeView */
+"WardrobeView_Wardrobe" = "Wardrobe";

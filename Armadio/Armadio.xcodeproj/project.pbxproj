@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1358839829102116009C8531 /* Clothe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839729102116009C8531 /* Clothe.swift */; };
+		1358839B29102136009C8531 /* WardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839A29102136009C8531 /* WardrobeView.swift */; };
+		1358839D291023E1009C8531 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839C291023E1009C8531 /* Receipt.swift */; };
+		1358839F291025D3009C8531 /* WardrobeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839E291025D3009C8531 /* WardrobeViewModel.swift */; };
+		135883A129102744009C8531 /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883A029102744009C8531 /* Color+Codable.swift */; };
+		135883A429103D72009C8531 /* ClotheRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883A329103D72009C8531 /* ClotheRow.swift */; };
+		135883A629103EDD009C8531 /* ClotheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883A529103EDD009C8531 /* ClotheItem.swift */; };
+		135883A82910402A009C8531 /* ClotheDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883A72910402A009C8531 /* ClotheDetails.swift */; };
+		135883AB291043F6009C8531 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883AA291043F6009C8531 /* CircleImage.swift */; };
+		135883AD29104599009C8531 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883AC29104599009C8531 /* FavoriteButton.swift */; };
 		13872FED290ACA7E0049D1D2 /* ArmadioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13872FEC290ACA7E0049D1D2 /* ArmadioApp.swift */; };
 		13872FEF290ACA7E0049D1D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13872FEE290ACA7E0049D1D2 /* ContentView.swift */; };
 		13872FF1290ACA800049D1D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13872FF0290ACA800049D1D2 /* Assets.xcassets */; };
@@ -55,6 +65,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1358839729102116009C8531 /* Clothe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Clothe.swift; path = Armadio/Model/Clothe.swift; sourceTree = SOURCE_ROOT; };
+		1358839A29102136009C8531 /* WardrobeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WardrobeView.swift; sourceTree = "<group>"; };
+		1358839C291023E1009C8531 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
+		1358839E291025D3009C8531 /* WardrobeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeViewModel.swift; sourceTree = "<group>"; };
+		135883A029102744009C8531 /* Color+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
+		135883A329103D72009C8531 /* ClotheRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClotheRow.swift; sourceTree = "<group>"; };
+		135883A529103EDD009C8531 /* ClotheItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClotheItem.swift; sourceTree = "<group>"; };
+		135883A72910402A009C8531 /* ClotheDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClotheDetails.swift; sourceTree = "<group>"; };
+		135883AA291043F6009C8531 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		135883AC29104599009C8531 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		13872FE9290ACA7E0049D1D2 /* Armadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Armadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13872FEC290ACA7E0049D1D2 /* ArmadioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmadioApp.swift; sourceTree = "<group>"; };
 		13872FEE290ACA7E0049D1D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +132,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13588396291020F8009C8531 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1358839729102116009C8531 /* Clothe.swift */,
+				1358839C291023E1009C8531 /* Receipt.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1358839929102136009C8531 /* Wardrobe */ = {
+			isa = PBXGroup;
+			children = (
+				135883A92910405E009C8531 /* ClotheDetails */,
+				135883A229103D58009C8531 /* ClotheRow */,
+				1358839A29102136009C8531 /* WardrobeView.swift */,
+				1358839E291025D3009C8531 /* WardrobeViewModel.swift */,
+			);
+			path = Wardrobe;
+			sourceTree = "<group>";
+		};
+		135883A229103D58009C8531 /* ClotheRow */ = {
+			isa = PBXGroup;
+			children = (
+				135883A329103D72009C8531 /* ClotheRow.swift */,
+				135883A529103EDD009C8531 /* ClotheItem.swift */,
+			);
+			path = ClotheRow;
+			sourceTree = "<group>";
+		};
+		135883A92910405E009C8531 /* ClotheDetails */ = {
+			isa = PBXGroup;
+			children = (
+				135883A72910402A009C8531 /* ClotheDetails.swift */,
+			);
+			path = ClotheDetails;
+			sourceTree = "<group>";
+		};
 		13872FE0290ACA7E0049D1D2 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +190,7 @@
 		13872FEB290ACA7E0049D1D2 /* Armadio */ = {
 			isa = PBXGroup;
 			children = (
+				13588396291020F8009C8531 /* Models */,
 				13872FF2290ACA800049D1D2 /* Preview Content */,
 				13873041290BE52A0049D1D2 /* Assets */,
 				13873038290AF5EC0049D1D2 /* Services */,
@@ -180,6 +238,8 @@
 				1387300E290ADAA20049D1D2 /* NavigationButton.swift */,
 				13873036290AEA250049D1D2 /* CheckboxView.swift */,
 				13A3A923290D10B800A49D99 /* RequiredView.swift */,
+				135883AA291043F6009C8531 /* CircleImage.swift */,
+				135883AC29104599009C8531 /* FavoriteButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -189,6 +249,7 @@
 			children = (
 				13873011290ADAC70049D1D2 /* Inspection.swift */,
 				13873044290BFE390049D1D2 /* Localized.swift */,
+				135883A029102744009C8531 /* Color+Codable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -205,6 +266,7 @@
 		13873018290ADB0F0049D1D2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1358839929102136009C8531 /* Wardrobe */,
 				13A3A925290D2AD500A49D99 /* Home */,
 				1387301C290ADB310049D1D2 /* Login */,
 				1387301B290ADB290049D1D2 /* GetStarted */,
@@ -458,18 +520,28 @@
 			files = (
 				1387300D290ADA8A0049D1D2 /* ContinueButton.swift in Sources */,
 				13872FEF290ACA7E0049D1D2 /* ContentView.swift in Sources */,
+				135883A129102744009C8531 /* Color+Codable.swift in Sources */,
+				135883A429103D72009C8531 /* ClotheRow.swift in Sources */,
 				1387300F290ADAA20049D1D2 /* NavigationButton.swift in Sources */,
+				135883A629103EDD009C8531 /* ClotheItem.swift in Sources */,
+				1358839D291023E1009C8531 /* Receipt.swift in Sources */,
 				13873022290ADBA60049D1D2 /* GetStartedViewModel.swift in Sources */,
+				135883AB291043F6009C8531 /* CircleImage.swift in Sources */,
 				1387303E290AF7E60049D1D2 /* SelectYourCountryViewModel.swift in Sources */,
 				13873028290ADC140049D1D2 /* CountryListView.swift in Sources */,
 				13873017290ADAF60049D1D2 /* TextStyles.swift in Sources */,
+				1358839F291025D3009C8531 /* WardrobeViewModel.swift in Sources */,
+				135883AD29104599009C8531 /* FavoriteButton.swift in Sources */,
 				13873020290ADB910049D1D2 /* GetStartedView.swift in Sources */,
+				1358839B29102136009C8531 /* WardrobeView.swift in Sources */,
 				13873015290ADAE30049D1D2 /* ButtonStyles.swift in Sources */,
 				13873012290ADAC70049D1D2 /* Inspection.swift in Sources */,
 				13873045290BFE390049D1D2 /* Localized.swift in Sources */,
 				13A3A920290D0A9900A49D99 /* Shake.swift in Sources */,
 				13873049290C225A0049D1D2 /* LoginOptionsViewModel.swift in Sources */,
+				135883A82910402A009C8531 /* ClotheDetails.swift in Sources */,
 				13A3A924290D10B800A49D99 /* RequiredView.swift in Sources */,
+				1358839829102116009C8531 /* Clothe.swift in Sources */,
 				13873026290ADBFE0049D1D2 /* SelectYourCountryView.swift in Sources */,
 				1387301E290ADB7B0049D1D2 /* LoginView.swift in Sources */,
 				1387303A290AF6170049D1D2 /* CountryFlagProvider.swift in Sources */,
