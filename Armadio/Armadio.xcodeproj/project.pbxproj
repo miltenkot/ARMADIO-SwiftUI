@@ -17,6 +17,8 @@
 		135883A82910402A009C8531 /* ClotheDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883A72910402A009C8531 /* ClotheDetails.swift */; };
 		135883AB291043F6009C8531 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883AA291043F6009C8531 /* CircleImage.swift */; };
 		135883AD29104599009C8531 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883AC29104599009C8531 /* FavoriteButton.swift */; };
+		135883AF2910FFAA009C8531 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883AE2910FFAA009C8531 /* FloatingButton.swift */; };
+		135883B2291108AF009C8531 /* ButtonMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883B1291108AF009C8531 /* ButtonMenuItem.swift */; };
 		13872FED290ACA7E0049D1D2 /* ArmadioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13872FEC290ACA7E0049D1D2 /* ArmadioApp.swift */; };
 		13872FEF290ACA7E0049D1D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13872FEE290ACA7E0049D1D2 /* ContentView.swift */; };
 		13872FF1290ACA800049D1D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13872FF0290ACA800049D1D2 /* Assets.xcassets */; };
@@ -75,6 +77,8 @@
 		135883A72910402A009C8531 /* ClotheDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClotheDetails.swift; sourceTree = "<group>"; };
 		135883AA291043F6009C8531 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		135883AC29104599009C8531 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		135883AE2910FFAA009C8531 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		135883B1291108AF009C8531 /* ButtonMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonMenuItem.swift; sourceTree = "<group>"; };
 		13872FE9290ACA7E0049D1D2 /* Armadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Armadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13872FEC290ACA7E0049D1D2 /* ArmadioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmadioApp.swift; sourceTree = "<group>"; };
 		13872FEE290ACA7E0049D1D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,6 +173,15 @@
 			path = ClotheDetails;
 			sourceTree = "<group>";
 		};
+		135883B02911088F009C8531 /* FloatingButton */ = {
+			isa = PBXGroup;
+			children = (
+				135883AE2910FFAA009C8531 /* FloatingButton.swift */,
+				135883B1291108AF009C8531 /* ButtonMenuItem.swift */,
+			);
+			path = FloatingButton;
+			sourceTree = "<group>";
+		};
 		13872FE0290ACA7E0049D1D2 = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +247,7 @@
 		1387300B290ADA7D0049D1D2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				135883B02911088F009C8531 /* FloatingButton */,
 				1387300C290ADA8A0049D1D2 /* ContinueButton.swift */,
 				1387300E290ADAA20049D1D2 /* NavigationButton.swift */,
 				13873036290AEA250049D1D2 /* CheckboxView.swift */,
@@ -520,10 +534,12 @@
 			files = (
 				1387300D290ADA8A0049D1D2 /* ContinueButton.swift in Sources */,
 				13872FEF290ACA7E0049D1D2 /* ContentView.swift in Sources */,
+				135883AF2910FFAA009C8531 /* FloatingButton.swift in Sources */,
 				135883A129102744009C8531 /* Color+Codable.swift in Sources */,
 				135883A429103D72009C8531 /* ClotheRow.swift in Sources */,
 				1387300F290ADAA20049D1D2 /* NavigationButton.swift in Sources */,
 				135883A629103EDD009C8531 /* ClotheItem.swift in Sources */,
+				135883B2291108AF009C8531 /* ButtonMenuItem.swift in Sources */,
 				1358839D291023E1009C8531 /* Receipt.swift in Sources */,
 				13873022290ADBA60049D1D2 /* GetStartedViewModel.swift in Sources */,
 				135883AB291043F6009C8531 /* CircleImage.swift in Sources */,

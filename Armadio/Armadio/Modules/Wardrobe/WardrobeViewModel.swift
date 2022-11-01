@@ -10,6 +10,7 @@ import Foundation
 final class WardrobeViewModel: ObservableObject {
     @Published var clothes: [Clothe] = Clothe.clothesMock // load from persist
     @Published var categoryName: String = ""
+    @Published var menuButtonExpanded: Bool = false
     
     var categories: [String: [Clothe]] {
         Dictionary(

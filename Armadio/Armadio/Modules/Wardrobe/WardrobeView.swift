@@ -12,8 +12,30 @@ struct WardrobeView: View {
     
     var body: some View {
         NavigationView {
-            content
-                .navigationTitle("WardrobeView_Wardrobe".localized)
+            ZStack {
+                content
+                    .navigationTitle("WardrobeView_Wardrobe".localized)
+                    .blur(radius: viewModel.menuButtonExpanded ? 5 : 0)
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        FloatingButton(showMenuItems: $viewModel.menuButtonExpanded,
+                                       action1: {
+                            print("One")
+                        },
+                                       action2: {
+                            print("Two")
+                        },
+                                       action3: {
+                            print("Three")
+                        })
+                    }
+                    .padding()
+                }
+                
+            }
+            
         }
     }
     
@@ -34,7 +56,7 @@ struct WardrobeView: View {
                 .listRowInsets(EdgeInsets())
             }
         } else {
-           Text("No content")
+            Text("No content")
         }
     }
     
