@@ -35,7 +35,7 @@ struct ClotheRow: View {
 struct ClotheRow_Previews: PreviewProvider {
     static var clothes = Clothe.clothesMock
     static var previews: some View {
-        ClotheRow(categoryName: clothes[0].category.rawValue,
+        ClotheRow(categoryName: clothes[0].category.name,
                    items: Array(clothes.prefix(4)))
     }
 }

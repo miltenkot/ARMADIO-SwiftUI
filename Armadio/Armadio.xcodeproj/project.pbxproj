@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13163D8D29193D42008D18F3 /* NavigationPickerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13163D8C29193D42008D18F3 /* NavigationPickerLabel.swift */; };
+		131AA9222919717C00C876C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 131AA9212919717C00C876C2 /* GoogleService-Info.plist */; };
+		131AA9252919726100C876C2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 131AA9242919726100C876C2 /* FirebaseAnalytics */; };
+		131AA9272919726100C876C2 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 131AA9262919726100C876C2 /* FirebaseCrashlytics */; };
+		131AA92C291A847F00C876C2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 131AA92B291A847F00C876C2 /* FirebaseAuth */; };
 		1358839829102116009C8531 /* Clothe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839729102116009C8531 /* Clothe.swift */; };
 		1358839B29102136009C8531 /* WardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839A29102136009C8531 /* WardrobeView.swift */; };
 		1358839D291023E1009C8531 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839C291023E1009C8531 /* Receipt.swift */; };
@@ -19,12 +24,14 @@
 		135883AD29104599009C8531 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883AC29104599009C8531 /* FavoriteButton.swift */; };
 		135883AF2910FFAA009C8531 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883AE2910FFAA009C8531 /* FloatingButton.swift */; };
 		135883B2291108AF009C8531 /* ButtonMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883B1291108AF009C8531 /* ButtonMenuItem.swift */; };
+		135883B529111133009C8531 /* AddNewClotheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883B429111133009C8531 /* AddNewClotheView.swift */; };
+		135883B729112FAF009C8531 /* ColorPickerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883B629112FAF009C8531 /* ColorPickerDetails.swift */; };
 		13872FED290ACA7E0049D1D2 /* ArmadioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13872FEC290ACA7E0049D1D2 /* ArmadioApp.swift */; };
 		13872FEF290ACA7E0049D1D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13872FEE290ACA7E0049D1D2 /* ContentView.swift */; };
 		13872FF1290ACA800049D1D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13872FF0290ACA800049D1D2 /* Assets.xcassets */; };
 		13872FF4290ACA800049D1D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13872FF3290ACA800049D1D2 /* Preview Assets.xcassets */; };
 		13873009290ACB1A0049D1D2 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 13873008290ACB1A0049D1D2 /* ViewInspector */; };
-		1387300D290ADA8A0049D1D2 /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1387300C290ADA8A0049D1D2 /* ContinueButton.swift */; };
+		1387300D290ADA8A0049D1D2 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1387300C290ADA8A0049D1D2 /* PrimaryButton.swift */; };
 		1387300F290ADAA20049D1D2 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1387300E290ADAA20049D1D2 /* NavigationButton.swift */; };
 		13873012290ADAC70049D1D2 /* Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873011290ADAC70049D1D2 /* Inspection.swift */; };
 		13873015290ADAE30049D1D2 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873014290ADAE30049D1D2 /* ButtonStyles.swift */; };
@@ -50,6 +57,12 @@
 		13A3A920290D0A9900A49D99 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A91F290D0A9900A49D99 /* Shake.swift */; };
 		13A3A924290D10B800A49D99 /* RequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A923290D10B800A49D99 /* RequiredView.swift */; };
 		13A3A927290D2B1C00A49D99 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A926290D2B1C00A49D99 /* HomeView.swift */; };
+		13AA6FB52918393B006BBDAA /* NavigationPickerDetailsDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA6FB42918393B006BBDAA /* NavigationPickerDetailsDate.swift */; };
+		13AE6F0C2912A03800D8FABA /* AddNewClotheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE6F0B2912A03800D8FABA /* AddNewClotheViewModel.swift */; };
+		13B8E8F82914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B8E8F72914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift */; };
+		13B8E8FE2915763600F3FDDC /* NavigationPickerDetailsPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B8E8FD2915763600F3FDDC /* NavigationPickerDetailsPrice.swift */; };
+		13B8E9002915899000F3FDDC /* NavigationPickerDetailsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B8E8FF2915899000F3FDDC /* NavigationPickerDetailsCategory.swift */; };
+		13B8E909291670E300F3FDDC /* NavigationPickerDetailsDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B8E908291670E300F3FDDC /* NavigationPickerDetailsDefault.swift */; };
 		2AA4849A290E70E900EC4814 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 2AA48499290E70E900EC4814 /* Factory */; };
 		2AA4849C290E77DE00EC4814 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4849B290E77DE00EC4814 /* Injection.swift */; };
 		2AE863D2290FB57B00EA1B4B /* SelectYourCountryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE863D1290FB57B00EA1B4B /* SelectYourCountryViewModelTests.swift */; };
@@ -67,6 +80,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13163D8C29193D42008D18F3 /* NavigationPickerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerLabel.swift; sourceTree = "<group>"; };
+		131AA9212919717C00C876C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1358839729102116009C8531 /* Clothe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Clothe.swift; path = Armadio/Model/Clothe.swift; sourceTree = SOURCE_ROOT; };
 		1358839A29102136009C8531 /* WardrobeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WardrobeView.swift; sourceTree = "<group>"; };
 		1358839C291023E1009C8531 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
@@ -79,13 +94,15 @@
 		135883AC29104599009C8531 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		135883AE2910FFAA009C8531 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		135883B1291108AF009C8531 /* ButtonMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonMenuItem.swift; sourceTree = "<group>"; };
+		135883B429111133009C8531 /* AddNewClotheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewClotheView.swift; sourceTree = "<group>"; };
+		135883B629112FAF009C8531 /* ColorPickerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerDetails.swift; sourceTree = "<group>"; };
 		13872FE9290ACA7E0049D1D2 /* Armadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Armadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13872FEC290ACA7E0049D1D2 /* ArmadioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmadioApp.swift; sourceTree = "<group>"; };
 		13872FEE290ACA7E0049D1D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		13872FF0290ACA800049D1D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13872FF3290ACA800049D1D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		13872FFE290ACAFD0049D1D2 /* ArmadioUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArmadioUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1387300C290ADA8A0049D1D2 /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
+		1387300C290ADA8A0049D1D2 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		1387300E290ADAA20049D1D2 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		13873011290ADAC70049D1D2 /* Inspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspection.swift; sourceTree = "<group>"; };
 		13873014290ADAE30049D1D2 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
@@ -111,6 +128,12 @@
 		13A3A91F290D0A9900A49D99 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		13A3A923290D10B800A49D99 /* RequiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredView.swift; sourceTree = "<group>"; };
 		13A3A926290D2B1C00A49D99 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		13AA6FB42918393B006BBDAA /* NavigationPickerDetailsDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerDetailsDate.swift; sourceTree = "<group>"; };
+		13AE6F0B2912A03800D8FABA /* AddNewClotheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewClotheViewModel.swift; sourceTree = "<group>"; };
+		13B8E8F72914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerDetailsDescription.swift; sourceTree = "<group>"; };
+		13B8E8FD2915763600F3FDDC /* NavigationPickerDetailsPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerDetailsPrice.swift; sourceTree = "<group>"; };
+		13B8E8FF2915899000F3FDDC /* NavigationPickerDetailsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerDetailsCategory.swift; sourceTree = "<group>"; };
+		13B8E908291670E300F3FDDC /* NavigationPickerDetailsDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerDetailsDefault.swift; sourceTree = "<group>"; };
 		2AA4849B290E77DE00EC4814 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		2AE863D1290FB57B00EA1B4B /* SelectYourCountryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectYourCountryViewModelTests.swift; sourceTree = "<group>"; };
 		2AE863D4290FB9A800EA1B4B /* CountryListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModelTests.swift; sourceTree = "<group>"; };
@@ -121,6 +144,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				131AA9272919726100C876C2 /* FirebaseCrashlytics in Frameworks */,
+				131AA9252919726100C876C2 /* FirebaseAnalytics in Frameworks */,
 				2AA4849A290E70E900EC4814 /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,12 +155,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				13873009290ACB1A0049D1D2 /* ViewInspector in Frameworks */,
+				131AA92C291A847F00C876C2 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		131AA928291A847900C876C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		13588396291020F8009C8531 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,12 +215,22 @@
 			path = FloatingButton;
 			sourceTree = "<group>";
 		};
+		135883B329111122009C8531 /* AddNewClothe */ = {
+			isa = PBXGroup;
+			children = (
+				135883B429111133009C8531 /* AddNewClotheView.swift */,
+				13AE6F0B2912A03800D8FABA /* AddNewClotheViewModel.swift */,
+			);
+			path = AddNewClothe;
+			sourceTree = "<group>";
+		};
 		13872FE0290ACA7E0049D1D2 = {
 			isa = PBXGroup;
 			children = (
 				13872FEB290ACA7E0049D1D2 /* Armadio */,
 				13872FFF290ACAFD0049D1D2 /* ArmadioUnitTests */,
 				13872FEA290ACA7E0049D1D2 /* Products */,
+				131AA928291A847900C876C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,13 +290,12 @@
 		1387300B290ADA7D0049D1D2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				13B8E8F92915327500F3FDDC /* Buttons */,
+				13B8E8F62914FAB900F3FDDC /* NavigationPicker */,
 				135883B02911088F009C8531 /* FloatingButton */,
-				1387300C290ADA8A0049D1D2 /* ContinueButton.swift */,
-				1387300E290ADAA20049D1D2 /* NavigationButton.swift */,
 				13873036290AEA250049D1D2 /* CheckboxView.swift */,
 				13A3A923290D10B800A49D99 /* RequiredView.swift */,
 				135883AA291043F6009C8531 /* CircleImage.swift */,
-				135883AC29104599009C8531 /* FavoriteButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -280,6 +322,7 @@
 		13873018290ADB0F0049D1D2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				135883B329111122009C8531 /* AddNewClothe */,
 				1358839929102136009C8531 /* Wardrobe */,
 				13A3A925290D2AD500A49D99 /* Home */,
 				1387301C290ADB310049D1D2 /* Login */,
@@ -382,6 +425,7 @@
 		13873041290BE52A0049D1D2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				131AA9212919717C00C876C2 /* GoogleService-Info.plist */,
 				13872FF0290ACA800049D1D2 /* Assets.xcassets */,
 				13873042290BE5B10049D1D2 /* Color.swift */,
 				13873046290BFE6B0049D1D2 /* Localizable.strings */,
@@ -403,6 +447,38 @@
 				13A3A926290D2B1C00A49D99 /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		13B8E8F62914FAB900F3FDDC /* NavigationPicker */ = {
+			isa = PBXGroup;
+			children = (
+				13B8E8FA29156F3800F3FDDC /* Details */,
+				13163D8C29193D42008D18F3 /* NavigationPickerLabel.swift */,
+			);
+			path = NavigationPicker;
+			sourceTree = "<group>";
+		};
+		13B8E8F92915327500F3FDDC /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				135883AC29104599009C8531 /* FavoriteButton.swift */,
+				1387300E290ADAA20049D1D2 /* NavigationButton.swift */,
+				1387300C290ADA8A0049D1D2 /* PrimaryButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		13B8E8FA29156F3800F3FDDC /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				135883B629112FAF009C8531 /* ColorPickerDetails.swift */,
+				13B8E8F72914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift */,
+				13B8E8FD2915763600F3FDDC /* NavigationPickerDetailsPrice.swift */,
+				13B8E8FF2915899000F3FDDC /* NavigationPickerDetailsCategory.swift */,
+				13B8E908291670E300F3FDDC /* NavigationPickerDetailsDefault.swift */,
+				13AA6FB42918393B006BBDAA /* NavigationPickerDetailsDate.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		2AE863D0290FB56A00EA1B4B /* SelectYourCountry */ = {
@@ -439,6 +515,8 @@
 			name = Armadio;
 			packageProductDependencies = (
 				2AA48499290E70E900EC4814 /* Factory */,
+				131AA9242919726100C876C2 /* FirebaseAnalytics */,
+				131AA9262919726100C876C2 /* FirebaseCrashlytics */,
 			);
 			productName = Armadio;
 			productReference = 13872FE9290ACA7E0049D1D2 /* Armadio.app */;
@@ -460,6 +538,7 @@
 			name = ArmadioUnitTests;
 			packageProductDependencies = (
 				13873008290ACB1A0049D1D2 /* ViewInspector */,
+				131AA92B291A847F00C876C2 /* FirebaseAuth */,
 			);
 			productName = ArmadioUnitTests;
 			productReference = 13872FFE290ACAFD0049D1D2 /* ArmadioUnitTests.xctest */;
@@ -496,6 +575,7 @@
 			packageReferences = (
 				13873007290ACB1A0049D1D2 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 				2AA48498290E70E900EC4814 /* XCRemoteSwiftPackageReference "Factory" */,
+				131AA9232919726100C876C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 13872FEA290ACA7E0049D1D2 /* Products */;
 			projectDirPath = "";
@@ -513,6 +593,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13872FF4290ACA800049D1D2 /* Preview Assets.xcassets in Resources */,
+				131AA9222919717C00C876C2 /* GoogleService-Info.plist in Resources */,
 				13873047290BFE6B0049D1D2 /* Localizable.strings in Resources */,
 				13872FF1290ACA800049D1D2 /* Assets.xcassets in Resources */,
 			);
@@ -532,7 +613,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1387300D290ADA8A0049D1D2 /* ContinueButton.swift in Sources */,
+				1387300D290ADA8A0049D1D2 /* PrimaryButton.swift in Sources */,
+				13B8E8FE2915763600F3FDDC /* NavigationPickerDetailsPrice.swift in Sources */,
+				13163D8D29193D42008D18F3 /* NavigationPickerLabel.swift in Sources */,
+				13B8E9002915899000F3FDDC /* NavigationPickerDetailsCategory.swift in Sources */,
 				13872FEF290ACA7E0049D1D2 /* ContentView.swift in Sources */,
 				135883AF2910FFAA009C8531 /* FloatingButton.swift in Sources */,
 				135883A129102744009C8531 /* Color+Codable.swift in Sources */,
@@ -540,12 +624,15 @@
 				1387300F290ADAA20049D1D2 /* NavigationButton.swift in Sources */,
 				135883A629103EDD009C8531 /* ClotheItem.swift in Sources */,
 				135883B2291108AF009C8531 /* ButtonMenuItem.swift in Sources */,
+				13B8E8F82914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift in Sources */,
 				1358839D291023E1009C8531 /* Receipt.swift in Sources */,
 				13873022290ADBA60049D1D2 /* GetStartedViewModel.swift in Sources */,
+				135883B729112FAF009C8531 /* ColorPickerDetails.swift in Sources */,
 				135883AB291043F6009C8531 /* CircleImage.swift in Sources */,
 				1387303E290AF7E60049D1D2 /* SelectYourCountryViewModel.swift in Sources */,
 				13873028290ADC140049D1D2 /* CountryListView.swift in Sources */,
 				13873017290ADAF60049D1D2 /* TextStyles.swift in Sources */,
+				13AE6F0C2912A03800D8FABA /* AddNewClotheViewModel.swift in Sources */,
 				1358839F291025D3009C8531 /* WardrobeViewModel.swift in Sources */,
 				135883AD29104599009C8531 /* FavoriteButton.swift in Sources */,
 				13873020290ADB910049D1D2 /* GetStartedView.swift in Sources */,
@@ -559,7 +646,10 @@
 				13A3A924290D10B800A49D99 /* RequiredView.swift in Sources */,
 				1358839829102116009C8531 /* Clothe.swift in Sources */,
 				13873026290ADBFE0049D1D2 /* SelectYourCountryView.swift in Sources */,
+				135883B529111133009C8531 /* AddNewClotheView.swift in Sources */,
 				1387301E290ADB7B0049D1D2 /* LoginView.swift in Sources */,
+				13AA6FB52918393B006BBDAA /* NavigationPickerDetailsDate.swift in Sources */,
+				13B8E909291670E300F3FDDC /* NavigationPickerDetailsDefault.swift in Sources */,
 				1387303A290AF6170049D1D2 /* CountryFlagProvider.swift in Sources */,
 				13873037290AEA250049D1D2 /* CheckboxView.swift in Sources */,
 				13873024290ADBD60049D1D2 /* LoginOptionsView.swift in Sources */,
@@ -836,6 +926,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		131AA9232919726100C876C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		13873007290ACB1A0049D1D2 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nalexn/ViewInspector.git";
@@ -855,6 +953,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		131AA9242919726100C876C2 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 131AA9232919726100C876C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		131AA9262919726100C876C2 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 131AA9232919726100C876C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		131AA92B291A847F00C876C2 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 131AA9232919726100C876C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		13873008290ACB1A0049D1D2 /* ViewInspector */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 13873007290ACB1A0049D1D2 /* XCRemoteSwiftPackageReference "ViewInspector" */;

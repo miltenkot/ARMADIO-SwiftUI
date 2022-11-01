@@ -29,21 +29,21 @@ struct LoginOptionsView: View {
                     }
                     
                     VStack(spacing: 0) {
-                        ContinueButton(text: "LoginOptionsView_Apple".localized,
+                        PrimaryButton(text: "LoginOptionsView_Apple".localized,
                                        foregroundColor: Color.themeColor(.primaryButtonFColor),
                                        backgroundColor: Color.themeColor(.primaryButtonBColor),
                                        imageName: "applelogo") {
                             print("action")
                         }
                         
-                        ContinueButton(text: "LoginOptionsView_Facebook".localized,
+                        PrimaryButton(text: "LoginOptionsView_Facebook".localized,
                                        foregroundColor: Color.themeColor(.primaryButtonFColor),
                                        backgroundColor: .blue,
                                        imageName: "f.cursive.circle.fill") {
                             print("action")
                         }
                         
-                        ContinueButton(text: "LoginOptionsView_Google".localized,
+                        PrimaryButton(text: "LoginOptionsView_Google".localized,
                                        foregroundColor: .blue,
                                        backgroundColor: Color.themeColor(.primaryButtonBColor),
                                        imageName: "g.square") {
@@ -51,7 +51,7 @@ struct LoginOptionsView: View {
                         }
                                        
                         
-                        ContinueButton(text: "LoginOptionsView_email".localized,
+                        PrimaryButton(text: "LoginOptionsView_email".localized,
                                        foregroundColor: Color.themeColor(.primaryButtonFColor),
                                        backgroundColor: .blue,
                                        imageName: "envelope.fill") {
@@ -59,7 +59,7 @@ struct LoginOptionsView: View {
                         }
                         
                         Divider().background(.white)
-                        ContinueButton(text: "LoginOptionsView_guest".localized,
+                        PrimaryButton(text: "LoginOptionsView_guest".localized,
                                        foregroundColor: Color.themeColor(.primaryButtonFColor),
                                        backgroundColor: .blue) {
                             viewModel.isPresented.toggle()

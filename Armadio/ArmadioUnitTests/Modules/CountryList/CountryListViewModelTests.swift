@@ -22,7 +22,7 @@ final class CountryListViewModelTests: XCTestCase {
     }
     
     func testGetSelectedCountryName() {
-        XCTAssertEqual(sut.getCountryName("PL"), "Poland")
+        XCTAssertEqual(sut.getCountryName("PL"), "Polska")
     }
     
     func testGetSelectedCountryFlag() {

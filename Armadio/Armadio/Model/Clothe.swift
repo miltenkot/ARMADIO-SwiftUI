@@ -24,15 +24,15 @@ struct Clothe: Hashable, Codable, Identifiable {
     var image: Image {
         Image(imageName)
     }
-    
-    enum Category: String, CaseIterable, Codable {
-        case bottoms = "bottoms"
-        case dresses = "dresses"
-        case outewear = "outewear"
-        case shoes = "shoes"
-        case tops = "tops"
-        case accessories = "accessories"
-    }
+}
+
+struct Category: Hashable, Codable {
+    var name: String
+    var subcategory: Subcategory
+}
+
+struct Subcategory: Hashable, Codable {
+    var name: String
 }
 
 struct Price: Hashable, Codable {
@@ -40,7 +40,7 @@ struct Price: Hashable, Codable {
     var currency: Currency
 }
 
-enum Currency: String, Codable {
+enum Currency: String, Codable, CaseIterable {
     case eur
     case usd
     case sek
@@ -61,10 +61,30 @@ extension Price: CustomStringConvertible {
 
 extension Clothe {
     static var clothesMock: [Clothe] = [
-        .init(id: 1, price: .init(amount: 300, currency: .pln), size: "M", category: .bottoms, color: .red, material: "Chiffon", description: "Nice clothe", brand: "Gucci", dateOfPurchase: .now, receipt: nil, imageName: "clothe1"),
-        .init(id: 2, price: .init(amount: 500, currency: .eur), size: "L", category: .accessories, color: .yellow, material: "Cotton", description: "Elegance", brand: "Gucci", dateOfPurchase: .now, receipt: nil, imageName: "clothe2"),
-        .init(id: 3, price: .init(amount: 1000, currency: .eur), size: "XXL", category: .accessories, color: .blue, material: "Crepe", description: "OMG Awesome", brand: "Gucci", dateOfPurchase: .now, receipt: nil, imageName: "clothe3"),
-        .init(id: 4, price: .init(amount: 600, currency: .pln), size: "S", category: .dresses, color: .black, material: "Denim", description: "Godness", brand: "Gucci", dateOfPurchase: .now, receipt: nil, imageName: "clothe4"),
-        .init(id: 5, price: .init(amount: 100, currency: .pln), size: "L", category: .tops, color: .black, material: "Lace", description: "Nice one", brand: "Gucci", dateOfPurchase: .now, receipt: nil, imageName: "clothe5")
+        .init(id: 1, price: .init(amount: 300, currency: .pln), size: "M", category: Category(name: "Bottoms", subcategory: .init(name: "Short")), color: .red, material: "Chiffon", description: "Nice clothe", brand: "Gucci", dateOfPurchase: .now, receipt: nil, imageName: "clothe1"),
+        .init(id: 2, price: .init(amount: 500, currency: .eur), size: "L", category: Category(name: "Accessories", subcategory: .init(name: "Drop")), color: .yellow, material: "Cotton", description: "Elegance", brand: "Gucci", dateOfPurchase: .now, receipt: nil, imageName: "clothe2"),
+        .init(id: 3, price: .init(amount: 1000, currency: .eur), size: "XXL", category: Category(name: "Accessories", subcategory: .init(name: "XYZ")), color: .blue, material: "Crepe", description: "OMG Awesome", brand: "Gucci", dateOfPurchase: .now, receipt: nil, imageName: "clothe3"),
+        .init(id: 4, price: .init(amount: 600, currency: .pln), size: "S", category: Category(name: "Dresses", subcategory: .init(name: "Seldom")), color: .black, material: "Denim", description: "Godness", brand: "Gucci", dateOfPurchase: .now, receipt: nil, imageName: "clothe4"),
+        .init(id: 5, price: .init(amount: 100, currency: .pln), size: "L", category: Category(name: "Tops", subcategory: .init(name: "Bark")), color: .black, material: "Lace", description: "Nice one", brand: "Gucci", dateOfPurchase: .now, receipt: nil, imageName: "clothe5")
     ]
+    
+}
+
+struct ClotheCategory: Hashable, Codable {
+    var name: String
+    var subcategories: [Subcategory]
+}
+
+extension ClotheCategory {
+    static var categoriesMock: [ClotheCategory] = [.init(name: "Category1", subcategories: [.init(name: "Suby1cc"),
+                                                                                         .init(name: "Suby1ss")]),
+                                                   .init(name: "Category2", subcategories: [.init(name: "Suby2aa"),
+                                                                                        .init(name: "Suby2ss"),
+                                                                                        .init(name: "Suby2dd"),
+                                                                                        .init(name: "Suby2cc")]),
+                                                   .init(name: "Category3", subcategories: [.init(name: "Suby3rr"),
+                                                                                       .init(name: "Suby3yy"),
+                                                                                       .init(name: "Suby3tt"),
+                                                                                       .init(name: "Suby3rr"),
+                                                                                       .init(name: "Suby3uu")])]
 }

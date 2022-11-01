@@ -9,6 +9,9 @@ import SwiftUI
 
 struct WardrobeView: View {
     @StateObject var viewModel = WardrobeViewModel()
+    @State private var isAddNewOpen = false
+    @State private var isStatsOpen = false
+    @State private var isOutfitsOpen = false
     
     var body: some View {
         NavigationView {
@@ -21,15 +24,24 @@ struct WardrobeView: View {
                     HStack {
                         Spacer()
                         FloatingButton(showMenuItems: $viewModel.menuButtonExpanded,
-                                       action1: {
-                            print("One")
+                                       addNewAction: {
+                            isAddNewOpen.toggle()
                         },
-                                       action2: {
-                            print("Two")
+                                       statsAction: {
+                            isStatsOpen.toggle()
                         },
-                                       action3: {
-                            print("Three")
+                                       outfitsAction: {
+                            isOutfitsOpen.toggle()
                         })
+                        .fullScreenCover(isPresented: $isAddNewOpen) {
+                            AddNewClotheView()
+                        }
+                        .fullScreenCover(isPresented: $isStatsOpen) {
+                            AddNewClotheView()
+                        }
+                        .fullScreenCover(isPresented: $isOutfitsOpen) {
+                            AddNewClotheView()
+                        }
                     }
                     .padding()
                 }

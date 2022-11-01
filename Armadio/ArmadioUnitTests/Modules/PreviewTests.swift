@@ -27,7 +27,7 @@ final class PreviewTests: XCTestCase {
     }
     
     func test_ContinueButton_Previews() {
-        _ = ContinueButton_Previews.previews
+        _ = PrimaryButton_Previews.previews
     }
     
     func test_SelectYourCountryView_Previews() {

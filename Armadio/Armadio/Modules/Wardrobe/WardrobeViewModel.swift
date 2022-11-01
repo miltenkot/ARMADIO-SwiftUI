@@ -15,7 +15,7 @@ final class WardrobeViewModel: ObservableObject {
     var categories: [String: [Clothe]] {
         Dictionary(
             grouping: clothes,
-            by: { $0.category.rawValue }
+            by: { $0.category.name }
         )
     }
     

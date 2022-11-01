@@ -1,5 +1,5 @@
 //
-//  ContinueButton.swift
+//  PrimaryButton.swift
 //  Armadio
 //
 //  Created by Bartłomiej on 27/10/2022.
@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct ContinueButton: View {
+struct PrimaryButton: View {
     let text: String
     let foregroundColor: Color
     let backgroundColor: Color
     let imageName: String?
     let action: () -> Void
     
-    init(text: String, foregroundColor: Color, backgroundColor: Color, imageName: String? = nil, action: @escaping () -> Void) {
+    init(text: String,
+         foregroundColor: Color = .themeColor(.primaryButtonFColor),
+         backgroundColor: Color = .themeColor(.primaryButtonBColor),
+         imageName: String? = nil, action: @escaping () -> Void) {
         self.text = text
         self.foregroundColor = foregroundColor
         self.backgroundColor = backgroundColor
@@ -38,12 +41,11 @@ struct ContinueButton: View {
     }
 }
 
-struct ContinueButton_Previews: PreviewProvider {
+struct PrimaryButton_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContinueButton(text: "Default", foregroundColor: .white, backgroundColor: .blue, imageName: "applelogo", action: {})
-            ContinueButton(text: "Default", foregroundColor: .white, backgroundColor: .blue, action: {})
+            PrimaryButton(text: "Default", foregroundColor: .white, backgroundColor: .blue, imageName: "applelogo", action: {})
+            PrimaryButton(text: "Default", foregroundColor: .white, backgroundColor: .blue, action: {})
         }
-        
     }
 }

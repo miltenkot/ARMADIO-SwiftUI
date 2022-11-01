@@ -76,7 +76,7 @@ struct SelectYourCountryView: View {
                 
                 Spacer()
                 
-                ContinueButton(text: "SelectYourCountryView_Continue".localized,
+                PrimaryButton(text: "SelectYourCountryView_Continue".localized,
                                foregroundColor: Color.themeColor(.primaryButtonFColor),
                                backgroundColor: .blue,
                                imageName: nil) {

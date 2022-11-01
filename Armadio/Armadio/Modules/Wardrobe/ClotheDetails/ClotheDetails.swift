@@ -47,7 +47,7 @@ struct ClotheDetails: View {
             }
             .padding()
         }
-        .navigationTitle(clothe.category.rawValue.uppercased())
+        .navigationTitle(clothe.category.name.uppercased())
         .navigationBarTitleDisplayMode(.inline)
     }
 }

@@ -10,17 +10,17 @@ import SwiftUI
 struct FloatingButton: View {
     @Binding var showMenuItems: Bool
     
-    let action1: () -> Void
-    let action2: () -> Void
-    let action3: () -> Void
+    let addNewAction: () -> Void
+    let statsAction: () -> Void
+    let outfitsAction: () -> Void
 
     var body: some View {
         VStack(alignment: .trailing) {
             Spacer()
             if showMenuItems {
-                ButtonMenuItem(action: action1, icon: "plus.circle.fill", name: "Add new")
-                ButtonMenuItem(action: action2, icon: "photo.on.rectangle", name: "Stats")
-                ButtonMenuItem(action: action3, icon: "square.and.arrow.up.fill", name: "Outfits")
+                ButtonMenuItem(action: addNewAction, icon: "plus.circle.fill", name: "Add new")
+                ButtonMenuItem(action: statsAction, icon: "photo.on.rectangle", name: "Stats")
+                ButtonMenuItem(action: outfitsAction, icon: "square.and.arrow.up.fill", name: "Outfits")
             }
             Button(action: {
                 self.showMenu()
@@ -43,8 +43,8 @@ struct FloatingButton: View {
 struct FloatingButton_Previews: PreviewProvider {
     static var previews: some View {
         FloatingButton(showMenuItems: .constant(true),
-                       action1: {},
-                       action2: {},
-                       action3: {})
+                       addNewAction: {},
+                       statsAction: {},
+                       outfitsAction: {})
     }
 }
