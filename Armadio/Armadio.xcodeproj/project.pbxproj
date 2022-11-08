@@ -12,6 +12,7 @@
 		131AA9252919726100C876C2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 131AA9242919726100C876C2 /* FirebaseAnalytics */; };
 		131AA9272919726100C876C2 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 131AA9262919726100C876C2 /* FirebaseCrashlytics */; };
 		131AA92C291A847F00C876C2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 131AA92B291A847F00C876C2 /* FirebaseAuth */; };
+		131AA92E291A87B200C876C2 /* FirebaseAnaliticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131AA92D291A87B200C876C2 /* FirebaseAnaliticsProvider.swift */; };
 		1358839829102116009C8531 /* Clothe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839729102116009C8531 /* Clothe.swift */; };
 		1358839B29102136009C8531 /* WardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839A29102136009C8531 /* WardrobeView.swift */; };
 		1358839D291023E1009C8531 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839C291023E1009C8531 /* Receipt.swift */; };
@@ -82,6 +83,7 @@
 /* Begin PBXFileReference section */
 		13163D8C29193D42008D18F3 /* NavigationPickerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerLabel.swift; sourceTree = "<group>"; };
 		131AA9212919717C00C876C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		131AA92D291A87B200C876C2 /* FirebaseAnaliticsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnaliticsProvider.swift; sourceTree = "<group>"; };
 		1358839729102116009C8531 /* Clothe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Clothe.swift; path = Armadio/Model/Clothe.swift; sourceTree = SOURCE_ROOT; };
 		1358839A29102136009C8531 /* WardrobeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WardrobeView.swift; sourceTree = "<group>"; };
 		1358839C291023E1009C8531 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				13873039290AF6170049D1D2 /* CountryFlagProvider.swift */,
+				131AA92D291A87B200C876C2 /* FirebaseAnaliticsProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				13872FEF290ACA7E0049D1D2 /* ContentView.swift in Sources */,
 				135883AF2910FFAA009C8531 /* FloatingButton.swift in Sources */,
 				135883A129102744009C8531 /* Color+Codable.swift in Sources */,
+				131AA92E291A87B200C876C2 /* FirebaseAnaliticsProvider.swift in Sources */,
 				135883A429103D72009C8531 /* ClotheRow.swift in Sources */,
 				1387300F290ADAA20049D1D2 /* NavigationButton.swift in Sources */,
 				135883A629103EDD009C8531 /* ClotheItem.swift in Sources */,

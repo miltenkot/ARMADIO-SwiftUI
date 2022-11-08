@@ -7,8 +7,14 @@
 
 import SwiftUI
 import PhotosUI
+import Factory
 
 final class AddNewClotheViewModel: ObservableObject {
+    // MARK: - Injected
+    
+    @Injected(Container.firebaseAnaliticsProvider) private var firebaseAnaliticsProvider
+    
+    // MARK: - Properties
     @Published var selectedImageData: Data? = nil
     @Published var selectedCategory: Category = .init(name: "Dresses", subcategory: .init(name: "Short"))
     @Published var selectedBrand: String = "Gucci"
@@ -21,4 +27,8 @@ final class AddNewClotheViewModel: ObservableObject {
     let sizes: [String] = ["XSS", "XS", "S", "M", "L", "XL", "XLL"]
     let brands: [String] = ["Gucci", "Luis", "Micheal Kors", "Armani", "TOmmy", "Adidas", "Nike"]
     
+    
+    func logEvent(_ string: String) {
+        firebaseAnaliticsProvider.logSaveAction(amount: string)
+    }
 }

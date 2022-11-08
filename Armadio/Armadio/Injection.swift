@@ -9,6 +9,7 @@ import Factory
 
 extension Container {
     static let countryFlagProvider = Factory<CountryFlagProvider> { CountryFlagProviderImpl() }
+    static let firebaseAnaliticsProvider = Factory<FirebaseAnaliticsProvider> { FirebaseAnaliticsProviderImpl() }
 }
 
 //MARK: Unit tests helpers

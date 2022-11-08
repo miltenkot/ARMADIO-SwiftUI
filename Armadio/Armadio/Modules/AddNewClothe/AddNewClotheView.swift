@@ -7,7 +7,6 @@
 
 import SwiftUI
 import PhotosUI
-import Firebase
 
 enum Route: Hashable {
     case price
@@ -58,9 +57,7 @@ struct AddNewClotheView: View {
                 
                 
                 PrimaryButton(text: "Save", foregroundColor: .themeColor(.primaryButtonFColor), backgroundColor: .themeColor(.primaryButtonBColor)) {
-                    FirebaseAnalytics.Analytics.logEvent("add_new_clothe_save_button_tapped",
-                                                         parameters: [AnalyticsParameterScreenName: "add_new_clothe_view",
-                                                                      "clothe_price": "\(viewModel.selectedPrice.amount)"])
+                    viewModel.logEvent("\(viewModel.selectedPrice.amount)")
                 }.padding(.horizontal)
             }
             .navigationDestination(for: Route.self, destination: { route in
