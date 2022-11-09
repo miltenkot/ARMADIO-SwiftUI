@@ -12,14 +12,15 @@ struct ClotheItem: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            clothe.image
+            imageView
                 .renderingMode(.original)
                 .resizable()
+                .scaledToFill()
                 .frame(width: 155, height: 155)
                 .cornerRadius(5)
             HStack {
-                Text(clothe.brand)
-                Text("\(clothe.price.amount, specifier: "%.2f") \(clothe.price.currency.rawValue.uppercased())")
+                Text(clothe.brand ?? "")
+                Text("\(clothe.price?.amount ?? 0.00, specifier: "%.2f") \(clothe.price?.currency.rawValue.uppercased() ?? "PLN")")
             }
             .foregroundColor(.primary)
             .font(.caption)
@@ -27,11 +28,19 @@ struct ClotheItem: View {
         }
         .padding(.leading, 15)
     }
+    
+    private var imageView: Image {
+        if let imageData = clothe.image {
+            return Image(uiImage: UIImage(data: imageData)!)
+        } else {
+            return Image("clothe1")
+        }
+    }
 }
 
 struct ClotheItem_Previews: PreviewProvider {
-    static var clothes = Clothe.clothesMock
+    
     static var previews: some View {
-        ClotheItem(clothe: clothes[0])
+        ClotheItem(clothe: Clothe.mock)
     }
 }

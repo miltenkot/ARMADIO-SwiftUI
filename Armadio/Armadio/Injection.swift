@@ -6,10 +6,12 @@
 //
 
 import Factory
+import CoreData
 
 extension Container {
     static let countryFlagProvider = Factory<CountryFlagProvider> { CountryFlagProviderImpl() }
     static let firebaseAnaliticsProvider = Factory<FirebaseAnaliticsProvider> { FirebaseAnaliticsProviderImpl() }
+    static let clotheDataProvider = Factory<ClotheDataProvider> { ClotheDataProviderImpl() }
 }
 
 //MARK: Unit tests helpers

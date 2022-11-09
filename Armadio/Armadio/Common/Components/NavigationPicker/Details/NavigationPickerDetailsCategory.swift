@@ -9,16 +9,16 @@ import SwiftUI
 
 struct NavigationPickerDetailsCategory: View {
     @Environment(\.dismiss) var dismiss
-    @Binding var bindCategory: Category
+    @Binding var bindCategory: LocalCategory
     @State private var effectAppear = false
     @State private var isDisplayedCategory: Bool = false
     @State private var isDisplayedSubCategory: Bool = false
     private var categories = ClotheCategory.categoriesMock
     @State private var category: ClotheCategory = ClotheCategory.categoriesMock[0]
-    @State private var  subcategory: Subcategory = ClotheCategory.categoriesMock[0].subcategories[0]
+    @State private var  subcategory: LocalSubcategory = ClotheCategory.categoriesMock[0].subcategories[0]
     private let title: String = "Category"
     
-    init(bindCategory: Binding<Category>) {
+    init(bindCategory: Binding<LocalCategory>) {
         self._bindCategory = bindCategory
     }
     
@@ -101,7 +101,7 @@ struct NavigationPickerDetailsCategory: View {
                 Spacer()
                 
                 PrimaryButton(text: "Save") {
-                    bindCategory = Category(name: category.name, subcategory: .init(name: subcategory.name))
+                    bindCategory = LocalCategory(name: category.name, subcategory: .init(name: subcategory.name))
                     dismiss()
                 }
             }

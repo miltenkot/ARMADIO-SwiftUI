@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A380" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="Category" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="clothe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Clothe" inverseName="category" inverseEntity="Clothe"/>
+        <relationship name="subcategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Subcategory" inverseName="category" inverseEntity="Subcategory"/>
+    </entity>
+    <entity name="Clothe" representedClassName="Clothe" syncable="YES">
+        <attribute name="brand" optional="YES" attributeType="String"/>
+        <attribute name="colorValue" optional="YES" attributeType="String" valueTransformerName="ColorTransformer" customClassName="UIColor"/>
+        <attribute name="dateOfPurchase" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="material" optional="YES" attributeType="String"/>
+        <attribute name="size" optional="YES" attributeType="String"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="clothe" inverseEntity="Category"/>
+        <relationship name="price" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Price" inverseName="clothe" inverseEntity="Price"/>
+        <relationship name="receipt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Receipt" inverseName="clothe" inverseEntity="Receipt"/>
+    </entity>
+    <entity name="Price" representedClassName="Price" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="currencyValue" optional="YES" attributeType="String"/>
+        <relationship name="clothe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Clothe" inverseName="price" inverseEntity="Clothe"/>
+    </entity>
+    <entity name="Receipt" representedClassName="Receipt" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <relationship name="clothe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Clothe" inverseName="receipt" inverseEntity="Clothe"/>
+    </entity>
+    <entity name="Subcategory" representedClassName="Subcategory" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="subcategory" inverseEntity="Category"/>
+    </entity>
+</model>

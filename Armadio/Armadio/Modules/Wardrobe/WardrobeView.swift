@@ -9,73 +9,82 @@ import SwiftUI
 
 struct WardrobeView: View {
     @StateObject var viewModel = WardrobeViewModel()
-    @State private var isAddNewOpen = false
-    @State private var isStatsOpen = false
-    @State private var isOutfitsOpen = false
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var clothes: FetchedResults<Clothe>
+    
+    var categories: [String: [Clothe]] {
+        Dictionary(
+            grouping: clothes,
+            by: { $0.category?.name ?? "Category Name" }
+        )
+    }
     
     var body: some View {
         NavigationView {
             ZStack {
-                content
-                    .navigationTitle("WardrobeView_Wardrobe".localized)
-                    .blur(radius: viewModel.menuButtonExpanded ? 5 : 0)
+                Group {
+                    if !clothes.isEmpty {
+                        List {
+                            Image(uiImage: UIImage(data: clothes[0].image!)!)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(height: 200)
+                                .clipped()
+                                .listRowInsets(EdgeInsets())
+                            
+                            ForEach(categories.keys.sorted(), id: \.self) { key in
+                                ClotheRow(categoryName: key, items: clothes)
+                                    .padding(.vertical)
+                            }
+                            .listRowInsets(EdgeInsets())
+                        }
+                    } else {
+                        Text("No content")
+                            .textStyle(TitleStyle())
+                    }
+                }
+                .navigationTitle("WardrobeView_Wardrobe".localized)
+                .blur(radius: viewModel.menuButtonExpanded ? 5 : 0)
                 VStack {
                     Spacer()
                     HStack {
                         Spacer()
                         FloatingButton(showMenuItems: $viewModel.menuButtonExpanded,
                                        addNewAction: {
-                            isAddNewOpen.toggle()
+                            viewModel.isAddNewOpen.toggle()
                         },
                                        statsAction: {
-                            isStatsOpen.toggle()
+                            viewModel.isStatsOpen.toggle()
                         },
                                        outfitsAction: {
-                            isOutfitsOpen.toggle()
+                            viewModel.isOutfitsOpen.toggle()
                         })
-                        .fullScreenCover(isPresented: $isAddNewOpen) {
+                        .fullScreenCover(isPresented: $viewModel.isAddNewOpen) {
                             AddNewClotheView()
                         }
-                        .fullScreenCover(isPresented: $isStatsOpen) {
+                        .fullScreenCover(isPresented: $viewModel.isStatsOpen) {
                             AddNewClotheView()
                         }
-                        .fullScreenCover(isPresented: $isOutfitsOpen) {
+                        .fullScreenCover(isPresented: $viewModel.isOutfitsOpen) {
                             AddNewClotheView()
                         }
                     }
                     .padding()
                 }
-                
             }
-            
         }
     }
-    
-    @ViewBuilder
-    var content: some View {
-        if !viewModel.clothes.isEmpty {
-            List {
-                viewModel.clothes[0].image
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 200)
-                    .clipped()
-                    .listRowInsets(EdgeInsets())
-                ForEach(viewModel.categories.keys.sorted(), id: \.self) { key in
-                    ClotheRow(categoryName: key, items: viewModel.categories[key] ?? [])
-                        .padding(.vertical)
-                }
-                .listRowInsets(EdgeInsets())
-            }
-        } else {
-            Text("No content")
-        }
-    }
-    
 }
 
 struct WardrobeView_Previews: PreviewProvider {
+    static var coreDataStack = CoreDataStack.preview
+    
     static var previews: some View {
-        WardrobeView()
+        Group {
+            WardrobeView()
+                .environment(\.managedObjectContext, coreDataStack.container.viewContext)
+            WardrobeView()
+        }
+        
     }
 }

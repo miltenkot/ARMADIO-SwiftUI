@@ -13,9 +13,10 @@
 		131AA9272919726100C876C2 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 131AA9262919726100C876C2 /* FirebaseCrashlytics */; };
 		131AA92C291A847F00C876C2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 131AA92B291A847F00C876C2 /* FirebaseAuth */; };
 		131AA92E291A87B200C876C2 /* FirebaseAnaliticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131AA92D291A87B200C876C2 /* FirebaseAnaliticsProvider.swift */; };
-		1358839829102116009C8531 /* Clothe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839729102116009C8531 /* Clothe.swift */; };
+		131AA932291AA4EB00C876C2 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131AA931291AA4EB00C876C2 /* CoreDataStack.swift */; };
+		131AA935291AA87500C876C2 /* Armadio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 131AA933291AA87500C876C2 /* Armadio.xcdatamodeld */; };
+		1358839829102116009C8531 /* LocalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839729102116009C8531 /* LocalModels.swift */; };
 		1358839B29102136009C8531 /* WardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839A29102136009C8531 /* WardrobeView.swift */; };
-		1358839D291023E1009C8531 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839C291023E1009C8531 /* Receipt.swift */; };
 		1358839F291025D3009C8531 /* WardrobeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839E291025D3009C8531 /* WardrobeViewModel.swift */; };
 		135883A129102744009C8531 /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883A029102744009C8531 /* Color+Codable.swift */; };
 		135883A429103D72009C8531 /* ClotheRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883A329103D72009C8531 /* ClotheRow.swift */; };
@@ -58,12 +59,26 @@
 		13A3A920290D0A9900A49D99 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A91F290D0A9900A49D99 /* Shake.swift */; };
 		13A3A924290D10B800A49D99 /* RequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A923290D10B800A49D99 /* RequiredView.swift */; };
 		13A3A927290D2B1C00A49D99 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A926290D2B1C00A49D99 /* HomeView.swift */; };
+		13A4C20229219B7500056034 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4C20129219B7500056034 /* ScannerView.swift */; };
+		13A4C20529219CDD00056034 /* ScannerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4C20429219CDD00056034 /* ScannerDetailsView.swift */; };
+		13A4C2072922299A00056034 /* ClotheDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4C2062922299A00056034 /* ClotheDataProvider.swift */; };
+		13A4C20A2922303800056034 /* PhotosPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4C2092922303800056034 /* PhotosPickerView.swift */; };
 		13AA6FB52918393B006BBDAA /* NavigationPickerDetailsDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA6FB42918393B006BBDAA /* NavigationPickerDetailsDate.swift */; };
 		13AE6F0C2912A03800D8FABA /* AddNewClotheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE6F0B2912A03800D8FABA /* AddNewClotheViewModel.swift */; };
 		13B8E8F82914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B8E8F72914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift */; };
 		13B8E8FE2915763600F3FDDC /* NavigationPickerDetailsPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B8E8FD2915763600F3FDDC /* NavigationPickerDetailsPrice.swift */; };
 		13B8E9002915899000F3FDDC /* NavigationPickerDetailsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B8E8FF2915899000F3FDDC /* NavigationPickerDetailsCategory.swift */; };
 		13B8E909291670E300F3FDDC /* NavigationPickerDetailsDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B8E908291670E300F3FDDC /* NavigationPickerDetailsDefault.swift */; };
+		13F8921E291E484F00A2E2F1 /* Price+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8921C291E484F00A2E2F1 /* Price+CoreDataClass.swift */; };
+		13F8921F291E484F00A2E2F1 /* Price+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8921D291E484F00A2E2F1 /* Price+CoreDataProperties.swift */; };
+		13F89222291E49BB00A2E2F1 /* Clothe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F89220291E49BB00A2E2F1 /* Clothe+CoreDataClass.swift */; };
+		13F89223291E49BB00A2E2F1 /* Clothe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F89221291E49BB00A2E2F1 /* Clothe+CoreDataProperties.swift */; };
+		13F8922D291E5C6B00A2E2F1 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F89227291E5C6B00A2E2F1 /* Category+CoreDataClass.swift */; };
+		13F8922E291E5C6B00A2E2F1 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F89228291E5C6B00A2E2F1 /* Category+CoreDataProperties.swift */; };
+		13F8922F291E5C6B00A2E2F1 /* Subcategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F89229291E5C6B00A2E2F1 /* Subcategory+CoreDataClass.swift */; };
+		13F89230291E5C6B00A2E2F1 /* Subcategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8922A291E5C6B00A2E2F1 /* Subcategory+CoreDataProperties.swift */; };
+		13F89231291E5C6B00A2E2F1 /* Receipt+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8922B291E5C6B00A2E2F1 /* Receipt+CoreDataClass.swift */; };
+		13F89232291E5C6B00A2E2F1 /* Receipt+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8922C291E5C6B00A2E2F1 /* Receipt+CoreDataProperties.swift */; };
 		2AA4849A290E70E900EC4814 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 2AA48499290E70E900EC4814 /* Factory */; };
 		2AA4849C290E77DE00EC4814 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4849B290E77DE00EC4814 /* Injection.swift */; };
 		2AE863D2290FB57B00EA1B4B /* SelectYourCountryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE863D1290FB57B00EA1B4B /* SelectYourCountryViewModelTests.swift */; };
@@ -84,9 +99,10 @@
 		13163D8C29193D42008D18F3 /* NavigationPickerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerLabel.swift; sourceTree = "<group>"; };
 		131AA9212919717C00C876C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		131AA92D291A87B200C876C2 /* FirebaseAnaliticsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnaliticsProvider.swift; sourceTree = "<group>"; };
-		1358839729102116009C8531 /* Clothe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Clothe.swift; path = Armadio/Model/Clothe.swift; sourceTree = SOURCE_ROOT; };
+		131AA931291AA4EB00C876C2 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		131AA934291AA87500C876C2 /* Armadio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Armadio.xcdatamodel; sourceTree = "<group>"; };
+		1358839729102116009C8531 /* LocalModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalModels.swift; path = Armadio/Model/LocalModels.swift; sourceTree = SOURCE_ROOT; };
 		1358839A29102136009C8531 /* WardrobeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WardrobeView.swift; sourceTree = "<group>"; };
-		1358839C291023E1009C8531 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		1358839E291025D3009C8531 /* WardrobeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeViewModel.swift; sourceTree = "<group>"; };
 		135883A029102744009C8531 /* Color+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
 		135883A329103D72009C8531 /* ClotheRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClotheRow.swift; sourceTree = "<group>"; };
@@ -130,12 +146,27 @@
 		13A3A91F290D0A9900A49D99 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		13A3A923290D10B800A49D99 /* RequiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredView.swift; sourceTree = "<group>"; };
 		13A3A926290D2B1C00A49D99 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		13A4C20129219B7500056034 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		13A4C20429219CDD00056034 /* ScannerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerDetailsView.swift; sourceTree = "<group>"; };
+		13A4C2062922299A00056034 /* ClotheDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClotheDataProvider.swift; sourceTree = "<group>"; };
+		13A4C2092922303800056034 /* PhotosPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerView.swift; sourceTree = "<group>"; };
 		13AA6FB42918393B006BBDAA /* NavigationPickerDetailsDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerDetailsDate.swift; sourceTree = "<group>"; };
 		13AE6F0B2912A03800D8FABA /* AddNewClotheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewClotheViewModel.swift; sourceTree = "<group>"; };
 		13B8E8F72914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerDetailsDescription.swift; sourceTree = "<group>"; };
 		13B8E8FD2915763600F3FDDC /* NavigationPickerDetailsPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerDetailsPrice.swift; sourceTree = "<group>"; };
 		13B8E8FF2915899000F3FDDC /* NavigationPickerDetailsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerDetailsCategory.swift; sourceTree = "<group>"; };
 		13B8E908291670E300F3FDDC /* NavigationPickerDetailsDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerDetailsDefault.swift; sourceTree = "<group>"; };
+		13F8921C291E484F00A2E2F1 /* Price+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Price+CoreDataClass.swift"; sourceTree = "<group>"; };
+		13F8921D291E484F00A2E2F1 /* Price+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Price+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		13F89220291E49BB00A2E2F1 /* Clothe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clothe+CoreDataClass.swift"; sourceTree = "<group>"; };
+		13F89221291E49BB00A2E2F1 /* Clothe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clothe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		13F89227291E5C6B00A2E2F1 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		13F89228291E5C6B00A2E2F1 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		13F89229291E5C6B00A2E2F1 /* Subcategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subcategory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		13F8922A291E5C6B00A2E2F1 /* Subcategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subcategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		13F8922B291E5C6B00A2E2F1 /* Receipt+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataClass.swift"; sourceTree = "<group>"; };
+		13F8922C291E5C6B00A2E2F1 /* Receipt+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		13F89233291E955400A2E2F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2AA4849B290E77DE00EC4814 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		2AE863D1290FB57B00EA1B4B /* SelectYourCountryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectYourCountryViewModelTests.swift; sourceTree = "<group>"; };
 		2AE863D4290FB9A800EA1B4B /* CountryListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModelTests.swift; sourceTree = "<group>"; };
@@ -171,11 +202,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		131AA930291AA47800C876C2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				133BA3E2291B8D4300C51154 /* Entities */,
+				131AA931291AA4EB00C876C2 /* CoreDataStack.swift */,
+				131AA933291AA87500C876C2 /* Armadio.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		133BA3E2291B8D4300C51154 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				13F89226291E5C4300A2E2F1 /* Receipt */,
+				13F89225291E5C3600A2E2F1 /* Subcategory */,
+				13F89224291E5C3100A2E2F1 /* Category */,
+				13F89213291E45CC00A2E2F1 /* Price */,
+				13F89206291E27CA00A2E2F1 /* Clothe */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		13588396291020F8009C8531 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1358839729102116009C8531 /* Clothe.swift */,
-				1358839C291023E1009C8531 /* Receipt.swift */,
+				1358839729102116009C8531 /* LocalModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,6 +300,8 @@
 		13872FEB290ACA7E0049D1D2 /* Armadio */ = {
 			isa = PBXGroup;
 			children = (
+				13F89233291E955400A2E2F1 /* Info.plist */,
+				131AA930291AA47800C876C2 /* CoreData */,
 				13588396291020F8009C8531 /* Models */,
 				13872FF2290ACA800049D1D2 /* Preview Content */,
 				13873041290BE52A0049D1D2 /* Assets */,
@@ -324,6 +378,8 @@
 		13873018290ADB0F0049D1D2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				13A4C2082922301F00056034 /* PhotosPickerView */,
+				13A4C20329219C9F00056034 /* ReceiptScanner */,
 				135883B329111122009C8531 /* AddNewClothe */,
 				1358839929102136009C8531 /* Wardrobe */,
 				13A3A925290D2AD500A49D99 /* Home */,
@@ -412,6 +468,7 @@
 			children = (
 				13873039290AF6170049D1D2 /* CountryFlagProvider.swift */,
 				131AA92D291A87B200C876C2 /* FirebaseAnaliticsProvider.swift */,
+				13A4C2062922299A00056034 /* ClotheDataProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -452,6 +509,23 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		13A4C20329219C9F00056034 /* ReceiptScanner */ = {
+			isa = PBXGroup;
+			children = (
+				13A4C20129219B7500056034 /* ScannerView.swift */,
+				13A4C20429219CDD00056034 /* ScannerDetailsView.swift */,
+			);
+			path = ReceiptScanner;
+			sourceTree = "<group>";
+		};
+		13A4C2082922301F00056034 /* PhotosPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				13A4C2092922303800056034 /* PhotosPickerView.swift */,
+			);
+			path = PhotosPickerView;
+			sourceTree = "<group>";
+		};
 		13B8E8F62914FAB900F3FDDC /* NavigationPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +556,51 @@
 				13AA6FB42918393B006BBDAA /* NavigationPickerDetailsDate.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		13F89206291E27CA00A2E2F1 /* Clothe */ = {
+			isa = PBXGroup;
+			children = (
+				13F89220291E49BB00A2E2F1 /* Clothe+CoreDataClass.swift */,
+				13F89221291E49BB00A2E2F1 /* Clothe+CoreDataProperties.swift */,
+			);
+			path = Clothe;
+			sourceTree = "<group>";
+		};
+		13F89213291E45CC00A2E2F1 /* Price */ = {
+			isa = PBXGroup;
+			children = (
+				13F8921C291E484F00A2E2F1 /* Price+CoreDataClass.swift */,
+				13F8921D291E484F00A2E2F1 /* Price+CoreDataProperties.swift */,
+			);
+			path = Price;
+			sourceTree = "<group>";
+		};
+		13F89224291E5C3100A2E2F1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				13F89227291E5C6B00A2E2F1 /* Category+CoreDataClass.swift */,
+				13F89228291E5C6B00A2E2F1 /* Category+CoreDataProperties.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		13F89225291E5C3600A2E2F1 /* Subcategory */ = {
+			isa = PBXGroup;
+			children = (
+				13F89229291E5C6B00A2E2F1 /* Subcategory+CoreDataClass.swift */,
+				13F8922A291E5C6B00A2E2F1 /* Subcategory+CoreDataProperties.swift */,
+			);
+			path = Subcategory;
+			sourceTree = "<group>";
+		};
+		13F89226291E5C4300A2E2F1 /* Receipt */ = {
+			isa = PBXGroup;
+			children = (
+				13F8922B291E5C6B00A2E2F1 /* Receipt+CoreDataClass.swift */,
+				13F8922C291E5C6B00A2E2F1 /* Receipt+CoreDataProperties.swift */,
+			);
+			path = Receipt;
 			sourceTree = "<group>";
 		};
 		2AE863D0290FB56A00EA1B4B /* SelectYourCountry */ = {
@@ -629,7 +748,6 @@
 				135883A629103EDD009C8531 /* ClotheItem.swift in Sources */,
 				135883B2291108AF009C8531 /* ButtonMenuItem.swift in Sources */,
 				13B8E8F82914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift in Sources */,
-				1358839D291023E1009C8531 /* Receipt.swift in Sources */,
 				13873022290ADBA60049D1D2 /* GetStartedViewModel.swift in Sources */,
 				135883B729112FAF009C8531 /* ColorPickerDetails.swift in Sources */,
 				135883AB291043F6009C8531 /* CircleImage.swift in Sources */,
@@ -638,8 +756,13 @@
 				13873017290ADAF60049D1D2 /* TextStyles.swift in Sources */,
 				13AE6F0C2912A03800D8FABA /* AddNewClotheViewModel.swift in Sources */,
 				1358839F291025D3009C8531 /* WardrobeViewModel.swift in Sources */,
+				13A4C20529219CDD00056034 /* ScannerDetailsView.swift in Sources */,
+				13F89231291E5C6B00A2E2F1 /* Receipt+CoreDataClass.swift in Sources */,
 				135883AD29104599009C8531 /* FavoriteButton.swift in Sources */,
 				13873020290ADB910049D1D2 /* GetStartedView.swift in Sources */,
+				13A4C20229219B7500056034 /* ScannerView.swift in Sources */,
+				13F8922D291E5C6B00A2E2F1 /* Category+CoreDataClass.swift in Sources */,
+				13A4C2072922299A00056034 /* ClotheDataProvider.swift in Sources */,
 				1358839B29102136009C8531 /* WardrobeView.swift in Sources */,
 				13873015290ADAE30049D1D2 /* ButtonStyles.swift in Sources */,
 				13873012290ADAC70049D1D2 /* Inspection.swift in Sources */,
@@ -648,19 +771,30 @@
 				13873049290C225A0049D1D2 /* LoginOptionsViewModel.swift in Sources */,
 				135883A82910402A009C8531 /* ClotheDetails.swift in Sources */,
 				13A3A924290D10B800A49D99 /* RequiredView.swift in Sources */,
-				1358839829102116009C8531 /* Clothe.swift in Sources */,
+				13F89222291E49BB00A2E2F1 /* Clothe+CoreDataClass.swift in Sources */,
+				1358839829102116009C8531 /* LocalModels.swift in Sources */,
+				131AA932291AA4EB00C876C2 /* CoreDataStack.swift in Sources */,
 				13873026290ADBFE0049D1D2 /* SelectYourCountryView.swift in Sources */,
+				13F8922E291E5C6B00A2E2F1 /* Category+CoreDataProperties.swift in Sources */,
 				135883B529111133009C8531 /* AddNewClotheView.swift in Sources */,
 				1387301E290ADB7B0049D1D2 /* LoginView.swift in Sources */,
 				13AA6FB52918393B006BBDAA /* NavigationPickerDetailsDate.swift in Sources */,
 				13B8E909291670E300F3FDDC /* NavigationPickerDetailsDefault.swift in Sources */,
+				13F89230291E5C6B00A2E2F1 /* Subcategory+CoreDataProperties.swift in Sources */,
+				13F89223291E49BB00A2E2F1 /* Clothe+CoreDataProperties.swift in Sources */,
 				1387303A290AF6170049D1D2 /* CountryFlagProvider.swift in Sources */,
+				13A4C20A2922303800056034 /* PhotosPickerView.swift in Sources */,
 				13873037290AEA250049D1D2 /* CheckboxView.swift in Sources */,
+				131AA935291AA87500C876C2 /* Armadio.xcdatamodeld in Sources */,
 				13873024290ADBD60049D1D2 /* LoginOptionsView.swift in Sources */,
 				13A3A927290D2B1C00A49D99 /* HomeView.swift in Sources */,
+				13F89232291E5C6B00A2E2F1 /* Receipt+CoreDataProperties.swift in Sources */,
+				13F8921E291E484F00A2E2F1 /* Price+CoreDataClass.swift in Sources */,
+				13F8921F291E484F00A2E2F1 /* Price+CoreDataProperties.swift in Sources */,
 				13872FED290ACA7E0049D1D2 /* ArmadioApp.swift in Sources */,
 				2AA4849C290E77DE00EC4814 /* Injection.swift in Sources */,
 				13873040290AF9430049D1D2 /* CountryListViewModel.swift in Sources */,
+				13F8922F291E5C6B00A2E2F1 /* Subcategory+CoreDataClass.swift in Sources */,
 				13873043290BE5B10049D1D2 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -814,6 +948,7 @@
 				DEVELOPMENT_TEAM = 9AKL82KSN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Armadio/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -843,6 +978,7 @@
 				DEVELOPMENT_TEAM = 9AKL82KSN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Armadio/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -983,6 +1119,19 @@
 			productName = Factory;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		131AA933291AA87500C876C2 /* Armadio.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				131AA934291AA87500C876C2 /* Armadio.xcdatamodel */,
+			);
+			currentVersion = 131AA934291AA87500C876C2 /* Armadio.xcdatamodel */;
+			path = Armadio.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 13872FE1290ACA7E0049D1D2 /* Project object */;
 }

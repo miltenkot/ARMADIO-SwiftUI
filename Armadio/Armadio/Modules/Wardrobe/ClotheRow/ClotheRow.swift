@@ -9,7 +9,12 @@ import SwiftUI
 
 struct ClotheRow: View {
     var categoryName: String
-    var items: [Clothe]
+    @FetchRequest var items: FetchedResults<Clothe>
+    
+    init(categoryName: String, items: FetchedResults<Clothe>) {
+        self.categoryName = categoryName
+        _items = FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "category.name == %@", categoryName))
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -32,10 +37,4 @@ struct ClotheRow: View {
     }
 }
 
-struct ClotheRow_Previews: PreviewProvider {
-    static var clothes = Clothe.clothesMock
-    static var previews: some View {
-        ClotheRow(categoryName: clothes[0].category.name,
-                   items: Array(clothes.prefix(4)))
-    }
-}
+// MARK: - Create preview

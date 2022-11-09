@@ -9,8 +9,8 @@ import SwiftUI
 
 struct NavigationPickerDetailsPrice: View {
     @Environment(\.dismiss) var dismiss
-    @Binding var bindingPrice: Price
-    @State private var price: Price = .init(amount: 0.0, currency: .pln)
+    @Binding var bindingPrice: LocalPrice
+    @State private var price: LocalPrice = .init(amount: 0.0, currency: .pln)
     @State private var effectAppear = false
     @State private var isDisplayed: Bool = false
     private let title: String = "Price"
@@ -23,7 +23,7 @@ struct NavigationPickerDetailsPrice: View {
         return formatter
     }()
     
-    init(price: Binding<Price>) {
+    init(price: Binding<LocalPrice>) {
         self._bindingPrice = price
     }
     

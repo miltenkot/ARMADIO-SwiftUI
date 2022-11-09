@@ -12,49 +12,111 @@ struct ClotheDetails: View {
     
     var body: some View {
         ScrollView {
-            CircleImage(image: clothe.image)
+            CircleImage(image: imageView)
                 .padding()
             VStack(alignment: .leading) {
                 HStack {
-                    Text(clothe.brand)
+                    Text(clothe.category?.name ?? "No category")
                         .font(.title)
                     FavoriteButton(isSet: .constant(true))
                 }
-                Text(clothe.description)
-                .font(.subheadline)
-                .foregroundColor(.secondary)
+                Text(clothe.category?.subcategory?.name ?? "No subcategory")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
                 Divider()
-                HStack {
-                    Text("Price: ")
-                    Spacer()
-                    Text("\(clothe.price.amount, specifier: "%.2f") \(clothe.price.currency.rawValue.uppercased())")
+                Group {
+                    
+                    if let price = clothe.price {
+                        HStack {
+                            Text("Price: ")
+                            Spacer()
+                            Text("\(price.amount, specifier: "%.2f") \(price.currency.rawValue.uppercased())")
+                        }
+                        Divider()
+                    }
+                    
+                    if let brand = clothe.brand {
+                        HStack {
+                            Text("Brand: ")
+                            Spacer()
+                            Text(brand)
+                        }
+                        Divider()
+                    }
+                    
+                    
+                    if let material = clothe.material {
+                        HStack {
+                            Text("Material: ")
+                            Spacer()
+                            Text(material)
+                        }
+                        Divider()
+                    }
+                    
+                    
+                    if let size = clothe.size {
+                        HStack {
+                            Text("Size: ")
+                            Spacer()
+                            Text(size)
+                        }
+                        Divider()
+                    }
+                    
+                    if let color = clothe.color {
+                        HStack {
+                            Text("Color: ")
+                            Spacer()
+                            Text(color.description)
+                                .padding(.horizontal, 25)
+                                .padding(.vertical, 4)
+                                .foregroundColor(Color.themeColor(.primaryText))
+                                .background(color)
+                                .cornerRadius(4)
+                        }
+                        Divider()
+                    }
+                    
+                    if let dateOfPurchase = clothe.dateOfPurchase {
+                        HStack {
+                            Text("Date Of Purchase: ")
+                            Spacer()
+                            Text(dateOfPurchase.formatted(date: .abbreviated, time: .omitted))
+                        }
+                        Divider()
+                    }
                 }
                 .font(.title3)
-                Divider()
-                HStack {
-                    Text("Material: ")
-                    Spacer()
-                    Text(clothe.material)
+                
+                if let description = clothe.desc {
+                    HStack {
+                        Text("Description: ")
+                            .font(.title3)
+                        Spacer()
+                        Text(description)
+                    }
+                    Divider()
                 }
-                .font(.title3)
-                Divider()
-                HStack {
-                    Text("Date Of Purchase: ")
-                    Spacer()
-                    Text(clothe.dateOfPurchase.formatted(date: .abbreviated, time: .omitted))
-                }
-                .font(.title3)
             }
             .padding()
         }
-        .navigationTitle(clothe.category.name.uppercased())
+        .navigationTitle(clothe.category?.name?.uppercased() ?? "Empty")
         .navigationBarTitleDisplayMode(.inline)
     }
+    
+    private var imageView: Image {
+        if let imageData = clothe.image {
+            return Image(uiImage: UIImage(data: imageData)!)
+        } else {
+            return Image("clothe1")
+        }
+    }
+    
 }
 
 struct ClotheDetails_Previews: PreviewProvider {
-    static var clothes = Clothe.clothesMock
     static var previews: some View {
-        ClotheDetails(clothe: clothes[0])
+        ClotheDetails(clothe: Clothe.mock)
     }
 }

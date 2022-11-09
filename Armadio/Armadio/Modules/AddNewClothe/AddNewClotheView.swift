@@ -6,58 +6,73 @@
 //
 
 import SwiftUI
-import PhotosUI
 
 enum Route: Hashable {
     case price
+    case receipt
     case category
     case color
     case size
     case brand
     case dateOfPurchase
     case description
+    case material
 }
 
 struct AddNewClotheView: View {
     @Environment(\.dismiss) var dismiss
+    @Environment(\.managedObjectContext) var moc
     @StateObject var viewModel = AddNewClotheViewModel()
     
     var body: some View {
         NavigationStack {
             List {
-                //this should be centered
-                PhotosPickerView(selectedItem: $viewModel.selectedItem, selectedImageData: $viewModel.selectedImageData).padding(.horizontal)
-                
-                NavigationLink(value: Route.price) {
-                    NavigationPickerLabel(title: "Price", content: priceLabel)
+                Group {
+                    PhotosPickerView(selectedItem: $viewModel.selectedItem, selectedImageData: $viewModel.selectedImageData).padding(.horizontal)
+                    
+                    NavigationLink(value: Route.price) {
+                        NavigationPickerLabel(title: "Price", content: priceLabel)
+                    }
+                    
+                    NavigationLink(value: Route.receipt) {
+                        NavigationPickerLabel(title: "Receipt", content: scanLabel)
+                    }
+                    
+                    NavigationLink(value: Route.category) {
+                        NavigationPickerLabel(title: "Category", content: categoryLabel)
+                    }
                 }
                 
-                NavigationLink(value: Route.category) {
-                    NavigationPickerLabel(title: "Category", content: categoryLabel)
+                Group {
+                    NavigationLink(value: Route.color) {
+                        NavigationPickerLabel(title: "Color", content: colorLabel)
+                    }
+                    
+                    NavigationLink(value: Route.size) {
+                        NavigationPickerLabel(title: "Size", content: sizeLabel)
+                    }
+                    
+                    NavigationLink(value: Route.brand) {
+                        NavigationPickerLabel(title: "Brand", content: brandLabel)
+                    }
+                    
+                    NavigationLink(value: Route.material) {
+                        NavigationPickerLabel(title: "Material", content: materialLabel)
+                    }
+                    
+                    NavigationLink(value: Route.dateOfPurchase) {
+                        NavigationPickerLabel(title: "Date Of Purchase", content: dateOfPurchaseLabel)
+                    }
+                    
+                    NavigationLink(value: Route.description) {
+                        NavigationPickerLabel(title: "Description", content: descriptionLabel)
+                    }
                 }
-                
-                NavigationLink(value: Route.color) {
-                    NavigationPickerLabel(title: "Color", content: colorLabel)
-                }
-                
-                NavigationLink(value: Route.size) {
-                    NavigationPickerLabel(title: "Size", content: sizeLabel)
-                }
-                
-                NavigationLink(value: Route.brand) {
-                    NavigationPickerLabel(title: "Brand", content: brandLabel)
-                }
-                
-                NavigationLink(value: Route.dateOfPurchase) {
-                    NavigationPickerLabel(title: "Date Of Purchase", content: dateOfPurchaseLabel)
-                }
-                NavigationLink(value: Route.description) {
-                    NavigationPickerLabel(title: "Description", content: descriptionLabel)
-                }
-                
                 
                 PrimaryButton(text: "Save", foregroundColor: .themeColor(.primaryButtonFColor), backgroundColor: .themeColor(.primaryButtonBColor)) {
+                    viewModel.saveClothe(for: moc)
                     viewModel.logEvent("\(viewModel.selectedPrice.amount)")
+                    dismiss()
                 }.padding(.horizontal)
             }
             .navigationDestination(for: Route.self, destination: { route in
@@ -65,6 +80,8 @@ struct AddNewClotheView: View {
                     switch route {
                     case .price:
                         NavigationPickerDetailsPrice(price: $viewModel.selectedPrice)
+                    case .receipt:
+                        ScannerDetailsView(isRecognizing: $viewModel.isReceiptRecognizing, receiptImageData: $viewModel.receiptImageData)
                     case .category:
                         NavigationPickerDetailsCategory(bindCategory: $viewModel.selectedCategory)
                     case .color:
@@ -76,6 +93,10 @@ struct AddNewClotheView: View {
                         NavigationPickerDetailsDefault(title: "Brand",
                                                        items: viewModel.brands,
                                                        item: $viewModel.selectedBrand)
+                    case .material:
+                        NavigationPickerDetailsDefault(title: "Material",
+                                                       items: viewModel.material,
+                                                       item: $viewModel.selectedMaterial)
                     case .dateOfPurchase:
                         NavigationPickerDetailsDate(date: $viewModel.selectedDate)
                     case .description:
@@ -93,38 +114,22 @@ struct AddNewClotheView: View {
                 }
             }
         }
-        
     }
 }
 
-struct PhotosPickerView: View {
-    @Binding var selectedItem: PhotosPickerItem?
-    @Binding var selectedImageData: Data?
-    
-    var body: some View {
-        PhotosPicker(
-            selection: $selectedItem,
-            matching: .images,
-            photoLibrary: .shared()) {
-                if let selectedImageData = selectedImageData,
-                   let uiImage = UIImage(data: selectedImageData) {
-                    CircleImage(image: Image(uiImage: uiImage))
-                } else {
-                    CircleImage(image:(Image(systemName: "photo.circle.fill")))
-                }
-            }.onChange(of: selectedItem, perform: { newValue in
-                Task {
-                    if let data = try? await newValue?.loadTransferable(type: Data.self) {
-                        selectedImageData = data
-                    }
-                }
-            })
-    }
-}
+// MARK: - Labels
 
 extension AddNewClotheView {
     @ViewBuilder private var priceLabel: some View {
         Text("\(viewModel.selectedPrice.amount, specifier: "%.2f")  \(viewModel.selectedPrice.currency.rawValue.uppercased())")
+    }
+    
+    @ViewBuilder private var scanLabel: some View {
+        HStack {
+            Image(systemName: "doc.text.viewfinder")
+                .foregroundColor(viewModel.isReceiptRecognizing ? .green : .themeColor(.primaryText))
+            Text(viewModel.isReceiptRecognizing ? "Saved" : "Empty")
+        }
     }
     
     @ViewBuilder private var categoryLabel: some View {
@@ -146,6 +151,10 @@ extension AddNewClotheView {
     
     @ViewBuilder private var brandLabel: some View {
         Text("\(viewModel.selectedBrand)")
+    }
+    
+    @ViewBuilder private var materialLabel: some View {
+        Text("\(viewModel.selectedMaterial)")
     }
     
     @ViewBuilder private var dateOfPurchaseLabel: some View {

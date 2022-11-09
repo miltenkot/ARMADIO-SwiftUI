@@ -6,18 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class WardrobeViewModel: ObservableObject {
-    @Published var clothes: [Clothe] = Clothe.clothesMock // load from persist
     @Published var categoryName: String = ""
     @Published var menuButtonExpanded: Bool = false
-    
-    var categories: [String: [Clothe]] {
-        Dictionary(
-            grouping: clothes,
-            by: { $0.category.name }
-        )
-    }
-    
-    
+    @Published var isAddNewOpen = false
+    @Published var isStatsOpen = false
+    @Published var isOutfitsOpen = false
+     
 }
