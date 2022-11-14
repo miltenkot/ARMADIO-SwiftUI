@@ -30,8 +30,9 @@ struct ClotheItem: View {
     }
     
     private var imageView: Image {
-        if let imageData = clothe.image {
-            return Image(uiImage: UIImage(data: imageData)!)
+        if let image = clothe.image,
+           let imageData = UIImage(data: image){
+            return Image(uiImage: imageData)
         } else {
             return Image("clothe1")
         }

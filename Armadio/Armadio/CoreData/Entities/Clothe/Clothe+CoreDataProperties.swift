@@ -26,6 +26,7 @@ extension Clothe {
     @NSManaged public var price: Price?
     @NSManaged public var category: Category?
     @NSManaged public var receipt: Receipt?
+    @NSManaged public var stats: Stats?
     @NSManaged fileprivate var colorValue: String?
     var color: Color {
         get {

@@ -21,7 +21,7 @@ enum Route: Hashable {
 
 struct AddNewClotheView: View {
     @Environment(\.dismiss) var dismiss
-    @Environment(\.managedObjectContext) var moc
+    @Environment(\.managedObjectContext) var context
     @StateObject var viewModel = AddNewClotheViewModel()
     
     var body: some View {
@@ -70,7 +70,7 @@ struct AddNewClotheView: View {
                 }
                 
                 PrimaryButton(text: "Save", foregroundColor: .themeColor(.primaryButtonFColor), backgroundColor: .themeColor(.primaryButtonBColor)) {
-                    viewModel.saveClothe(for: moc)
+                    viewModel.saveClothe(for: context)
                     viewModel.logEvent("\(viewModel.selectedPrice.amount)")
                     dismiss()
                 }.padding(.horizontal)
@@ -133,7 +133,7 @@ extension AddNewClotheView {
     }
     
     @ViewBuilder private var categoryLabel: some View {
-        Text("\(viewModel.selectedCategory.name) / \(viewModel.selectedCategory.subcategory.name)")
+        Text("\(viewModel.selectedCategory.name ?? "empty name") / \(viewModel.selectedCategory.subcategory?.name ?? "empty subcategory name")")
     }
     
     @ViewBuilder private var colorLabel: some View {

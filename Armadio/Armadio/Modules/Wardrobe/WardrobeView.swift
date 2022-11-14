@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct WardrobeView: View {
     @StateObject var viewModel = WardrobeViewModel()
-    @Environment(\.managedObjectContext) var moc
+    @Environment(\.managedObjectContext) var context
     @FetchRequest(sortDescriptors: []) var clothes: FetchedResults<Clothe>
     
     var categories: [String: [Clothe]] {
@@ -25,12 +26,14 @@ struct WardrobeView: View {
                 Group {
                     if !clothes.isEmpty {
                         List {
-                            Image(uiImage: UIImage(data: clothes[0].image!)!)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(height: 200)
-                                .clipped()
-                                .listRowInsets(EdgeInsets())
+                            if let imageData = clothes[0].image {
+                                Image(uiImage: UIImage(data: imageData)!)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(height: 200)
+                                    .clipped()
+                                    .listRowInsets(EdgeInsets())
+                            }
                             
                             ForEach(categories.keys.sorted(), id: \.self) { key in
                                 ClotheRow(categoryName: key, items: clothes)

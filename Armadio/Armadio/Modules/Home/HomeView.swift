@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         TabView {
-            Text("Now")
+            NowView()
                 .tabItem {
                     Label("HomeView_Now".localized, systemImage: "figure.wave")
                 }
@@ -36,7 +36,9 @@ struct HomeView: View {
 }
 
 struct HomeView_Previews: PreviewProvider {
+    static var coreDataStack = CoreDataStack.preview
     static var previews: some View {
         HomeView()
+            .environment(\.managedObjectContext, coreDataStack.container.viewContext)
     }
 }

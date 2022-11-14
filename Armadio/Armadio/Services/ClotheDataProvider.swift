@@ -10,20 +10,31 @@ import CoreData
 import SwiftUI
 
 protocol ClotheDataProvider {
-    func saveClothe(subcategoryName: String,
-                    categoryName: String,
-                    receiptImageData: Data,
-                    clotheBrand: String, clotheColor: Color, clotheDateOfPurchase: Date, clotheDescription: String,
-                    clotheImageData: Data, clotheMaterial: String, clotheSize: String, coreDataContext: NSManagedObjectContext)
+    func updateClotheStats(clothe: Clothe, coreDataContext: NSManagedObjectContext)
+    func saveClothe(subcategoryName: String?,
+                    categoryName: String?,
+                    receiptImageData: Data?,
+                    clotheBrand: String?, clotheColor: Color, clotheDateOfPurchase: Date?, clotheDescription: String?,
+                    clotheImageData: Data?, clotheMaterial: String?, clotheSize: String?, coreDataContext: NSManagedObjectContext)
 }
 
 final class ClotheDataProviderImpl: ClotheDataProvider {
     
-    func saveClothe(subcategoryName: String,
-                    categoryName: String,
-                    receiptImageData: Data,
-                    clotheBrand: String, clotheColor: Color, clotheDateOfPurchase: Date, clotheDescription: String,
-                    clotheImageData: Data, clotheMaterial: String, clotheSize: String,
+    func updateClotheStats(clothe: Clothe, coreDataContext: NSManagedObjectContext) {
+        clothe.stats?.numberOfWorn += 1
+        clothe.stats?.recentlyWornDate = .now
+        do {
+            try coreDataContext.save()
+        } catch {
+            print("update clothe failed \(error)")
+        }
+    }
+    
+    func saveClothe(subcategoryName: String?,
+                    categoryName: String?,
+                    receiptImageData: Data?,
+                    clotheBrand: String?, clotheColor: Color, clotheDateOfPurchase: Date?, clotheDescription: String?,
+                    clotheImageData: Data?, clotheMaterial: String?, clotheSize: String?,
                     coreDataContext: NSManagedObjectContext) {
         let subcategory = Subcategory(context: coreDataContext)
         subcategory.name = subcategoryName
@@ -41,6 +52,10 @@ final class ClotheDataProviderImpl: ClotheDataProvider {
         clothe.image = clotheImageData
         clothe.material = clotheMaterial
         clothe.size = clotheSize
+        let stats = Stats(context: coreDataContext)
+        stats.numberOfWorn = 0
+        stats.recentlyWornDate = .now
+        clothe.stats = stats
         clothe.category = category
         clothe.receipt = receipt
         

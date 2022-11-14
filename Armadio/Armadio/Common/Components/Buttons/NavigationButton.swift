@@ -10,6 +10,9 @@ import SwiftUI
 enum NavigationButtonType {
     case close
     case back
+    case add
+    case delete
+    case refresh
 }
 
 struct NavigationButton: View {
@@ -33,10 +36,16 @@ struct NavigationButton: View {
     
     private func getImageName() -> String {
         switch type {
+        case .delete:
+            return "trash.circle.fill"
         case .close:
             return "multiply.circle.fill"
         case .back:
             return "arrow.backward.circle.fill"
+        case .add:
+            return "plus.circle.fill"
+        case .refresh:
+            return "arrow.clockwise.circle.fill"
         }
     }
 }
@@ -46,10 +55,12 @@ struct DismissButton_Previews: PreviewProvider {
         Group {
             NavigationButton(type: .back, action: {})
             NavigationButton(type: .close, action: {})
+            NavigationButton(type: .add, action: {})
         }.preferredColorScheme(.light)
         Group {
             NavigationButton(type: .back, action: {})
             NavigationButton(type: .close, action: {})
+            NavigationButton(type: .add, action: {})
         }.preferredColorScheme(.dark)
     }
 }

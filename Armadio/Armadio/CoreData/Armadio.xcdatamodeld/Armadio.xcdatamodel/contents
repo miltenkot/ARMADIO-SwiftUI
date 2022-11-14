@@ -17,6 +17,7 @@
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="clothe" inverseEntity="Category"/>
         <relationship name="price" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Price" inverseName="clothe" inverseEntity="Price"/>
         <relationship name="receipt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Receipt" inverseName="clothe" inverseEntity="Receipt"/>
+        <relationship name="stats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Stats" inverseName="clothe" inverseEntity="Stats"/>
     </entity>
     <entity name="Price" representedClassName="Price" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -26,6 +27,11 @@
     <entity name="Receipt" representedClassName="Receipt" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <relationship name="clothe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Clothe" inverseName="receipt" inverseEntity="Clothe"/>
+    </entity>
+    <entity name="Stats" representedClassName="Stats" syncable="YES">
+        <attribute name="numberOfWorn" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="recentlyWornDate" attributeType="Date" defaultDateTimeInterval="690828000" usesScalarValueType="NO"/>
+        <relationship name="clothe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Clothe" inverseName="stats" inverseEntity="Clothe"/>
     </entity>
     <entity name="Subcategory" representedClassName="Subcategory" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String"/>

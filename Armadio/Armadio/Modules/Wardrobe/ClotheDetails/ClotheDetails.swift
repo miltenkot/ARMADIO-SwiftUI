@@ -15,17 +15,18 @@ struct ClotheDetails: View {
             CircleImage(image: imageView)
                 .padding()
             VStack(alignment: .leading) {
-                HStack {
-                    Text(clothe.category?.name ?? "No category")
-                        .font(.title)
-                    FavoriteButton(isSet: .constant(true))
-                }
-                Text(clothe.category?.subcategory?.name ?? "No subcategory")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-                Divider()
                 Group {
-                    
+                    HStack {
+                        Text(clothe.category?.name ?? "No category")
+                            .font(.title)
+                        FavoriteButton(isSet: .constant(true))
+                    }
+                    Text(clothe.category?.subcategory?.name ?? "No subcategory")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                    Divider()
+                }
+                Group {
                     if let price = clothe.price {
                         HStack {
                             Text("Price: ")
@@ -53,8 +54,8 @@ struct ClotheDetails: View {
                         }
                         Divider()
                     }
-                    
-                    
+                }
+                Group {
                     if let size = clothe.size {
                         HStack {
                             Text("Size: ")
@@ -77,14 +78,33 @@ struct ClotheDetails: View {
                         }
                         Divider()
                     }
-                    
-                    if let dateOfPurchase = clothe.dateOfPurchase {
-                        HStack {
-                            Text("Date Of Purchase: ")
-                            Spacer()
-                            Text(dateOfPurchase.formatted(date: .abbreviated, time: .omitted))
+                    Group {
+                        if let dateOfPurchase = clothe.dateOfPurchase {
+                            HStack {
+                                Text("Date Of Purchase: ")
+                                Spacer()
+                                Text(dateOfPurchase.formatted(date: .abbreviated, time: .omitted))
+                            }
+                            Divider()
                         }
-                        Divider()
+                        
+                        if let numberOfWorn = clothe.stats?.numberOfWorn {
+                            HStack {
+                                Text("Number Of Wears ")
+                                Spacer()
+                                Text("\(numberOfWorn)")
+                            }
+                            Divider()
+                        }
+                        
+                        if let recentlyWorn = clothe.stats?.recentlyWornDate {
+                            HStack {
+                                Text("Number Of Wears ")
+                                Spacer()
+                                Text(recentlyWorn.formatted(date: .abbreviated, time: .omitted))
+                            }
+                            Divider()
+                        }
                     }
                 }
                 .font(.title3)
@@ -106,8 +126,9 @@ struct ClotheDetails: View {
     }
     
     private var imageView: Image {
-        if let imageData = clothe.image {
-            return Image(uiImage: UIImage(data: imageData)!)
+        if let image = clothe.image,
+           let imageData = UIImage(data: image){
+            return Image(uiImage: imageData)
         } else {
             return Image("clothe1")
         }

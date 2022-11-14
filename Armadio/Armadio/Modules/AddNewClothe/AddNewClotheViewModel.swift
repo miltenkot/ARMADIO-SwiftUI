@@ -17,8 +17,9 @@ final class AddNewClotheViewModel: ObservableObject {
     @Injected(Container.clotheDataProvider) private var clotheDataProvider
     
     // MARK: - Properties
-    @Published var selectedImageData: Data? = nil
-    @Published var receiptImageData: Data? = nil
+    @Published var selectedImageData: Data? = nil //UIImage(systemName: "photo.circle.fill")?.jpegData(compressionQuality: 1.0)!
+    #warning("receipt should be optional")
+    @Published var receiptImageData: Data? = UIImage(systemName: "camera")?.jpegData(compressionQuality: 1.0)!
     @Published var selectedCategory: LocalCategory = .init(name: "Dresses", subcategory: .init(name: "Short"))
     @Published var selectedBrand: String = "Gucci"
     @Published var selectedMaterial: String = "Coton"
@@ -42,31 +43,16 @@ final class AddNewClotheViewModel: ObservableObject {
     // MARK: - Clothe DataProvider
     
     func saveClothe(for context: NSManagedObjectContext) {
-        let subcategory = Subcategory(context: context)
-        subcategory.name = selectedCategory.subcategory.name
-        let category = Category(context: context)
-        category.name = selectedCategory.name
-        category.subcategory = subcategory
-        let receipt = Receipt(context: context)
-        receipt.image = UIImage(named: "receipt1")?.jpegData(compressionQuality: 0.8)
-        let clothe = Clothe(context: context)
-        clothe.id = UUID()
-        clothe.brand = selectedBrand
-        clothe.color = selectedColor
-        clothe.dateOfPurchase = selectedDate
-        clothe.desc = description
-        clothe.image = selectedImageData
-        clothe.material = selectedMaterial
-        clothe.size = selectedSize
-        clothe.category = category
-        clothe.receipt = receipt
-        
-        do {
-            if context.hasChanges {
-                try context.save()
-            }
-        } catch {
-            print("save failed \(error)")
-        }
+        clotheDataProvider.saveClothe(subcategoryName: selectedCategory.subcategory?.name,
+                                      categoryName: selectedCategory.name,
+                                      receiptImageData: receiptImageData,
+                                      clotheBrand: selectedBrand,
+                                      clotheColor: selectedColor,
+                                      clotheDateOfPurchase: selectedDate,
+                                      clotheDescription: description,
+                                      clotheImageData: selectedImageData,
+                                      clotheMaterial: selectedMaterial,
+                                      clotheSize: selectedSize,
+                                      coreDataContext: context)
     }
 }

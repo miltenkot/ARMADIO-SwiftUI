@@ -61,7 +61,7 @@ struct NavigationPickerDetailsCategory: View {
                             VStack(alignment: .leading) {
                                 Text("Subcategory")
                                     .font(.system(size: 12, weight: .light))
-                                Text(subcategory.name)
+                                Text(subcategory.name ?? "Empty name")
                                 
                             }
                             Spacer()
@@ -86,7 +86,7 @@ struct NavigationPickerDetailsCategory: View {
                         .sheet(isPresented: $isDisplayedSubCategory) {
                             Picker("", selection: $subcategory, content: {
                                 ForEach(category.subcategories, id: \.self) {
-                                    Text($0.name)
+                                    Text($0.name ?? "Empty name")
                                 }
                             })
                             .pickerStyle(.inline)
