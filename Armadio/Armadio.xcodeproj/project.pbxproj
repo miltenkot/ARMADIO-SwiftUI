@@ -31,6 +31,14 @@
 		135883B2291108AF009C8531 /* ButtonMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883B1291108AF009C8531 /* ButtonMenuItem.swift */; };
 		135883B529111133009C8531 /* AddNewClotheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883B429111133009C8531 /* AddNewClotheView.swift */; };
 		135883B729112FAF009C8531 /* ColorPickerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135883B629112FAF009C8531 /* ColorPickerDetails.swift */; };
+		135F546A292EA684000E6A93 /* GeneralOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F5469292EA684000E6A93 /* GeneralOverview.swift */; };
+		135F546D292EB5C3000E6A93 /* PriceOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F546C292EB5C3000E6A93 /* PriceOverview.swift */; };
+		136E39FD293246FE00595EE6 /* PopularityOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136E39FC293246FE00595EE6 /* PopularityOverview.swift */; };
+		136E39FF29326C5200595EE6 /* PriceOverviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136E39FE29326C5200595EE6 /* PriceOverviewDetails.swift */; };
+		136E3A012933670F00595EE6 /* GeneralOverviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136E3A002933670F00595EE6 /* GeneralOverviewDetails.swift */; };
+		136E3A032933677C00595EE6 /* TimeRangePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136E3A022933677C00595EE6 /* TimeRangePicker.swift */; };
+		136E3A052933682600595EE6 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136E3A042933682600595EE6 /* Date+Extension.swift */; };
+		136E3A07293371C800595EE6 /* PopularityOverviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136E3A06293371C800595EE6 /* PopularityOverviewDetails.swift */; };
 		1373D6A729242453009A8930 /* FilteredListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373D6A629242452009A8930 /* FilteredListView.swift */; };
 		1373D6A92924BEB3009A8930 /* FilteredListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373D6A82924BEB3009A8930 /* FilteredListViewModel.swift */; };
 		1373D6AC2924C059009A8930 /* SortMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373D6AB2924C059009A8930 /* SortMenuView.swift */; };
@@ -74,6 +82,8 @@
 		13A4C2072922299A00056034 /* ClotheDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4C2062922299A00056034 /* ClotheDataProvider.swift */; };
 		13A4C20A2922303800056034 /* PhotosPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4C2092922303800056034 /* PhotosPickerView.swift */; };
 		13A4C20D29229B1F00056034 /* NowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4C20C29229B1F00056034 /* NowView.swift */; };
+		13A73D35292E031900A7CFED /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A73D34292E031900A7CFED /* StatsViewModel.swift */; };
+		13A73D37292E033500A7CFED /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A73D36292E033500A7CFED /* StatsView.swift */; };
 		13AA6FB52918393B006BBDAA /* NavigationPickerDetailsDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA6FB42918393B006BBDAA /* NavigationPickerDetailsDate.swift */; };
 		13AE6F0C2912A03800D8FABA /* AddNewClotheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE6F0B2912A03800D8FABA /* AddNewClotheViewModel.swift */; };
 		13B8E8F82914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B8E8F72914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift */; };
@@ -133,6 +143,14 @@
 		135883B1291108AF009C8531 /* ButtonMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonMenuItem.swift; sourceTree = "<group>"; };
 		135883B429111133009C8531 /* AddNewClotheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewClotheView.swift; sourceTree = "<group>"; };
 		135883B629112FAF009C8531 /* ColorPickerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerDetails.swift; sourceTree = "<group>"; };
+		135F5469292EA684000E6A93 /* GeneralOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralOverview.swift; sourceTree = "<group>"; };
+		135F546C292EB5C3000E6A93 /* PriceOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceOverview.swift; sourceTree = "<group>"; };
+		136E39FC293246FE00595EE6 /* PopularityOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityOverview.swift; sourceTree = "<group>"; };
+		136E39FE29326C5200595EE6 /* PriceOverviewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceOverviewDetails.swift; sourceTree = "<group>"; };
+		136E3A002933670F00595EE6 /* GeneralOverviewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralOverviewDetails.swift; sourceTree = "<group>"; };
+		136E3A022933677C00595EE6 /* TimeRangePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRangePicker.swift; sourceTree = "<group>"; };
+		136E3A042933682600595EE6 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		136E3A06293371C800595EE6 /* PopularityOverviewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityOverviewDetails.swift; sourceTree = "<group>"; };
 		1373D6A629242452009A8930 /* FilteredListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredListView.swift; sourceTree = "<group>"; };
 		1373D6A82924BEB3009A8930 /* FilteredListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredListViewModel.swift; sourceTree = "<group>"; };
 		1373D6AB2924C059009A8930 /* SortMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortMenuView.swift; sourceTree = "<group>"; };
@@ -177,6 +195,8 @@
 		13A4C2062922299A00056034 /* ClotheDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClotheDataProvider.swift; sourceTree = "<group>"; };
 		13A4C2092922303800056034 /* PhotosPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerView.swift; sourceTree = "<group>"; };
 		13A4C20C29229B1F00056034 /* NowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowView.swift; sourceTree = "<group>"; };
+		13A73D34292E031900A7CFED /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
+		13A73D36292E033500A7CFED /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		13AA6FB42918393B006BBDAA /* NavigationPickerDetailsDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerDetailsDate.swift; sourceTree = "<group>"; };
 		13AE6F0B2912A03800D8FABA /* AddNewClotheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewClotheViewModel.swift; sourceTree = "<group>"; };
 		13B8E8F72914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerDetailsDescription.swift; sourceTree = "<group>"; };
@@ -303,6 +323,43 @@
 			path = AddNewClothe;
 			sourceTree = "<group>";
 		};
+		135F5467292EA611000E6A93 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				136E39FB2932467700595EE6 /* Popularity */,
+				135F546B292EB56C000E6A93 /* Price */,
+				135F5468292EA668000E6A93 /* General */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		135F5468292EA668000E6A93 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				135F5469292EA684000E6A93 /* GeneralOverview.swift */,
+				136E3A002933670F00595EE6 /* GeneralOverviewDetails.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		135F546B292EB56C000E6A93 /* Price */ = {
+			isa = PBXGroup;
+			children = (
+				135F546C292EB5C3000E6A93 /* PriceOverview.swift */,
+				136E39FE29326C5200595EE6 /* PriceOverviewDetails.swift */,
+			);
+			path = Price;
+			sourceTree = "<group>";
+		};
+		136E39FB2932467700595EE6 /* Popularity */ = {
+			isa = PBXGroup;
+			children = (
+				136E39FC293246FE00595EE6 /* PopularityOverview.swift */,
+				136E3A06293371C800595EE6 /* PopularityOverviewDetails.swift */,
+			);
+			path = Popularity;
+			sourceTree = "<group>";
+		};
 		1373D6A52924243B009A8930 /* FilteredList */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +456,7 @@
 				134747E4292C0D0F00856593 /* NowToolbar.swift */,
 				13EFA81A292D11EE00F89CE6 /* CustomSheetView.swift */,
 				13EFA81C292D13E600F89CE6 /* CustomOverlayedButton.swift */,
+				136E3A022933677C00595EE6 /* TimeRangePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -411,6 +469,7 @@
 				13873044290BFE390049D1D2 /* Localized.swift */,
 				135883A029102744009C8531 /* Color+Codable.swift */,
 				13EFA818292D0DED00F89CE6 /* Alignment.swift */,
+				136E3A042933682600595EE6 /* Date+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -427,6 +486,7 @@
 		13873018290ADB0F0049D1D2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				13A73D33292E030000A7CFED /* Stats */,
 				1373D6A52924243B009A8930 /* FilteredList */,
 				1392AC6E2923E653003E1934 /* SelectYourClothe */,
 				13A4C20B29229B0800056034 /* Now */,
@@ -610,6 +670,16 @@
 				1392AC6C2923E508003E1934 /* NowViewModel.swift */,
 			);
 			path = Now;
+			sourceTree = "<group>";
+		};
+		13A73D33292E030000A7CFED /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				135F5467292EA611000E6A93 /* Charts */,
+				13A73D36292E033500A7CFED /* StatsView.swift */,
+				13A73D34292E031900A7CFED /* StatsViewModel.swift */,
+			);
+			path = Stats;
 			sourceTree = "<group>";
 		};
 		13B8E8F62914FAB900F3FDDC /* NavigationPicker */ = {
@@ -834,6 +904,7 @@
 				1387300D290ADA8A0049D1D2 /* PrimaryButton.swift in Sources */,
 				13EFA819292D0DED00F89CE6 /* Alignment.swift in Sources */,
 				13B8E8FE2915763600F3FDDC /* NavigationPickerDetailsPrice.swift in Sources */,
+				136E39FD293246FE00595EE6 /* PopularityOverview.swift in Sources */,
 				13163D8D29193D42008D18F3 /* NavigationPickerLabel.swift in Sources */,
 				13B8E9002915899000F3FDDC /* NavigationPickerDetailsCategory.swift in Sources */,
 				13872FEF290ACA7E0049D1D2 /* ContentView.swift in Sources */,
@@ -845,6 +916,7 @@
 				1387300F290ADAA20049D1D2 /* NavigationButton.swift in Sources */,
 				1318ADA32926D00200A17550 /* ClotheNowRow.swift in Sources */,
 				135883A629103EDD009C8531 /* ClotheItem.swift in Sources */,
+				135F546A292EA684000E6A93 /* GeneralOverview.swift in Sources */,
 				135883B2291108AF009C8531 /* ButtonMenuItem.swift in Sources */,
 				13B8E8F82914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift in Sources */,
 				1373D6A92924BEB3009A8930 /* FilteredListViewModel.swift in Sources */,
@@ -854,11 +926,13 @@
 				1373D6AC2924C059009A8930 /* SortMenuView.swift in Sources */,
 				1387303E290AF7E60049D1D2 /* SelectYourCountryViewModel.swift in Sources */,
 				13873028290ADC140049D1D2 /* CountryListView.swift in Sources */,
+				135F546D292EB5C3000E6A93 /* PriceOverview.swift in Sources */,
 				13873017290ADAF60049D1D2 /* TextStyles.swift in Sources */,
 				13EFA81D292D13E600F89CE6 /* CustomOverlayedButton.swift in Sources */,
 				13AE6F0C2912A03800D8FABA /* AddNewClotheViewModel.swift in Sources */,
 				1358839F291025D3009C8531 /* WardrobeViewModel.swift in Sources */,
 				13EFA81B292D11EE00F89CE6 /* CustomSheetView.swift in Sources */,
+				136E3A07293371C800595EE6 /* PopularityOverviewDetails.swift in Sources */,
 				13A4C20529219CDD00056034 /* ScannerDetailsView.swift in Sources */,
 				13F89231291E5C6B00A2E2F1 /* Receipt+CoreDataClass.swift in Sources */,
 				135883AD29104599009C8531 /* FavoriteButton.swift in Sources */,
@@ -880,6 +954,7 @@
 				13873026290ADBFE0049D1D2 /* SelectYourCountryView.swift in Sources */,
 				13F8922E291E5C6B00A2E2F1 /* Category+CoreDataProperties.swift in Sources */,
 				135883B529111133009C8531 /* AddNewClotheView.swift in Sources */,
+				13A73D35292E031900A7CFED /* StatsViewModel.swift in Sources */,
 				1387301E290ADB7B0049D1D2 /* LoginView.swift in Sources */,
 				13AA6FB52918393B006BBDAA /* NavigationPickerDetailsDate.swift in Sources */,
 				13B8E909291670E300F3FDDC /* NavigationPickerDetailsDefault.swift in Sources */,
@@ -887,10 +962,13 @@
 				13F89223291E49BB00A2E2F1 /* Clothe+CoreDataProperties.swift in Sources */,
 				1373D6A729242453009A8930 /* FilteredListView.swift in Sources */,
 				1387303A290AF6170049D1D2 /* CountryFlagProvider.swift in Sources */,
+				136E3A052933682600595EE6 /* Date+Extension.swift in Sources */,
 				13A4C20A2922303800056034 /* PhotosPickerView.swift in Sources */,
 				13873037290AEA250049D1D2 /* CheckboxView.swift in Sources */,
+				136E3A032933677C00595EE6 /* TimeRangePicker.swift in Sources */,
 				131AA935291AA87500C876C2 /* Armadio.xcdatamodeld in Sources */,
 				1392AC6D2923E508003E1934 /* NowViewModel.swift in Sources */,
+				136E3A012933670F00595EE6 /* GeneralOverviewDetails.swift in Sources */,
 				13873024290ADBD60049D1D2 /* LoginOptionsView.swift in Sources */,
 				13A3A927290D2B1C00A49D99 /* HomeView.swift in Sources */,
 				13F89232291E5C6B00A2E2F1 /* Receipt+CoreDataProperties.swift in Sources */,
@@ -898,12 +976,14 @@
 				13F8921F291E484F00A2E2F1 /* Price+CoreDataProperties.swift in Sources */,
 				13872FED290ACA7E0049D1D2 /* ArmadioApp.swift in Sources */,
 				13A4C20D29229B1F00056034 /* NowView.swift in Sources */,
+				136E39FF29326C5200595EE6 /* PriceOverviewDetails.swift in Sources */,
 				2AA4849C290E77DE00EC4814 /* Injection.swift in Sources */,
 				13873040290AF9430049D1D2 /* CountryListViewModel.swift in Sources */,
 				13F8922F291E5C6B00A2E2F1 /* Subcategory+CoreDataClass.swift in Sources */,
 				1392AC702923E687003E1934 /* SelectYourClotheView.swift in Sources */,
 				1318ADA6292BD3BD00A17550 /* Optional+Extension.swift in Sources */,
 				1392AC722923E691003E1934 /* SelectYourClotheViewModel.swift in Sources */,
+				13A73D37292E033500A7CFED /* StatsView.swift in Sources */,
 				13873043290BE5B10049D1D2 /* Color.swift in Sources */,
 				13EFA82A292D321400F89CE6 /* Stats+CoreDataClass.swift in Sources */,
 				13EFA82B292D321400F89CE6 /* Stats+CoreDataProperties.swift in Sources */,

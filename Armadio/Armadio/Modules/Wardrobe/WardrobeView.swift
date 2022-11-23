@@ -66,7 +66,7 @@ struct WardrobeView: View {
                             AddNewClotheView()
                         }
                         .fullScreenCover(isPresented: $viewModel.isStatsOpen) {
-                            AddNewClotheView()
+                            StatsView()
                         }
                         .fullScreenCover(isPresented: $viewModel.isOutfitsOpen) {
                             AddNewClotheView()

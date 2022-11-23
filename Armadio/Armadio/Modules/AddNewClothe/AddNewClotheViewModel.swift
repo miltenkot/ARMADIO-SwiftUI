@@ -45,6 +45,7 @@ final class AddNewClotheViewModel: ObservableObject {
     func saveClothe(for context: NSManagedObjectContext) {
         clotheDataProvider.saveClothe(subcategoryName: selectedCategory.subcategory?.name,
                                       categoryName: selectedCategory.name,
+                                      localPrice: selectedPrice,
                                       receiptImageData: receiptImageData,
                                       clotheBrand: selectedBrand,
                                       clotheColor: selectedColor,

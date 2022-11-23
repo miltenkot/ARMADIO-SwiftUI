@@ -24,3 +24,20 @@ extension Color {
         }
     }
 }
+
+enum ArmadioGradient {
+    case primary
+}
+
+extension LinearGradient {
+    static func gradient(_ type: ArmadioGradient) -> LinearGradient {
+        switch type {
+        case .primary:
+            return LinearGradient(colors: [.blue.opacity(0.5),
+                                           .red.opacity(0.2),
+                                           .purple.opacity(0.05)],
+                                  startPoint: .top,
+                                  endPoint: .bottom)
+        }
+    }
+}

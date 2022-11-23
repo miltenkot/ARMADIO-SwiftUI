@@ -13,6 +13,7 @@ protocol ClotheDataProvider {
     func updateClotheStats(clothe: Clothe, coreDataContext: NSManagedObjectContext)
     func saveClothe(subcategoryName: String?,
                     categoryName: String?,
+                    localPrice: LocalPrice?,
                     receiptImageData: Data?,
                     clotheBrand: String?, clotheColor: Color, clotheDateOfPurchase: Date?, clotheDescription: String?,
                     clotheImageData: Data?, clotheMaterial: String?, clotheSize: String?, coreDataContext: NSManagedObjectContext)
@@ -32,6 +33,7 @@ final class ClotheDataProviderImpl: ClotheDataProvider {
     
     func saveClothe(subcategoryName: String?,
                     categoryName: String?,
+                    localPrice: LocalPrice?,
                     receiptImageData: Data?,
                     clotheBrand: String?, clotheColor: Color, clotheDateOfPurchase: Date?, clotheDescription: String?,
                     clotheImageData: Data?, clotheMaterial: String?, clotheSize: String?,
@@ -52,6 +54,10 @@ final class ClotheDataProviderImpl: ClotheDataProvider {
         clothe.image = clotheImageData
         clothe.material = clotheMaterial
         clothe.size = clotheSize
+        let price = Price(context: coreDataContext)
+        price.amount = localPrice?.amount ?? 0
+        price.currency = localPrice?.currency ?? .pln
+        clothe.price = price
         let stats = Stats(context: coreDataContext)
         stats.numberOfWorn = 0
         stats.recentlyWornDate = .now

@@ -20,7 +20,7 @@ struct ClotheItem: View {
                 .cornerRadius(5)
             HStack {
                 Text(clothe.brand ?? "")
-                Text("\(clothe.price?.amount ?? 0.00, specifier: "%.2f") \(clothe.price?.currency.rawValue.uppercased() ?? "PLN")")
+                Text("\(clothe.price?.amount ?? 0, specifier: "%.2f") \(clothe.price?.currency.rawValue.uppercased() ?? "PLN")")
             }
             .foregroundColor(.primary)
             .font(.caption)

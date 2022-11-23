@@ -43,7 +43,7 @@ struct LocalClothe: Hashable, Codable, Identifiable {
         self.image = object.image
         self.material = object.material
         self.size = object.size
-        self.price?.amount = object.price?.amount ?? 0.00
+        self.price?.amount = object.price?.amount ?? 0
         self.price?.currency = object.price?.currency ?? .pln
         self.category?.name = object.category?.name
         self.category?.subcategory?.name = object.category?.subcategory?.name
