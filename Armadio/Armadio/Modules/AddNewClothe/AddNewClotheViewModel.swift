@@ -17,22 +17,19 @@ final class AddNewClotheViewModel: ObservableObject {
     @Injected(Container.clotheDataProvider) private var clotheDataProvider
     
     // MARK: - Properties
-    @Published var selectedImageData: Data? = nil //UIImage(systemName: "photo.circle.fill")?.jpegData(compressionQuality: 1.0)!
-    #warning("receipt should be optional")
-    @Published var receiptImageData: Data? = UIImage(systemName: "camera")?.jpegData(compressionQuality: 1.0)!
-    @Published var selectedCategory: LocalCategory = .init(name: "Dresses", subcategory: .init(name: "Short"))
-    @Published var selectedBrand: String = "Gucci"
-    @Published var selectedMaterial: String = "Coton"
+    @Published var selectedImageData: Data? = nil
+    @Published var receiptImageData: Data? = nil
+    @Published var selectedCategory: LocalCategory = .init(name: ClotheCategory.categoriesMock.first?.name ?? "Empty",
+                                                           subcategory: .init(name: ClotheCategory.categoriesMock.first?.subcategories.first?.name ?? "Empty"))
+    @Published var selectedBrand: String = LocalClothe.brandMock.first!
+    @Published var selectedMaterial: String = LocalClothe.materialMock.first!
     @Published var selectedPrice: LocalPrice = .init(amount: 0.0, currency: .pln)
     @Published var selectedItem: PhotosPickerItem? = nil
     @Published var selectedDate = Date()
     @Published var selectedColor: Color = .red
     @Published var description = ""
-    @Published var selectedSize = "XS"
+    @Published var selectedSize = LocalClothe.sizesMock.first!
     @Published var isReceiptRecognizing = false
-    let sizes: [String] = ["XSS", "XS", "S", "M", "L", "XL", "XLL"]
-    let brands: [String] = ["Gucci", "Luis", "Micheal Kors", "Armani", "TOmmy", "Adidas", "Nike"]
-    let material: [String] = ["Coton", "Whool", "Gold", "Silver", "Many", "Sos", "Ross"]
     
     // MARK: - FirebaseAnalitics
     

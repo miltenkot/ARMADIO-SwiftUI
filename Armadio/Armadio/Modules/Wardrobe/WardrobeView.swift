@@ -54,22 +54,27 @@ struct WardrobeView: View {
                         Spacer()
                         FloatingButton(showMenuItems: $viewModel.menuButtonExpanded,
                                        addNewAction: {
-                            viewModel.isAddNewOpen.toggle()
+                            viewModel.activeModalView = .addNew
                         },
                                        statsAction: {
-                            viewModel.isStatsOpen.toggle()
+                            viewModel.activeModalView = .stats
                         },
                                        outfitsAction: {
-                            viewModel.isOutfitsOpen.toggle()
+                            viewModel.activeModalView = .outfits
+                        }, listAction: {
+                            viewModel.activeModalView = .list
                         })
-                        .fullScreenCover(isPresented: $viewModel.isAddNewOpen) {
-                            AddNewClotheView()
-                        }
-                        .fullScreenCover(isPresented: $viewModel.isStatsOpen) {
-                            StatsView()
-                        }
-                        .fullScreenCover(isPresented: $viewModel.isOutfitsOpen) {
-                            AddNewClotheView()
+                        .fullScreenCover(item: $viewModel.activeModalView) {
+                            switch $0 {
+                            case .addNew:
+                                AddNewClotheView()
+                            case .stats:
+                                StatsView()
+                            case .outfits:
+                                AddNewClotheView()
+                            case .list:
+                                ClothesListView()
+                            }
                         }
                     }
                     .padding()

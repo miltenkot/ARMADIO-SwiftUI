@@ -36,18 +36,22 @@ struct NowView: View {
                     CustomOverlayedButton(selectedClothe: $selectedClothe1, customButton: NavigationButton(type: .add) {
                         activeSheet = .first
                     })
+                    .padding(.leading, 70)
                     CustomOverlayedButton(selectedClothe: $selectedClothe2, customButton: NavigationButton(type: .add) {
                         activeSheet = .second
                     })
+                    .padding(.leading, 30)
                     CustomOverlayedButton(selectedClothe: $selectedClothe3, customButton: NavigationButton(type: .add) {
                         activeSheet = .third
                     })
                     CustomOverlayedButton(selectedClothe: $selectedClothe4, customButton: NavigationButton(type: .add) {
                         activeSheet = .fourth
                     })
+                    .padding(.leading, 30)
                     CustomOverlayedButton(selectedClothe: $selectedClothe5, customButton: NavigationButton(type: .add) {
                         activeSheet = .five
                     })
+                    .padding(.leading, 70)
                 }
                 .alignmentGuide(HorizontalAlignment.custom)
                 { d in d[.trailing] + 100 }

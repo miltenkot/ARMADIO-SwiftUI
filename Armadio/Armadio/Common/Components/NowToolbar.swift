@@ -32,7 +32,6 @@ struct NowToolbar: View {
                         NavigationButton(type: .close) {
                             dismissAction()
                         }
-                        
                     }
                 }
         }

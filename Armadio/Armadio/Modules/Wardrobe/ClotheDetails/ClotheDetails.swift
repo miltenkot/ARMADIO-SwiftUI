@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ClotheDetails: View {
     var clothe: Clothe
+    @State private var isReceiptModalShown = false
     
     var body: some View {
         ScrollView {
@@ -27,83 +29,85 @@ struct ClotheDetails: View {
                     Divider()
                 }
                 Group {
-                    if let price = clothe.price {
-                        HStack {
-                            Text("Price: ")
-                            Spacer()
-                            Text("\(price.amount, specifier: "%.2f") \(price.currency.rawValue.uppercased())")
+                    Group {
+                        if let price = clothe.price {
+                            HStack {
+                                Text("Price: ")
+                                Spacer()
+                                Text("\(price.amount, specifier: "%.2f") \(price.currency.rawValue.uppercased())")
+                            }
+                            Divider()
                         }
-                        Divider()
-                    }
-                    
-                    if let brand = clothe.brand {
-                        HStack {
-                            Text("Brand: ")
-                            Spacer()
-                            Text(brand)
+                        
+                        if let brand = clothe.brand {
+                            HStack {
+                                Text("Brand: ")
+                                Spacer()
+                                Text(brand)
+                            }
+                            Divider()
                         }
-                        Divider()
-                    }
-                    
-                    
-                    if let material = clothe.material {
-                        HStack {
-                            Text("Material: ")
-                            Spacer()
-                            Text(material)
+                        
+                        
+                        if let material = clothe.material {
+                            HStack {
+                                Text("Material: ")
+                                Spacer()
+                                Text(material)
+                            }
+                            Divider()
                         }
-                        Divider()
-                    }
-                }
-                Group {
-                    if let size = clothe.size {
-                        HStack {
-                            Text("Size: ")
-                            Spacer()
-                            Text(size)
-                        }
-                        Divider()
-                    }
-                    
-                    if let color = clothe.color {
-                        HStack {
-                            Text("Color: ")
-                            Spacer()
-                            Text(color.description)
-                                .padding(.horizontal, 25)
-                                .padding(.vertical, 4)
-                                .foregroundColor(Color.themeColor(.primaryText))
-                                .background(color)
-                                .cornerRadius(4)
-                        }
-                        Divider()
                     }
                     Group {
-                        if let dateOfPurchase = clothe.dateOfPurchase {
+                        if let size = clothe.size {
                             HStack {
-                                Text("Date Of Purchase: ")
+                                Text("Size: ")
                                 Spacer()
-                                Text(dateOfPurchase.formatted(date: .abbreviated, time: .omitted))
+                                Text(size)
                             }
                             Divider()
                         }
                         
-                        if let numberOfWorn = clothe.stats?.numberOfWorn {
+                        if let color = clothe.color {
                             HStack {
-                                Text("Number Of Wears ")
+                                Text("Color: ")
                                 Spacer()
-                                Text("\(numberOfWorn)")
+                                Text(color.description)
+                                    .padding(.horizontal, 25)
+                                    .padding(.vertical, 4)
+                                    .foregroundColor(Color.themeColor(.primaryText))
+                                    .background(color)
+                                    .cornerRadius(4)
                             }
                             Divider()
                         }
-                        
-                        if let recentlyWorn = clothe.stats?.recentlyWornDate {
-                            HStack {
-                                Text("Number Of Wears ")
-                                Spacer()
-                                Text(recentlyWorn.formatted(date: .abbreviated, time: .omitted))
+                        Group {
+                            if let dateOfPurchase = clothe.dateOfPurchase {
+                                HStack {
+                                    Text("Date Of Purchase: ")
+                                    Spacer()
+                                    Text(dateOfPurchase.formatted(date: .abbreviated, time: .omitted))
+                                }
+                                Divider()
                             }
-                            Divider()
+                            
+                            if let numberOfWorn = clothe.stats?.numberOfWorn {
+                                HStack {
+                                    Text("Number Of Wears ")
+                                    Spacer()
+                                    Text("\(numberOfWorn)")
+                                }
+                                Divider()
+                            }
+                            
+                            if let recentlyWorn = clothe.stats?.recentlyWornDate {
+                                HStack {
+                                    Text("Number Of Wears ")
+                                    Spacer()
+                                    Text(recentlyWorn.formatted(date: .abbreviated, time: .omitted))
+                                }
+                                Divider()
+                            }
                         }
                     }
                 }
@@ -121,8 +125,21 @@ struct ClotheDetails: View {
             }
             .padding()
         }
+        
         .navigationTitle(clothe.category?.name?.uppercased() ?? "Empty")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    isReceiptModalShown.toggle()
+                } label: {
+                    Image(systemName: "doc.text.viewfinder")
+                }
+            }
+        }
+        .sheet(isPresented: $isReceiptModalShown) {
+            ReceiptDetails(imageData: clothe.receipt?.image)
+        }
     }
     
     private var imageView: Image {

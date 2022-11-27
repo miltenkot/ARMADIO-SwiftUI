@@ -7,16 +7,12 @@
 
 import SwiftUI
 
-struct ClotheNowRow: View {
-    @Binding var isDisplayed: Bool
-    @Binding var selectedClothe: Clothe?
+struct ClotheListRow: View {
+    let clothe: Clothe
     
     var body: some View {
-        Button(action: {
-            isDisplayed.toggle()
-        }, label: {
-            if let selectedClothe,
-               let data = selectedClothe.image,
+        Group {
+            if let data = clothe.image,
                let uiImage = UIImage(data: data) {
                 VStack(alignment: .leading) {
                     HStack {
@@ -27,26 +23,17 @@ struct ClotheNowRow: View {
                             .clipped()
                             .cornerRadius(10)
                         VStack(alignment: .leading) {
-                            Text(selectedClothe.category?.name ?? "Empty")
+                            Text(clothe.category?.name ?? "Empty")
                                 .font(.custom("AvenirNext-Regular", size: 15))
                                 .foregroundColor(.gray)
-                            Text(selectedClothe.category?.subcategory?.name ?? "Empty")
+                            Text(clothe.category?.subcategory?.name ?? "Empty")
                                 .font(.custom("AvenirNext-Demibold", size: 15))
                         }
                     }
                     .padding(.top, 20)
                 }
-            } else {
-                HStack {
-                    Spacer()
-                    Image(systemName: "plus")
-                        .resizable()
-                        .foregroundColor(.themeColor(.primaryText))
-                        .frame(width: 50, height: 50)
-                    Spacer()
-                }
             }
-        })
+        }
         .frame(height: 150)
     }
 }
@@ -54,8 +41,7 @@ struct ClotheNowRow: View {
 struct ClotheNowRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ClotheNowRow(isDisplayed: .constant(false), selectedClothe: .constant(nil))
-            ClotheNowRow(isDisplayed: .constant(false), selectedClothe: .constant(Clothe.mock))
+            ClotheListRow(clothe: Clothe.mock)
         }
     }
 }

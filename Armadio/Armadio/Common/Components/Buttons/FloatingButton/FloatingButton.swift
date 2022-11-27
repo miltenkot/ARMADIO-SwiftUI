@@ -13,6 +13,7 @@ struct FloatingButton: View {
     let addNewAction: () -> Void
     let statsAction: () -> Void
     let outfitsAction: () -> Void
+    let listAction: () -> Void
 
     var body: some View {
         VStack(alignment: .trailing) {
@@ -21,6 +22,7 @@ struct FloatingButton: View {
                 ButtonMenuItem(action: addNewAction, icon: "plus.circle.fill", name: "Add new")
                 ButtonMenuItem(action: statsAction, icon: "photo.on.rectangle", name: "Stats")
                 ButtonMenuItem(action: outfitsAction, icon: "square.and.arrow.up.fill", name: "Outfits")
+                ButtonMenuItem(action: listAction, icon: "list.bullet.circle.fill", name: "List")
             }
             Button(action: {
                 self.showMenu()
@@ -45,6 +47,7 @@ struct FloatingButton_Previews: PreviewProvider {
         FloatingButton(showMenuItems: .constant(true),
                        addNewAction: {},
                        statsAction: {},
-                       outfitsAction: {})
+                       outfitsAction: {},
+                       listAction: {})
     }
 }

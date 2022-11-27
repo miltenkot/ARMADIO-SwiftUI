@@ -52,6 +52,12 @@ struct LocalClothe: Hashable, Codable, Identifiable {
     }
 }
 
+extension LocalClothe {
+    static private(set) var brandMock: [String] = ["Gucci", "Luis", "Micheal Kors", "Armani", "TOmmy", "Adidas", "Nike"]
+    static private(set) var sizesMock: [String] = ["XSS", "XS", "S", "M", "L", "XL", "XLL"]
+    static private(set) var materialMock: [String] = ["Coton", "Whool", "Gold", "Silver", "Many", "Sos", "Ross"]
+}
+
 struct LocalCategory: Hashable, Codable {
     var name: String?
     var subcategory: LocalSubcategory?
@@ -95,15 +101,59 @@ struct ClotheCategory: Hashable, Codable {
 }
 
 extension ClotheCategory {
-    static var categoriesMock: [ClotheCategory] = [.init(name: "Category1", subcategories: [.init(name: "Suby1cc"),
-                                                                                            .init(name: "Suby1ss")]),
-                                                   .init(name: "Category2", subcategories: [.init(name: "Suby2aa"),
-                                                                                            .init(name: "Suby2ss"),
-                                                                                            .init(name: "Suby2dd"),
-                                                                                            .init(name: "Suby2cc")]),
-                                                   .init(name: "Category3", subcategories: [.init(name: "Suby3rr"),
-                                                                                            .init(name: "Suby3yy"),
-                                                                                            .init(name: "Suby3tt"),
-                                                                                            .init(name: "Suby3rr"),
-                                                                                            .init(name: "Suby3uu")])]
+    static var categoriesMock: [ClotheCategory] = [.init(name: "T-shirty i koszulki polo",
+                                                         subcategories: [
+                                                            .init(name: "T-shirty basic"),
+                                                            .init(name: "T-shirty z nadrukiem"),
+                                                            .init(name: "Tank top"),
+                                                            .init(name: "Koszulki polo"),
+                                                            .init(name: "Bluzki z długim rękawem"),
+                                                            .init(name: "T-shirty sportowe")
+                                                         ]),
+                                                   .init(name: "Koszule",
+                                                         subcategories: [
+                                                            .init(name: "Koszule na co dzień"),
+                                                            .init(name: "Koszule biznesowe")
+                                                         ]),
+                                                   .init(name: "Swetry i bluzy",
+                                                         subcategories: [
+                                                            .init(name: "Bluzy z kapturem"),
+                                                            .init(name: "Bluzy nierozpinane"),
+                                                            .init(name: "Bluzy rozpinane"),
+                                                            .init(name: "Bluzy polarowe")
+                                                         ]),
+                                                   .init(name: "Jeansy",
+                                                         subcategories: [
+                                                            .init(name: "Skinny fit"),
+                                                            .init(name: "Slim fit"),
+                                                            .init(name: "Straight leg"),
+                                                            .init(name: "Zwężane jeansy"),
+                                                            .init(name: "Relaxed & loose fit"),
+                                                            .init(name: "Bootcut"),
+                                                            .init(name: "Szorty jeansowe")
+                                                         ]),
+                                                   .init(name: "Spodnie",
+                                                         subcategories: [
+                                                            .init(name: "Chinosy"),
+                                                            .init(name: "Eleganckie spodnie"),
+                                                            .init(name: "Bojówki"),
+                                                            .init(name: "Spodnie treningowe"),
+                                                            .init(name: "Ogrodniczki")
+                                                         ]),
+                                                   .init(name: "Szorty",
+                                                         subcategories: [
+                                                            .init(name: "Codzienne szorty"),
+                                                            .init(name: "Szorty dżinsowe"),
+                                                            .init(name: "Szorty sportowe")
+                                                         ]),
+                                                   .init(name: "Sukienki",
+                                                         subcategories: [
+                                                            .init(name: "Sukienki letnie"),
+                                                            .init(name: "Sukienki koktajlowe"),
+                                                            .init(name: "Sukienki wieczorowe"),
+                                                            .init(name: "Sukienki koszulowe"),
+                                                            .init(name: "Sukienki z dżerseju"),
+                                                            .init(name: "Sukienki etui"),
+                                                            .init(name: "Sukienki maxi")
+                                                         ])]
 }

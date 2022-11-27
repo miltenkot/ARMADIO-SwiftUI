@@ -26,7 +26,7 @@ struct NavigationButton: View {
         } label: {
             Image(systemName: getImageName())
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .scaledToFit()
                 .frame(width: 35, height: 35, alignment: .center)
                 .foregroundColor(colorScheme == .dark ? Color(UIColor.darkGray): Color((UIColor.lightGray)))
                 .background(colorScheme == .dark ? .white : .black)
@@ -52,15 +52,10 @@ struct NavigationButton: View {
 
 struct DismissButton_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            NavigationButton(type: .back, action: {})
-            NavigationButton(type: .close, action: {})
-            NavigationButton(type: .add, action: {})
-        }.preferredColorScheme(.light)
-        Group {
-            NavigationButton(type: .back, action: {})
-            NavigationButton(type: .close, action: {})
-            NavigationButton(type: .add, action: {})
-        }.preferredColorScheme(.dark)
+        NavigationButton(type: .delete, action: {})
+        NavigationButton(type: .close, action: {})
+        NavigationButton(type: .back, action: {})
+        NavigationButton(type: .add, action: {})
+        NavigationButton(type: .refresh, action: {})
     }
 }

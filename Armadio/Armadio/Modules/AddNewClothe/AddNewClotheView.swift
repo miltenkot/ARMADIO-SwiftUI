@@ -81,21 +81,25 @@ struct AddNewClotheView: View {
                     case .price:
                         NavigationPickerDetailsPrice(price: $viewModel.selectedPrice)
                     case .receipt:
+                        #if targetEnvironment(simulator)
+                        SimulatorDefaulView()
+                        #else
                         ScannerDetailsView(isRecognizing: $viewModel.isReceiptRecognizing, receiptImageData: $viewModel.receiptImageData)
+                        #endif
                     case .category:
                         NavigationPickerDetailsCategory(bindCategory: $viewModel.selectedCategory)
                     case .color:
                         ColorPickerDetails(selection: $viewModel.selectedColor)
                     case .size:
                         NavigationPickerDetailsDefault(title: "Size",
-                                                       items: viewModel.sizes, item: $viewModel.selectedSize)
+                                                       items: LocalClothe.sizesMock, item: $viewModel.selectedSize)
                     case .brand:
                         NavigationPickerDetailsDefault(title: "Brand",
-                                                       items: viewModel.brands,
+                                                       items: LocalClothe.brandMock,
                                                        item: $viewModel.selectedBrand)
                     case .material:
                         NavigationPickerDetailsDefault(title: "Material",
-                                                       items: viewModel.material,
+                                                       items: LocalClothe.materialMock,
                                                        item: $viewModel.selectedMaterial)
                     case .dateOfPurchase:
                         NavigationPickerDetailsDate(date: $viewModel.selectedDate)
