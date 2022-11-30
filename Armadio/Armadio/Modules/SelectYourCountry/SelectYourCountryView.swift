@@ -23,40 +23,8 @@ struct SelectYourCountryView: View {
                 Text("SelectYourCountryView_Please".localized)
                     .foregroundColor(.gray)
                 
-                Button {
-                    viewModel.isDisplayed.toggle()
-                } label: {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("SelectYourCountryView_Armadio".localized)
-                                .font(.system(size: 12, weight: .light))
-                            HStack {
-                                Text(viewModel.getCountryFlag())
-                                Text(viewModel.getCountryName())
-                                    .textStyle(NormalStyle())
-                                
-                            }
-                        }
-                        
-                        Spacer()
-                        Image(systemName: "arrow.right")
-                    }
-                    .foregroundColor(Color.themeColor(.primaryText))
-                    .padding()
-                }
-                .frame(height: 60)
-                .foregroundColor(.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(.gray, lineWidth: 2)
-                )
-                .padding()
-                .sheet(isPresented: $viewModel.isDisplayed) {
-                    CountryListView(selectedFlag: $viewModel.countryCode)
-                        .presentationDetents([.large])
-                        .presentationDragIndicator(.visible)
-                    
-                }
+                CountryPickerView(countryCode: $viewModel.countryCode)
+                
                 VStack() {
                     HStack {
                         CheckboxView(readMoreAction: {
@@ -78,8 +46,7 @@ struct SelectYourCountryView: View {
                 
                 PrimaryButton(text: "SelectYourCountryView_Continue".localized,
                                foregroundColor: Color.themeColor(.primaryButtonFColor),
-                               backgroundColor: .blue,
-                               imageName: nil) {
+                               backgroundColor: .blue) {
                     if viewModel.checkboxState == false {
                         withAnimation {
                             viewModel.startShakeAnimate()

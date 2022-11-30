@@ -30,45 +30,55 @@ struct LoginOptionsView: View {
                     
                     VStack(spacing: 0) {
                         PrimaryButton(text: "LoginOptionsView_Apple".localized,
-                                       foregroundColor: Color.themeColor(.primaryButtonFColor),
-                                       backgroundColor: Color.themeColor(.primaryButtonBColor),
-                                       imageName: "applelogo") {
-                            print("action")
+                                      foregroundColor: Color.themeColor(.primaryButtonFColor),
+                                      backgroundColor: Color.themeColor(.primaryButtonBColor),
+                                      imageName: "applelogo") {
+                            viewModel.activeModalView = .apple
                         }
                         
                         PrimaryButton(text: "LoginOptionsView_Facebook".localized,
-                                       foregroundColor: Color.themeColor(.primaryButtonFColor),
-                                       backgroundColor: .blue,
-                                       imageName: "f.cursive.circle.fill") {
-                            print("action")
+                                      foregroundColor: Color.themeColor(.primaryButtonFColor),
+                                      backgroundColor: .blue,
+                                      imageName: "f.cursive.circle.fill") {
+                            viewModel.activeModalView = .facebook
                         }
                         
                         PrimaryButton(text: "LoginOptionsView_Google".localized,
-                                       foregroundColor: .blue,
-                                       backgroundColor: Color.themeColor(.primaryButtonBColor),
-                                       imageName: "g.square") {
-                            print("action")
+                                      foregroundColor: .blue,
+                                      backgroundColor: Color.themeColor(.primaryButtonBColor),
+                                      imageName: "g.square") {
+                            viewModel.activeModalView = .google
                         }
-                                       
+                        
                         
                         PrimaryButton(text: "LoginOptionsView_email".localized,
-                                       foregroundColor: Color.themeColor(.primaryButtonFColor),
-                                       backgroundColor: .blue,
-                                       imageName: "envelope.fill") {
-                            print("action")
+                                      foregroundColor: Color.themeColor(.primaryButtonFColor),
+                                      backgroundColor: .blue,
+                                      imageName: "envelope.fill") {
+                            viewModel.activeModalView = .email
                         }
                         
                         Divider().background(.white)
                         PrimaryButton(text: "LoginOptionsView_guest".localized,
-                                       foregroundColor: Color.themeColor(.primaryButtonFColor),
-                                       backgroundColor: .blue) {
-                            viewModel.isPresented.toggle()
+                                      foregroundColor: Color.themeColor(.primaryButtonFColor),
+                                      backgroundColor: .blue) {
+                            viewModel.activeModalView = .guest
                             
                         }
-                                       .fullScreenCover(isPresented: $viewModel.isPresented) {
-                                           SelectYourCountryView()
-                                       }
-                        
+                                      .fullScreenCover(item: $viewModel.activeModalView) {
+                                          switch $0 {
+                                          case .apple:
+                                              SelectYourCountryView()
+                                          case .facebook:
+                                              SelectYourCountryView()
+                                          case .google:
+                                              SelectYourCountryView()
+                                          case .email:
+                                              ProfileDetailsView()
+                                          case .guest:
+                                              SelectYourCountryView()
+                                          }
+                                      }
                     }
                 }.padding()
                     .toolbar {

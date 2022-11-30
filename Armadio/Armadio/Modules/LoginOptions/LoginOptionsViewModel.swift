@@ -8,5 +8,13 @@
 import Foundation
 
 final class LoginOptionsViewModel: ObservableObject {
-    @Published var isPresented = false
+    @Published var activeModalView: ModalView? = nil
+    
+    enum ModalView: String, Identifiable {
+        case apple, facebook, google, email, guest
+        
+        var id: String {
+            return self.rawValue
+        }
+    }
 }
