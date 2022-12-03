@@ -9,9 +9,11 @@ import Foundation
 
 final class LoginOptionsViewModel: ObservableObject {
     @Published var activeModalView: ModalView? = nil
+    @Published var facebookLoginNotAvailable = false
+    @Published var appleLoginNotAvailable = false
     
     enum ModalView: String, Identifiable {
-        case apple, facebook, google, email, guest
+        case email, guest
         
         var id: String {
             return self.rawValue

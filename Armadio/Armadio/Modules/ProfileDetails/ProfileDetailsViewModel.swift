@@ -16,6 +16,7 @@ final class ProfileDetailsViewModel: ObservableObject {
     @Published var isDisplayed = false
     @Published var countryCode: String? = "AC"
     @Published var isMainViewPresented = false
+    @Published var isLoginScreenPresented = false
     @Published var emailText = ""
     @Published var firstNameText = ""
     @Published var lastNameText = ""

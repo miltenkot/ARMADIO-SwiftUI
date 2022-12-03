@@ -68,12 +68,3 @@ struct StatsView_Previews: PreviewProvider {
         StatsView()
     }
 }
-
-
-//    .toolbar {
-//        ToolbarItem(placement: .navigationBarLeading) {
-//            NavigationButton(type: .back) {
-//                dismiss()
-//            }
-//        }
-//    }

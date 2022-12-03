@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginOptionsView: View {
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
     @StateObject var viewModel = LoginOptionsViewModel()
     
     var body: some View {
@@ -33,21 +34,21 @@ struct LoginOptionsView: View {
                                       foregroundColor: Color.themeColor(.primaryButtonFColor),
                                       backgroundColor: Color.themeColor(.primaryButtonBColor),
                                       imageName: "applelogo") {
-                            viewModel.activeModalView = .apple
+                            viewModel.appleLoginNotAvailable.toggle()
                         }
                         
                         PrimaryButton(text: "LoginOptionsView_Facebook".localized,
                                       foregroundColor: Color.themeColor(.primaryButtonFColor),
                                       backgroundColor: .blue,
                                       imageName: "f.cursive.circle.fill") {
-                            viewModel.activeModalView = .facebook
+                            viewModel.facebookLoginNotAvailable.toggle()
                         }
                         
                         PrimaryButton(text: "LoginOptionsView_Google".localized,
                                       foregroundColor: .blue,
                                       backgroundColor: Color.themeColor(.primaryButtonBColor),
                                       imageName: "g.square") {
-                            viewModel.activeModalView = .google
+                            authViewModel.signInWithGoogle()
                         }
                         
                         
@@ -67,18 +68,18 @@ struct LoginOptionsView: View {
                         }
                                       .fullScreenCover(item: $viewModel.activeModalView) {
                                           switch $0 {
-                                          case .apple:
-                                              SelectYourCountryView()
-                                          case .facebook:
-                                              SelectYourCountryView()
-                                          case .google:
-                                              SelectYourCountryView()
                                           case .email:
                                               ProfileDetailsView()
                                           case .guest:
                                               SelectYourCountryView()
                                           }
                                       }
+                                      .alert("Facebook login is not yet available", isPresented: $viewModel.facebookLoginNotAvailable, actions: {
+                                          Button("OK", role: .cancel) { }
+                                      })
+                                      .alert("Apple login is not yet available", isPresented: $viewModel.appleLoginNotAvailable, actions: {
+                                          Button("OK", role: .cancel) { }
+                                      })
                     }
                 }.padding()
                     .toolbar {
@@ -94,7 +95,9 @@ struct LoginOptionsView: View {
 }
 
 struct LoginOptionsView_Previews: PreviewProvider {
+    static let authViewModel = AuthenticationViewModel()
     static var previews: some View {
         LoginOptionsView()
+            .environmentObject(authViewModel)
     }
 }

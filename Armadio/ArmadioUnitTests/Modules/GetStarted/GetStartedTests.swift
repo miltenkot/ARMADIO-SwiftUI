@@ -7,6 +7,10 @@
 
 import XCTest
 import ViewInspector
+import GoogleSignIn
+import FirebaseCore
+import FirebaseAuth
+import Firebase
 @testable import Armadio
 
 extension GetStartedView: Inspectable {}

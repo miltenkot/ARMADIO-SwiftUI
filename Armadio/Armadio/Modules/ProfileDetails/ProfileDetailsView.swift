@@ -38,6 +38,9 @@ struct ProfileDetailsView: View {
                 }
                 .padding()
                 Spacer()
+                Button("Don't have an account?") {
+                    viewModel.isLoginScreenPresented.toggle()
+                }
                 PrimaryButton(text: "Next", foregroundColor: Color.themeColor(.primaryButtonFColor),
                               backgroundColor: .blue) {
                     if viewModel.validateFields {
@@ -50,7 +53,10 @@ struct ProfileDetailsView: View {
                     }
                 }
                               .fullScreenCover(isPresented: $viewModel.isMainViewPresented) {
-                                  PasswordDetailsView()
+                                  PasswordDetailsView(viewModel: .init(userEmail: viewModel.emailText, userFirstName: viewModel.firstNameText, userLastName: viewModel.lastNameText, userCountryCode: viewModel.countryCode))
+                              }
+                              .fullScreenCover(isPresented: $viewModel.isLoginScreenPresented) {
+                                  SignInView()
                               }
                 
             }

@@ -25,12 +25,13 @@ final class SelectYourCountryViewModelTests: XCTestCase {
         Container.Registrations.pop()
     }
     
-    func testGetSelectedCountryName() {
-        XCTAssertEqual(sut.getCountryName(), "Austria")
-    }
-    
-    func testGetSelectedCountryFlag() {
-        XCTAssertEqual(sut.getCountryFlag(), "🇦🇹")
-    }
+    //move to proper module
+//    func testGetSelectedCountryName() {
+//        XCTAssertEqual(sut.getCountryName(), "Austria")
+//    }
+//
+//    func testGetSelectedCountryFlag() {
+//        XCTAssertEqual(sut.getCountryFlag(), "🇦🇹")
+//    }
 
 }

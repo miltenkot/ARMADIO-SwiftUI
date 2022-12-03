@@ -12,6 +12,8 @@ extension Container {
     static let countryFlagProvider = Factory<CountryFlagProvider> { CountryFlagProviderImpl() }
     static let firebaseAnaliticsProvider = Factory<FirebaseAnaliticsProvider> { FirebaseAnaliticsProviderImpl() }
     static let clotheDataProvider = Factory<ClotheDataProvider> { ClotheDataProviderImpl() }
+    static let googleSignInAuthProvider = Factory<GoogleSignInAuthProvider> { GoogleSignInAuthProviderImpl() }
+    static let firebaseAuthService = Factory<AuthService> { FirebaseAuthService() }
 }
 
 //MARK: Unit tests helpers

@@ -26,7 +26,7 @@ struct HomeView: View {
                 .tabItem {
                     Label("HomeView_Chat".localized, systemImage: "ellipsis.bubble.fill")
                 }
-            Text("Profile")
+            ProfileSettingsView()
                 .tabItem {
                     Label("HomeView_Profile".localized, systemImage: "person.circle.fill")
                 }

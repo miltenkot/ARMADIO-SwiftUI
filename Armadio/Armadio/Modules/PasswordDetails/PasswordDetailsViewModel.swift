@@ -6,12 +6,27 @@
 //
 
 import Foundation
+import Factory
 
 final class PasswordDetailsViewModel: ObservableObject {
+    
+    @Published var isMainViewPresented = false
     @Published var numberOfShakes = 0.0
+    @Published var showingErrorAlert = false
+    //User credential
     @Published var passwordText = ""
     @Published var repeatPasswordText = ""
-    @Published var isMainViewPresented = false
+    var userEmail: String
+    var userFirstName: String
+    var userLastName: String
+    var userCountryCode: String?
+    
+    init(userEmail: String, userFirstName: String, userLastName: String, userCountryCode: String? = nil) {
+        self.userEmail = userEmail
+        self.userFirstName = userFirstName
+        self.userLastName = userLastName
+        self.userCountryCode = userCountryCode
+    }
     
     var validateFields: Bool {
         [passwordText, repeatPasswordText].contains(where: { $0.isEmpty }) || !isPasswordValid(passwordText) || !(passwordText == repeatPasswordText)

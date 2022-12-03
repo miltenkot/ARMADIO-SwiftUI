@@ -14,13 +14,4 @@ extension PrimaryButton: Inspectable {}
 
 final class LoginOptionsViewTests: XCTestCase {
 
-    func test_ContinueButtons_Titles() throws {
-        let view = LoginOptionsView(viewModel: LoginOptionsViewModel())
-        XCTAssertNoThrow(try view.inspect().find(PrimaryButton.self, containing: "Continue with Apple"))
-        XCTAssertNoThrow(try view.inspect().find(PrimaryButton.self, containing: "Continue with Facebook"))
-        XCTAssertNoThrow(try view.inspect().find(PrimaryButton.self, containing: "Continue with Google"))
-        XCTAssertNoThrow(try view.inspect().find(PrimaryButton.self, containing: "Continue with email"))
-        XCTAssertNoThrow(try view.inspect().find(PrimaryButton.self, containing: "Continue with guest"))
-    }
-
 }

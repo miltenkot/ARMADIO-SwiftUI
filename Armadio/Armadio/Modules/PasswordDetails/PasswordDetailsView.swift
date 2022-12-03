@@ -9,7 +9,12 @@ import SwiftUI
 
 struct PasswordDetailsView: View {
     @Environment(\.dismiss) var dismiss
-    @StateObject var viewModel = PasswordDetailsViewModel()
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
+    @ObservedObject var viewModel: PasswordDetailsViewModel
+    
+    init(viewModel: PasswordDetailsViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         NavigationView {
@@ -18,7 +23,7 @@ struct PasswordDetailsView: View {
                     VStack(alignment: .leading, spacing: 14) {
                         Text("Password")
                             .textStyle(TitleStyle(foregroundColor: Color.themeColor(.primaryText)))
-                        Text("Password must have more than some characters, contain some special character, one digit, one uppercase letter")
+                        Text("Password must have more than 8 characters, contain some special character, one digit, one uppercase letter")
                             .font(.system(size: 14, weight: .light))
                             .foregroundColor(Color.themeColor(.primaryText))
                     }
@@ -29,22 +34,26 @@ struct PasswordDetailsView: View {
                             .shake(with: viewModel.numberOfShakes)
                     }.padding(.vertical, 5)
                     Spacer()
-                    PrimaryButton(text: "Sign Up", foregroundColor: Color.themeColor(.primaryButtonFColor),
-                                  backgroundColor: .blue) {
+                    PrimaryAsyncButton(text: "Sign Up", foregroundColor: Color.themeColor(.primaryButtonFColor),
+                                       backgroundColor: .blue) {
                         if viewModel.validateFields {
                             withAnimation {
                                 viewModel.startShakeAnimate()
                             }
                         } else {
-                            viewModel.clearShakeAnimate()
-                            viewModel.isMainViewPresented.toggle()
+                            Task {
+                                viewModel.clearShakeAnimate()
+                                authViewModel.registerWithEmail(email: viewModel.userEmail, password: viewModel.passwordText)
+                                dismiss()
+                            }
+                            
                         }
-                    }
-                                  .fullScreenCover(isPresented: $viewModel.isMainViewPresented) {
-                                      HomeView()
-                                  }
+                    }    
                 }.padding()
             }
+            .alert("User is already sign in", isPresented: $viewModel.showingErrorAlert, actions: {
+                Button("OK", role: .cancel) { }
+            })
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     NavigationButton(type: .back) {
@@ -58,6 +67,6 @@ struct PasswordDetailsView: View {
 
 struct PasswordDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordDetailsView()
+        PasswordDetailsView(viewModel: PasswordDetailsViewModel(userEmail: "", userFirstName: "", userLastName: ""))
     }
 }

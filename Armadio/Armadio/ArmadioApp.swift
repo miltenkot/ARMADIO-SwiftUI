@@ -8,10 +8,13 @@
 import SwiftUI
 import Firebase
 import CoreData
+import GoogleSignIn
+import FirebaseCore
 
 @main
 struct ArmadioApp: App {
     @StateObject private var coreDataStack = CoreDataStack()
+    @StateObject private var authViewModel = AuthenticationViewModel()
     
     init() {
         setupFirebase()
@@ -20,15 +23,20 @@ struct ArmadioApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(authViewModel)
+                .onAppear {
+                    authViewModel.restorePreviousSignIn()
+                }
                 .environment(\.managedObjectContext, coreDataStack.container.viewContext)
+                .onOpenURL { url in
+                    GIDSignIn.sharedInstance.handle(url)
+                }
         }
     }
 }
 
 extension ArmadioApp {
     func setupFirebase() {
-        #if !DEBUG
         FirebaseApp.configure()
-        #endif
     }
 }
