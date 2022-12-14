@@ -14,15 +14,15 @@ struct SignInView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 0) {
+            VStack(spacing: Constants.spacingZero) {
                 VStack {
                     Spacer()
                     HStack {
-                        VStack(alignment: .leading, spacing: 14) {
-                            Text("Log in")
+                        VStack(alignment: .leading, spacing: Constants.spacingSmall) {
+                            Text("SignInView_LogIn".localized)
                                 .textStyle(TitleStyle(foregroundColor: Color.themeColor(.primaryText)))
-                            Text("Login to your service using password and email.")
-                                .font(.system(size: 14, weight: .light))
+                            Text("SignInView_PassAndEmail".localized)
+                                .font(.system(size: Constants.fontSmall, weight: .light))
                                 .foregroundColor(Color.themeColor(.primaryText))
                         }
                         Spacer()
@@ -32,9 +32,9 @@ struct SignInView: View {
                             .shake(with: viewModel.numberOfShakes)
                         UserFormTextField(text: $viewModel.passwordText, type: .password)
                             .shake(with: viewModel.numberOfShakes)
-                    }.padding(.vertical, 5)
+                    }.padding(.vertical, Constants.paddingVerticalSmall)
                     Spacer()
-                    PrimaryAsyncButton(text: "Sign In", foregroundColor: Color.themeColor(.primaryButtonFColor),
+                    PrimaryAsyncButton(text: "SignInView_SignIn".localized, foregroundColor: Color.themeColor(.primaryButtonFColor),
                                        backgroundColor: .blue) {
                         if viewModel.validateFields {
                             withAnimation {
@@ -49,7 +49,7 @@ struct SignInView: View {
                                 
                                 switch result {
                                 case .success:
-                                    // here is bug our sheet doesn't dismiss
+                                    #warning("here is bug our sheet doesn't dismiss")
                                     dismiss()
                                 case .failure:
                                     viewModel.showingErrorAlert.toggle()
@@ -59,7 +59,7 @@ struct SignInView: View {
                     }
                 }.padding()
             }
-            .alert("User not found", isPresented: $viewModel.showingErrorAlert, actions: {
+            .alert("SignInView_UserNotFound".localized, isPresented: $viewModel.showingErrorAlert, actions: {
                 Button("OK", role: .cancel) { }
             })
             .toolbar {

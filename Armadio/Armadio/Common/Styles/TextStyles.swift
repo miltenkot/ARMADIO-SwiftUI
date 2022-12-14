@@ -9,14 +9,16 @@ import SwiftUI
 
 struct TitleStyle: ViewModifier {
     let foregroundColor: Color
+    let size: Double
     
-    init(foregroundColor: Color = Color.themeColor(.primaryText)) {
+    init(foregroundColor: Color = Color.themeColor(.primaryText), size: Double = 30) {
         self.foregroundColor = foregroundColor
+        self.size = size
     }
     
     func body(content: Content) -> some View {
         content
-            .font(.system(size: 30, weight: .bold))
+            .font(.system(size: size, weight: .bold))
             .foregroundColor(foregroundColor)
     }
 }

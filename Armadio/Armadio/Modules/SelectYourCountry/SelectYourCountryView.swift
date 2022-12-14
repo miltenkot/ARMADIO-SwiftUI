@@ -14,12 +14,14 @@ struct SelectYourCountryView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
+            VStack(spacing: Constants.spacingSmall) {
                 HStack {
                     Text("SelectYourCountryView_Welcome".localized)
                         .textStyle(TitleStyle(foregroundColor: Color.themeColor(.primaryText)))
                     Spacer()
-                }.padding()
+                }
+                .padding()
+                
                 Text("SelectYourCountryView_Please".localized)
                     .foregroundColor(.gray)
                 
@@ -36,7 +38,6 @@ struct SelectYourCountryView: View {
                     if viewModel.numberOfShakes > 0 {
                         withAnimation {
                             RequiredView().transition(.fadeAndSlide)
-                            
                         }
                     }
                 }
@@ -46,7 +47,7 @@ struct SelectYourCountryView: View {
                 
                 PrimaryButton(text: "SelectYourCountryView_Continue".localized,
                                foregroundColor: Color.themeColor(.primaryButtonFColor),
-                               backgroundColor: .blue) {
+                              backgroundColor: Color.themeColor(.primaryColor)) {
                     if viewModel.checkboxState == false {
                         withAnimation {
                             viewModel.startShakeAnimate()

@@ -21,7 +21,8 @@ struct ReceiptDetails: View {
                         .scaledToFit()
                         .padding()
                 } else {
-                    Text("No content")
+                    Text("ReceiptDetails_NoContent".localized)
+                        .textStyle(TitleStyle())
                 }
             }
             .toolbar {

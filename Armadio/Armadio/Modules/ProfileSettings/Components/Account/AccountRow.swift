@@ -6,26 +6,41 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct AccountRow: View {
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
+    
     var body: some View {
         HStack {
-            Image(systemName: "person.crop.circle.fill")
-                .resizable()
-                .scaledToFill()
-                .foregroundColor(.blue)
-                .frame(width: 80, height: 80)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                .overlay {
-                    Circle().stroke(.white, lineWidth: 4)
-                }
-                .shadow(radius: 7)
-                .padding(.trailing)
+            if let imageURL = authViewModel.currentUserInfo()?.photo {
+                AsyncImage(url: imageURL)
+                    .frame(width: Constants.widthSmall, height: Constants.heightSmall)
+                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    .overlay {
+                        Circle().stroke(.white, lineWidth: 4)
+                    }
+                    .shadow(radius: 7)
+                    .padding(.trailing)
+            } else {
+                Image(systemName: "person.crop.circle.fill")
+                    .resizable()
+                    .scaledToFill()
+                    .foregroundColor(.blue)
+                    .frame(width: Constants.widthSmall, height: Constants.heightSmall)
+                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    .overlay {
+                        Circle().stroke(.white, lineWidth: 4)
+                    }
+                    .shadow(radius: 7)
+                    .padding(.trailing)
+            }
+            
             VStack(alignment: .leading) {
-                Text("Bartlomiej Lanczyk")
-                    .font(.custom("AvenirNext-Bold", size: 20))
-                Text("Nothing")
-                    .font(.custom("AvenirNext-Demibold", size: 15))
+                Text("\(authViewModel.currentUserInfo()?.displayName ?? "Empty")")
+                    .font(.custom("AvenirNext-Bold", size: Constants.fontMedium))
+                Text("\(authViewModel.currentUserInfo()?.uid ?? "Empty")")
+                    .font(.custom("AvenirNext-Demibold", size: Constants.fontSmall))
                     .foregroundColor(.gray)
             }
             Spacer()
@@ -34,7 +49,9 @@ struct AccountRow: View {
 }
 
 struct MyProfileRow_Previews: PreviewProvider {
+    static let authViewModel = AuthenticationViewModel()
     static var previews: some View {
         AccountRow()
+            .environmentObject(authViewModel)
     }
 }

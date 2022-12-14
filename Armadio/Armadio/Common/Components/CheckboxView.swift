@@ -24,11 +24,11 @@ struct CheckboxView: View {
                         .overlay {
                             Image(systemName: (checkState == true) ? "checkmark.square.fill" : "square.fill")
                                 .resizable()
-                                .foregroundColor((checkState == true) ? .blue : checkboxColor)
+                                .foregroundColor((checkState == true) ? Color.themeColor(.primaryColor) : checkboxColor)
                                 .background(checkboxColor)
                             
                         }
-                        .border(.blue, width: 3)
+                        .border(Color.themeColor(.primaryColor), width: 3)
                         .cornerRadius(5)
                 }
             }
@@ -38,7 +38,7 @@ struct CheckboxView: View {
                 Button("CheckboxView_Read".localized) {
                     readMoreAction()
                 }
-                .foregroundColor(.blue)
+                .foregroundColor(Color.themeColor(.primaryColor))
             }
             .font(.system(size: 18, weight: .medium))
             .foregroundColor(Color.themeColor(.primaryText))

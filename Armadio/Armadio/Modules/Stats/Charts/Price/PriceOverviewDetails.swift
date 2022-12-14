@@ -73,6 +73,7 @@ extension PriceOverviewDetailsChart {
 }
 
 struct PriceOverviewDetails: View {
+    @Environment(\.dismiss) var dismiss
     @FetchRequest var clothes: FetchedResults<Clothe>
     @State private var timeRange: TimeRange = .lastYear
     @State private var showAverageLine: Bool = false
@@ -104,6 +105,14 @@ struct PriceOverviewDetails: View {
         }
         .listStyle(.plain)
         .navigationBarTitle("Total price", displayMode: .inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                NavigationButton(type: .back) {
+                    dismiss()
+                }
+            }
+        }
     }
 }
 

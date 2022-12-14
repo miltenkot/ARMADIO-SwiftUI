@@ -18,12 +18,12 @@ struct PasswordDetailsView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 0) {
+            VStack(spacing: Constants.spacingZero) {
                 VStack {
-                    VStack(alignment: .leading, spacing: 14) {
-                        Text("Password")
+                    VStack(alignment: .leading, spacing: Constants.spacingSmall) {
+                        Text("PasswordDetailsView_Password".localized)
                             .textStyle(TitleStyle(foregroundColor: Color.themeColor(.primaryText)))
-                        Text("Password must have more than 8 characters, contain some special character, one digit, one uppercase letter")
+                        Text("PasswordDetailsView_PasswordNeeds".localized)
                             .font(.system(size: 14, weight: .light))
                             .foregroundColor(Color.themeColor(.primaryText))
                     }
@@ -32,10 +32,10 @@ struct PasswordDetailsView: View {
                             .shake(with: viewModel.numberOfShakes)
                         UserFormTextField(text: $viewModel.repeatPasswordText, type: .repeatPassword)
                             .shake(with: viewModel.numberOfShakes)
-                    }.padding(.vertical, 5)
+                    }.padding(.vertical, Constants.paddingVerticalSmall)
                     Spacer()
-                    PrimaryAsyncButton(text: "Sign Up", foregroundColor: Color.themeColor(.primaryButtonFColor),
-                                       backgroundColor: .blue) {
+                    PrimaryAsyncButton(text: "PasswordDetailsView_Sign".localized, foregroundColor: Color.themeColor(.primaryButtonFColor),
+                                       backgroundColor: Color.themeColor(.primaryColor)) {
                         if viewModel.validateFields {
                             withAnimation {
                                 viewModel.startShakeAnimate()
@@ -46,13 +46,12 @@ struct PasswordDetailsView: View {
                                 authViewModel.registerWithEmail(email: viewModel.userEmail, password: viewModel.passwordText)
                                 dismiss()
                             }
-                            
                         }
-                    }    
+                    }
                 }.padding()
             }
-            .alert("User is already sign in", isPresented: $viewModel.showingErrorAlert, actions: {
-                Button("OK", role: .cancel) { }
+            .alert("PasswordDetailsView_User".localized, isPresented: $viewModel.showingErrorAlert, actions: {
+                Button("PasswordDetailsView_Ok".localized, role: .cancel) { }
             })
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {

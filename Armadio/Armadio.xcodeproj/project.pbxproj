@@ -14,6 +14,7 @@
 		131AA92E291A87B200C876C2 /* FirebaseAnaliticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131AA92D291A87B200C876C2 /* FirebaseAnaliticsProvider.swift */; };
 		131AA932291AA4EB00C876C2 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131AA931291AA4EB00C876C2 /* CoreDataStack.swift */; };
 		131AA935291AA87500C876C2 /* Armadio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 131AA933291AA87500C876C2 /* Armadio.xcdatamodeld */; };
+		132CF4C9294B0D1B00D809C8 /* AppStorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132CF4C8294B0D1B00D809C8 /* AppStorageKey.swift */; };
 		134747E5292C0D0F00856593 /* NowToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134747E4292C0D0F00856593 /* NowToolbar.swift */; };
 		1358839829102116009C8531 /* LocalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839729102116009C8531 /* LocalModels.swift */; };
 		1358839B29102136009C8531 /* WardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839A29102136009C8531 /* WardrobeView.swift */; };
@@ -88,6 +89,9 @@
 		13953B61293D037700BB03A0 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13953B60293D037700BB03A0 /* SignInView.swift */; };
 		13953B63293D038200BB03A0 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13953B62293D038200BB03A0 /* SignInViewModel.swift */; };
 		13953B652949181000BB03A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13953B642949181000BB03A0 /* User.swift */; };
+		13953B67294A1C0200BB03A0 /* AnimationCompletionObserverModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13953B66294A1C0200BB03A0 /* AnimationCompletionObserverModifier.swift */; };
+		13953B69294A1C4200BB03A0 /* AnyTransition+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13953B68294A1C4200BB03A0 /* AnyTransition+Extension.swift */; };
+		13953B6B294A454600BB03A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13953B6A294A454600BB03A0 /* Constants.swift */; };
 		13A3A920290D0A9900A49D99 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A91F290D0A9900A49D99 /* Shake.swift */; };
 		13A3A924290D10B800A49D99 /* RequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A923290D10B800A49D99 /* RequiredView.swift */; };
 		13A3A927290D2B1C00A49D99 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3A926290D2B1C00A49D99 /* HomeView.swift */; };
@@ -158,6 +162,7 @@
 		131AA92D291A87B200C876C2 /* FirebaseAnaliticsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnaliticsProvider.swift; sourceTree = "<group>"; };
 		131AA931291AA4EB00C876C2 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		131AA934291AA87500C876C2 /* Armadio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Armadio.xcdatamodel; sourceTree = "<group>"; };
+		132CF4C8294B0D1B00D809C8 /* AppStorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKey.swift; sourceTree = "<group>"; };
 		134747E4292C0D0F00856593 /* NowToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowToolbar.swift; sourceTree = "<group>"; };
 		1358839729102116009C8531 /* LocalModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalModels.swift; path = Armadio/Models/LocalModels.swift; sourceTree = SOURCE_ROOT; };
 		1358839A29102136009C8531 /* WardrobeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WardrobeView.swift; sourceTree = "<group>"; };
@@ -228,6 +233,9 @@
 		13953B60293D037700BB03A0 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		13953B62293D038200BB03A0 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		13953B642949181000BB03A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		13953B66294A1C0200BB03A0 /* AnimationCompletionObserverModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCompletionObserverModifier.swift; sourceTree = "<group>"; };
+		13953B68294A1C4200BB03A0 /* AnyTransition+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Extension.swift"; sourceTree = "<group>"; };
+		13953B6A294A454600BB03A0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		13A3A91F290D0A9900A49D99 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		13A3A923290D10B800A49D99 /* RequiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredView.swift; sourceTree = "<group>"; };
 		13A3A926290D2B1C00A49D99 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -320,6 +328,14 @@
 				131AA933291AA87500C876C2 /* Armadio.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		132CF4C7294B0D0E00D809C8 /* AppStorage */ = {
+			isa = PBXGroup;
+			children = (
+				132CF4C8294B0D1B00D809C8 /* AppStorageKey.swift */,
+			);
+			path = AppStorage;
 			sourceTree = "<group>";
 		};
 		133BA3E2291B8D4300C51154 /* Entities */ = {
@@ -475,6 +491,7 @@
 		13872FEB290ACA7E0049D1D2 /* Armadio */ = {
 			isa = PBXGroup;
 			children = (
+				132CF4C7294B0D0E00D809C8 /* AppStorage */,
 				13953B58293CFB7A00BB03A0 /* EnvironmentObjects */,
 				13F89233291E955400A2E2F1 /* Info.plist */,
 				131AA930291AA47800C876C2 /* CoreData */,
@@ -552,6 +569,7 @@
 				13EFA818292D0DED00F89CE6 /* Alignment.swift */,
 				136E3A042933682600595EE6 /* Date+Extension.swift */,
 				13953B56293CC7FF00BB03A0 /* UIApplication.swift */,
+				13953B68294A1C4200BB03A0 /* AnyTransition+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -561,6 +579,7 @@
 			children = (
 				13873014290ADAE30049D1D2 /* ButtonStyles.swift */,
 				13873016290ADAF60049D1D2 /* TextStyles.swift */,
+				13953B6A294A454600BB03A0 /* Constants.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -741,6 +760,7 @@
 			isa = PBXGroup;
 			children = (
 				13A3A91F290D0A9900A49D99 /* Shake.swift */,
+				13953B66294A1C0200BB03A0 /* AnimationCompletionObserverModifier.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -1091,6 +1111,7 @@
 				1318ADA32926D00200A17550 /* ClotheListRow.swift in Sources */,
 				135883A629103EDD009C8531 /* ClotheItem.swift in Sources */,
 				135F546A292EA684000E6A93 /* GeneralOverview.swift in Sources */,
+				13953B67294A1C0200BB03A0 /* AnimationCompletionObserverModifier.swift in Sources */,
 				135883B2291108AF009C8531 /* ButtonMenuItem.swift in Sources */,
 				13B8E8F82914FAD300F3FDDC /* NavigationPickerDetailsDescription.swift in Sources */,
 				1373D6A92924BEB3009A8930 /* FilteredListViewModel.swift in Sources */,
@@ -1107,6 +1128,8 @@
 				13EFA81D292D13E600F89CE6 /* CustomOverlayedButton.swift in Sources */,
 				13AE6F0C2912A03800D8FABA /* AddNewClotheViewModel.swift in Sources */,
 				1358839F291025D3009C8531 /* WardrobeViewModel.swift in Sources */,
+				132CF4C9294B0D1B00D809C8 /* AppStorageKey.swift in Sources */,
+				13953B6B294A454600BB03A0 /* Constants.swift in Sources */,
 				13EFA81B292D11EE00F89CE6 /* CustomSheetView.swift in Sources */,
 				13B19A87293B9FE1002E8AF1 /* AccountList.swift in Sources */,
 				136E3A07293371C800595EE6 /* PopularityOverviewDetails.swift in Sources */,
@@ -1151,6 +1174,7 @@
 				1373D6A729242453009A8930 /* FilteredListView.swift in Sources */,
 				1387303A290AF6170049D1D2 /* CountryFlagProvider.swift in Sources */,
 				136E3A052933682600595EE6 /* Date+Extension.swift in Sources */,
+				13953B69294A1C4200BB03A0 /* AnyTransition+Extension.swift in Sources */,
 				13A4C20A2922303800056034 /* PhotosPickerView.swift in Sources */,
 				13873037290AEA250049D1D2 /* CheckboxView.swift in Sources */,
 				136E3A032933677C00595EE6 /* TimeRangePicker.swift in Sources */,

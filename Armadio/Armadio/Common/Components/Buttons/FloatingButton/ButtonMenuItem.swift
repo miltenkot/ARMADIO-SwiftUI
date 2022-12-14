@@ -21,10 +21,10 @@ struct ButtonMenuItem: View {
                     .font(.system(size: 19, weight: .semibold))
                     .padding(5)
                     .foregroundColor(Color.themeColor(.primaryButtonFColor))
-                    .background(.purple)
+                    .background(Color.themeColor(.primaryColor))
                 ZStack {
                     Circle()
-                        .foregroundColor(.purple)
+                        .foregroundColor(Color.themeColor(.primaryColor))
                         .frame(width: 55, height: 55)
                     Image(systemName: icon)
                         .imageScale(.large)

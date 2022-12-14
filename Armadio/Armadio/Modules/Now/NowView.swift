@@ -19,60 +19,96 @@ enum ActiveSheet: Identifiable {
 
 struct NowView: View {
     @StateObject var viewModel = NowViewModel()
-    @State var activeSheet: ActiveSheet?
-    //TODO: - Fix this implementation
-    @AppStorage("clothe1") private var selectedClothe1: LocalClothe? = nil
-    @AppStorage("clothe2") private var selectedClothe2: LocalClothe? = nil
-    @AppStorage("clothe3") private var selectedClothe3: LocalClothe? = nil
-    @AppStorage("clothe4") private var selectedClothe4: LocalClothe? = nil
-    @AppStorage("clothe5") private var selectedClothe5: LocalClothe? = nil
+    @State private var activeSheet: ActiveSheet?
+    
+    @AppStorage(AppStorageKey.avatarName.rawValue)
+    private var avatarName: String? = nil
+    
+    @AppStorage(AppStorageKey.clotheTop.rawValue)
+    private var selectedClotheTop: LocalClothe? = nil
+    
+    @AppStorage(AppStorageKey.clotheMiddle.rawValue)
+    private var selectedClotheMiddle: LocalClothe? = nil
+    
+    @AppStorage(AppStorageKey.clotheBottom.rawValue)
+    private var selectedClotheBottom: LocalClothe? = nil
+    
+    @AppStorage(AppStorageKey.clotheAccessories.rawValue)
+    private var selectedClotheAccessories: LocalClothe? = nil
+    
+    @AppStorage(AppStorageKey.clotheShoes.rawValue)
+    private var selectedClotheShoes: LocalClothe? = nil
     
     var body: some View {
         NavigationView {
             ZStack(alignment: .custom) {
-                Image("person1")
-                
-                VStack(spacing: 70) {
-                    CustomOverlayedButton(selectedClothe: $selectedClothe1, customButton: NavigationButton(type: .add) {
-                        activeSheet = .first
-                    })
-                    .padding(.leading, 70)
-                    CustomOverlayedButton(selectedClothe: $selectedClothe2, customButton: NavigationButton(type: .add) {
-                        activeSheet = .second
-                    })
-                    .padding(.leading, 30)
-                    CustomOverlayedButton(selectedClothe: $selectedClothe3, customButton: NavigationButton(type: .add) {
-                        activeSheet = .third
-                    })
-                    CustomOverlayedButton(selectedClothe: $selectedClothe4, customButton: NavigationButton(type: .add) {
-                        activeSheet = .fourth
-                    })
-                    .padding(.leading, 30)
-                    CustomOverlayedButton(selectedClothe: $selectedClothe5, customButton: NavigationButton(type: .add) {
-                        activeSheet = .five
-                    })
-                    .padding(.leading, 70)
+                if avatarName == nil {
+                    VStack {
+                        Text("NowView_Select".localized)
+                            .textStyle(NormalStyle())
+                        ScrollView(.horizontal) {
+                            LazyHStack {
+                                ForEach(1...5, id: \.self) { value in
+                                    Button {
+                                        avatarName = "person\(value)"
+                                    } label: {
+                                        Image("person\(value)")
+                                            .frame(width: Constants.widthLarge)
+                                            .padding()
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    Image(avatarName!)
+                    
+                    VStack(spacing: Constants.spacingLarge) {
+                        CustomOverlayedButton(selectedClothe: $selectedClotheTop, customButton: NavigationButton(type: .add) {
+                            activeSheet = .first
+                        })
+                        .padding(.leading, Constants.paddingLeadingLarge)
+                        
+                        CustomOverlayedButton(selectedClothe: $selectedClotheMiddle, customButton: NavigationButton(type: .add) {
+                            activeSheet = .second
+                        })
+                        .padding(.leading, Constants.paddingLeadingMedium)
+                        
+                        CustomOverlayedButton(selectedClothe: $selectedClotheBottom, customButton: NavigationButton(type: .add) {
+                            activeSheet = .third
+                        })
+                        
+                        CustomOverlayedButton(selectedClothe: $selectedClotheAccessories, customButton: NavigationButton(type: .add) {
+                            activeSheet = .fourth
+                        })
+                        .padding(.leading, Constants.paddingLeadingMedium)
+                        
+                        CustomOverlayedButton(selectedClothe: $selectedClotheShoes, customButton: NavigationButton(type: .add) {
+                            activeSheet = .five
+                        })
+                        .padding(.leading, Constants.paddingLeadingLarge)
+                    }
+                    .alignmentGuide(HorizontalAlignment.custom)
+                    { d in d[.trailing] + 100 }
+                        .alignmentGuide(VerticalAlignment.custom)
+                    { d in d[.bottom] - 230 }
                 }
-                .alignmentGuide(HorizontalAlignment.custom)
-                { d in d[.trailing] + 100 }
-                    .alignmentGuide(VerticalAlignment.custom)
-                { d in d[.bottom] - 230 }
             }
             .sheet(item: $activeSheet, content: { item in
                 switch item {
                 case .first:
-                    CustomSheetView(selectedClothe: $selectedClothe1)
+                    CustomSheetView(selectedClothe: $selectedClotheTop)
                 case .second:
-                    CustomSheetView(selectedClothe: $selectedClothe2)
+                    CustomSheetView(selectedClothe: $selectedClotheMiddle)
                 case .third:
-                    CustomSheetView(selectedClothe: $selectedClothe3)
+                    CustomSheetView(selectedClothe: $selectedClotheBottom)
                 case .fourth:
-                    CustomSheetView(selectedClothe: $selectedClothe4)
+                    CustomSheetView(selectedClothe: $selectedClotheAccessories)
                 case .five:
-                    CustomSheetView(selectedClothe: $selectedClothe5)
+                    CustomSheetView(selectedClothe: $selectedClotheShoes)
                 }
             })
-            .navigationTitle("Now")
+            .navigationTitle("NowView_Title".localized)
         }
     }
 }

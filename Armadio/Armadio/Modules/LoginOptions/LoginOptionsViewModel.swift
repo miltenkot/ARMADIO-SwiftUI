@@ -16,7 +16,7 @@ final class LoginOptionsViewModel: ObservableObject {
         case email, guest
         
         var id: String {
-            return self.rawValue
+            self.rawValue
         }
     }
 }

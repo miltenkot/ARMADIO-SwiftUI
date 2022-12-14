@@ -16,6 +16,7 @@ protocol GoogleSignInAuthProvider {
 }
 
 final class GoogleSignInAuthProviderImpl: GoogleSignInAuthProvider {
+    #warning("add api key to configuration file")
     private let clientID = "483110351652-655i9bbc5ho8qr514ragps92ajs8ielf.apps.googleusercontent.com"
     
     private lazy var configuration: GIDConfiguration = {

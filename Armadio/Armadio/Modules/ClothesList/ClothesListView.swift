@@ -51,7 +51,7 @@ struct ClothesListView: View {
                         }
                         .onDelete(perform: removeItem)
                     } else {
-                        Text("No results")
+                        Text("ClothesListView_No results".localized)
                             .bold()
                     }
                 }

@@ -18,11 +18,11 @@ struct HomeView: View {
                 .tabItem {
                     Label("HomeView_Wardrobe".localized, systemImage: "cabinet.fill")
                 }
-            Text("Marketplace")
+            Text("Marketplace is not available yet.")
                 .tabItem {
                     Label("HomeView_Marketplace".localized, systemImage: "cart.circle.fill")
                 }
-            Text("Chat")
+            Text("Chat is not available yet.")
                 .tabItem {
                     Label("HomeView_Chat".localized, systemImage: "ellipsis.bubble.fill")
                 }
@@ -32,6 +32,7 @@ struct HomeView: View {
                 }
             
         }
+        .accentColor(Color.themeColor(.primaryColor))
     }
 }
 

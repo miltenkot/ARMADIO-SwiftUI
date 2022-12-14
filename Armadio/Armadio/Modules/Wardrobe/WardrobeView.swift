@@ -42,7 +42,7 @@ struct WardrobeView: View {
                             .listRowInsets(EdgeInsets())
                         }
                     } else {
-                        Text("No content")
+                        Text("WardrobeView_NoContent".localized)
                             .textStyle(TitleStyle())
                     }
                 }
@@ -58,9 +58,6 @@ struct WardrobeView: View {
                         },
                                        statsAction: {
                             viewModel.activeModalView = .stats
-                        },
-                                       outfitsAction: {
-                            viewModel.activeModalView = .outfits
                         }, listAction: {
                             viewModel.activeModalView = .list
                         })
@@ -70,8 +67,6 @@ struct WardrobeView: View {
                                 AddNewClotheView()
                             case .stats:
                                 StatsView()
-                            case .outfits:
-                                AddNewClotheView()
                             case .list:
                                 ClothesListView()
                             }
@@ -93,6 +88,5 @@ struct WardrobeView_Previews: PreviewProvider {
                 .environment(\.managedObjectContext, coreDataStack.container.viewContext)
             WardrobeView()
         }
-        
     }
 }

@@ -15,7 +15,7 @@
 /* LoginOptionsView */
 "LoginOptionsView_Get" = "Get started with Armadio";
 "LoginOptionsView_Please" = "Please choose how you want to continue setting up your account 🤗";
-"LoginOptionsView_Please_visit" = "Please visit Wolt Privacy Statement in English to learn about personal data processing at Wolt. You can access your local Privacy Statement related to your Wolt account in the next phase of registration after you have provided the country and lanquage preferences applicable to you.";
+"LoginOptionsView_Please_visit" = "Please visit Armadio Privacy Statement in English to learn about personal data processing at Wolt. You can access your local Privacy Statement related to your Armadio account in the next phase of registration after you have provided the country and lanquage preferences applicable to you.";
 "LoginOptionsView_Apple" = "Continue with Apple";
 "LoginOptionsView_Facebook" = "Continue with Facebook";
 "LoginOptionsView_Google" = "Continue with Google";
@@ -44,3 +44,58 @@
 
 /* WardrobeView */
 "WardrobeView_Wardrobe" = "Wardrobe";
+"WardrobeView_NoContent" = "You haven't added any clothes yet.";
+
+/* ProfileDetailsView */
+"ProfileDetailsView_Title" = "Profile details";
+"ProfileDetailsView_account" = "Don't have an account?";
+"ProfileDetailsView_Next" = "Next";
+
+/* PasswordDetailsView */
+"PasswordDetailsView_Password" = "Password";
+"PasswordDetailsView_PasswordNeeds" = "Password must have more than 8 characters, contain some special character, one digit, one uppercase letter";
+"PasswordDetailsView_Sign" = "Sign Up";
+"PasswordDetailsView_User" = "User is already sign in";
+"PasswordDetailsView_Ok" = "OK";
+
+/* NowView */
+"NowView_Select" = "Select your avatar";
+"NowView_Title" = "Now";
+
+/* AddNewClotheView */
+"AddNewClotheView_Save" = "Save";
+"AddNewClotheView_Price" = "Price:";
+"AddNewClotheView_Receipt" = "Receipt:";
+"AddNewClotheView_Category" = "Category:";
+"AddNewClotheView_Color" = "Color:";
+"AddNewClotheView_Size" = "Size:";
+"AddNewClotheView_Brand" = "Brand:";
+"AddNewClotheView_Material" = "Material:";
+"AddNewClotheView_DateOfPurchase" = "Date Of Purchase:";
+"AddNewClotheView_Description" = "Description:";
+
+/* ReceiptDetails */
+"ReceiptDetails_NoContent" = "No content";
+
+/* SelectYourClotheView */
+"SelectYourClotheView_NoContent" = "No content";
+
+/* ClothesListView */
+"ClothesListView_No results" = "No results";
+
+/* SignInView */
+"SignInView_LogIn" = "Log in";
+"SignInView_PassAndEmail" = "Login to your service using password and email.";
+"SignInView_SignIn" = "Sign In";
+"SignInView_UserNotFound" = "User not found";
+
+/* AccountList */
+"AccountList_Country" = "Country:";
+"AccountList_Email" = "Email:";
+"AccountList_Name" = "Name:";
+"AccountList_Phone" = "Phone:";
+"AccountList_LogOut" = "Log out";
+"AccountList_Account" = "Account";
+
+/* ProfileSettingsView */
+"ProfileSettingsView_Profile" = "Profile";

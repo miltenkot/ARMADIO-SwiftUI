@@ -16,9 +16,9 @@ struct LoginOptionsView: View {
         NavigationView {
             ZStack {
                 Color.themeColor(.primarySheet).ignoresSafeArea()
-                VStack(alignment: .center, spacing: 40) {
+                VStack(alignment: .center, spacing: Constants.spacingMedium) {
                     
-                    VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading, spacing: Constants.spacingSmall) {
                         
                         Text("LoginOptionsView_Get".localized)
                             .textStyle(TitleStyle(foregroundColor: Color.themeColor(.primaryText)))
@@ -29,7 +29,9 @@ struct LoginOptionsView: View {
                             .foregroundColor(Color.themeColor(.primaryText))
                     }
                     
-                    VStack(spacing: 0) {
+                    VStack(spacing: Constants.spacingZero) {
+#warning("TODO: - Add fb and apple login method")
+                        
                         PrimaryButton(text: "LoginOptionsView_Apple".localized,
                                       foregroundColor: Color.themeColor(.primaryButtonFColor),
                                       backgroundColor: Color.themeColor(.primaryButtonBColor),
@@ -39,13 +41,13 @@ struct LoginOptionsView: View {
                         
                         PrimaryButton(text: "LoginOptionsView_Facebook".localized,
                                       foregroundColor: Color.themeColor(.primaryButtonFColor),
-                                      backgroundColor: .blue,
+                                      backgroundColor: Color.themeColor(.primaryColor),
                                       imageName: "f.cursive.circle.fill") {
                             viewModel.facebookLoginNotAvailable.toggle()
                         }
                         
                         PrimaryButton(text: "LoginOptionsView_Google".localized,
-                                      foregroundColor: .blue,
+                                      foregroundColor: Color.themeColor(.primaryColor),
                                       backgroundColor: Color.themeColor(.primaryButtonBColor),
                                       imageName: "g.square") {
                             authViewModel.signInWithGoogle()
@@ -54,7 +56,7 @@ struct LoginOptionsView: View {
                         
                         PrimaryButton(text: "LoginOptionsView_email".localized,
                                       foregroundColor: Color.themeColor(.primaryButtonFColor),
-                                      backgroundColor: .blue,
+                                      backgroundColor: Color.themeColor(.primaryColor),
                                       imageName: "envelope.fill") {
                             viewModel.activeModalView = .email
                         }
@@ -62,7 +64,7 @@ struct LoginOptionsView: View {
                         Divider().background(.white)
                         PrimaryButton(text: "LoginOptionsView_guest".localized,
                                       foregroundColor: Color.themeColor(.primaryButtonFColor),
-                                      backgroundColor: .blue) {
+                                      backgroundColor: Color.themeColor(.primaryColor)) {
                             viewModel.activeModalView = .guest
                             
                         }
@@ -74,10 +76,10 @@ struct LoginOptionsView: View {
                                               SelectYourCountryView()
                                           }
                                       }
-                                      .alert("Facebook login is not yet available", isPresented: $viewModel.facebookLoginNotAvailable, actions: {
+                                      .alert("Facebook login is not available yet.", isPresented: $viewModel.facebookLoginNotAvailable, actions: {
                                           Button("OK", role: .cancel) { }
                                       })
-                                      .alert("Apple login is not yet available", isPresented: $viewModel.appleLoginNotAvailable, actions: {
+                                      .alert("Apple login is not available yet.", isPresented: $viewModel.appleLoginNotAvailable, actions: {
                                           Button("OK", role: .cancel) { }
                                       })
                     }

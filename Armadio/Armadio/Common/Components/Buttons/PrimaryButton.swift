@@ -16,7 +16,7 @@ struct PrimaryButton: View {
     
     init(text: String,
          foregroundColor: Color = .themeColor(.primaryButtonFColor),
-         backgroundColor: Color = .themeColor(.primaryButtonBColor),
+         backgroundColor: Color = .themeColor(.primaryColor),
          imageName: String? = nil, action: @escaping () -> Void) {
         self.text = text
         self.foregroundColor = foregroundColor
@@ -50,7 +50,7 @@ struct PrimaryAsyncButton: View {
     
     init(text: String,
          foregroundColor: Color = .themeColor(.primaryButtonFColor),
-         backgroundColor: Color = .themeColor(.primaryButtonBColor),
+         backgroundColor: Color = .themeColor(.primaryColor),
          imageName: String? = nil, action: @escaping () -> Void) {
         self.text = text
         self.foregroundColor = foregroundColor

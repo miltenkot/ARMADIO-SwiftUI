@@ -28,48 +28,49 @@ struct AddNewClotheView: View {
         NavigationStack {
             List {
                 Group {
-                    PhotosPickerView(selectedItem: $viewModel.selectedItem, selectedImageData: $viewModel.selectedImageData).padding(.horizontal)
+                    PhotosPickerView(selectedItem: $viewModel.selectedItem, selectedImageData: $viewModel.selectedImageData)
+                        .padding(.horizontal)
                     
                     NavigationLink(value: Route.price) {
-                        NavigationPickerLabel(title: "Price", content: priceLabel)
+                        NavigationPickerLabel(title: "AddNewClotheView_Price".localized, content: priceLabel)
                     }
                     
                     NavigationLink(value: Route.receipt) {
-                        NavigationPickerLabel(title: "Receipt", content: scanLabel)
+                        NavigationPickerLabel(title: "AddNewClotheView_Receipt".localized, content: scanLabel)
                     }
                     
                     NavigationLink(value: Route.category) {
-                        NavigationPickerLabel(title: "Category", content: categoryLabel)
+                        NavigationPickerLabel(title: "AddNewClotheView_Category".localized, content: categoryLabel)
                     }
                 }
                 
                 Group {
                     NavigationLink(value: Route.color) {
-                        NavigationPickerLabel(title: "Color", content: colorLabel)
+                        NavigationPickerLabel(title: "AddNewClotheView_Color".localized, content: colorLabel)
                     }
                     
                     NavigationLink(value: Route.size) {
-                        NavigationPickerLabel(title: "Size", content: sizeLabel)
+                        NavigationPickerLabel(title: "AddNewClotheView_Size".localized, content: sizeLabel)
                     }
                     
                     NavigationLink(value: Route.brand) {
-                        NavigationPickerLabel(title: "Brand", content: brandLabel)
+                        NavigationPickerLabel(title: "AddNewClotheView_Brand".localized, content: brandLabel)
                     }
                     
                     NavigationLink(value: Route.material) {
-                        NavigationPickerLabel(title: "Material", content: materialLabel)
+                        NavigationPickerLabel(title: "AddNewClotheView_Material".localized, content: materialLabel)
                     }
                     
                     NavigationLink(value: Route.dateOfPurchase) {
-                        NavigationPickerLabel(title: "Date Of Purchase", content: dateOfPurchaseLabel)
+                        NavigationPickerLabel(title: "AddNewClotheView_DateOfPurchase".localized, content: dateOfPurchaseLabel)
                     }
                     
                     NavigationLink(value: Route.description) {
-                        NavigationPickerLabel(title: "Description", content: descriptionLabel)
+                        NavigationPickerLabel(title: "AddNewClotheView_Description".localized, content: descriptionLabel)
                     }
                 }
                 
-                PrimaryButton(text: "Save", foregroundColor: .themeColor(.primaryButtonFColor), backgroundColor: .themeColor(.primaryButtonBColor)) {
+                PrimaryButton(text: "AddNewClotheView_Save".localized, foregroundColor: .themeColor(.primaryButtonFColor), backgroundColor: .themeColor(.primaryColor)) {
                     viewModel.saveClothe(for: context)
                     viewModel.logEvent("\(viewModel.selectedPrice.amount)")
                     dismiss()

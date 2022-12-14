@@ -14,7 +14,7 @@ struct ProfileDetailsView: View {
         NavigationView {
             VStack(spacing: 0) {
                 HStack {
-                    Text("Profile details")
+                    Text("ProfileDetailsView_Title".localized)
                         .textStyle(TitleStyle(foregroundColor: Color.themeColor(.primaryText)))
                     Spacer()
                 }.padding()
@@ -38,11 +38,12 @@ struct ProfileDetailsView: View {
                 }
                 .padding()
                 Spacer()
-                Button("Don't have an account?") {
+                Button("ProfileDetailsView_account".localized) {
                     viewModel.isLoginScreenPresented.toggle()
                 }
-                PrimaryButton(text: "Next", foregroundColor: Color.themeColor(.primaryButtonFColor),
-                              backgroundColor: .blue) {
+                .foregroundColor(Color.themeColor(.primaryColor))
+                PrimaryButton(text: "ProfileDetailsView_Next".localized, foregroundColor: Color.themeColor(.primaryButtonFColor),
+                              backgroundColor: Color.themeColor(.primaryColor)) {
                     if viewModel.validateFields {
                         withAnimation {
                             viewModel.startShakeAnimate()
@@ -58,7 +59,6 @@ struct ProfileDetailsView: View {
                               .fullScreenCover(isPresented: $viewModel.isLoginScreenPresented) {
                                   SignInView()
                               }
-                
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {

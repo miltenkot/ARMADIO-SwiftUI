@@ -9,8 +9,9 @@ import SwiftUI
 import UIKit
 
 struct ClotheDetails: View {
-    var clothe: Clothe
+    @Environment(\.dismiss) var dismiss
     @State private var isReceiptModalShown = false
+    var clothe: Clothe
     
     var body: some View {
         ScrollView {
@@ -125,15 +126,20 @@ struct ClotheDetails: View {
             }
             .padding()
         }
-        
         .navigationTitle(clothe.category?.name?.uppercased() ?? "Empty")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
                     isReceiptModalShown.toggle()
                 } label: {
                     Image(systemName: "doc.text.viewfinder")
+                }
+            }
+            ToolbarItem(placement: .navigationBarLeading) {
+                NavigationButton(type: .back) {
+                    dismiss()
                 }
             }
         }
@@ -147,7 +153,7 @@ struct ClotheDetails: View {
            let imageData = UIImage(data: image){
             return Image(uiImage: imageData)
         } else {
-            return Image("clothe1")
+            return Image("open_wardrobe")
         }
     }
     

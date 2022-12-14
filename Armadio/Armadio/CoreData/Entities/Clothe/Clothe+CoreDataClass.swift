@@ -21,7 +21,7 @@ extension Clothe {
         let item = Clothe(context: context)
         item.id = UUID()
         item.desc = "Nice clothe bro! I have lot of days when i was a child"
-        item.image = (UIImage(named: "clothe1")?.jpegData(compressionQuality: 1.0))!
+        item.image = (UIImage(named: "open_wardrobe")?.jpegData(compressionQuality: 1.0))!
         item.material = "Cotton"
         item.size = "XXL"
         let price = Price(context: context)

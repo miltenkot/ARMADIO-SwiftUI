@@ -33,9 +33,8 @@ final class FirebaseAuthService: AuthService {
     @Injected(Container.googleSignInAuthProvider) private var googleSignInAuthProvider
     
     func currentUserInfo() -> UserInfo? {
-        guard let user = Auth.auth().currentUser,
-              let email = user.email else { return nil }
-        return UserInfo(email: email, displayName: user.displayName)
+        guard let user = Auth.auth().currentUser else { return nil }
+        return UserInfo(uid: user.providerID, email: user.email, displayName: user.displayName, phoneNumber: user.phoneNumber, photo: user.photoURL)
     }
     
     func restorePreviousSignIn() async -> AuthState {

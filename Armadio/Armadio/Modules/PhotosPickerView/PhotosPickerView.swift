@@ -21,7 +21,7 @@ struct PhotosPickerView: View {
                    let uiImage = UIImage(data: selectedImageData) {
                     CircleImage(image: Image(uiImage: uiImage))
                 } else {
-                    CircleImage(image:(Image(systemName: "photo.circle.fill")))
+                    CircleImage(image: Image("open_wardrobe"))
                 }
             }.onChange(of: selectedItem, perform: { newValue in
                 Task {

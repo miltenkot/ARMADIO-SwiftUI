@@ -13,7 +13,6 @@ struct ProfileSettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                
                 NavigationLink {
                     AccountList()
                 } label: {
@@ -22,11 +21,9 @@ struct ProfileSettingsView: View {
                 .listRowSeparator(.hidden, edges: .top)
             }
             .listStyle(.plain)
-            .navigationTitle("Profile")
+            .navigationTitle("ProfileSettingsView_Profile".localized)
             .navigationBarTitleDisplayMode(.large)
-            
         }
-        
     }
 }
 

@@ -17,24 +17,30 @@ struct AccountList: View {
             NavigationLink {
                 
             } label: {
-                NavigationPickerLabel(title: "Country:", content: countryLabel)
+                NavigationPickerLabel(title: "AccountList_Country".localized, content: countryLabel)
             }
             .listRowSeparator(.hidden, edges: .top)
             
             NavigationLink {
                 
             } label: {
-                NavigationPickerLabel(title: "Email:", content: emailLabel)
+                NavigationPickerLabel(title: "AccountList_Email".localized, content: emailLabel)
             }
             
             NavigationLink {
                 
             } label: {
-                NavigationPickerLabel(title: "Name:", content: nameLabel)
+                NavigationPickerLabel(title: "AccountList_Name".localized, content: nameLabel)
+            }
+            
+            NavigationLink {
+                
+            } label: {
+                NavigationPickerLabel(title: "AccountList_Phone".localized, content: phoneLabel)
             }
             
             if authViewModel.currentUserInfo() != nil {
-                PrimaryButton(text: "Log out", foregroundColor: .red, backgroundColor: .red.opacity(0.2)) {
+                PrimaryButton(text: "AccountList_LogOut".localized, foregroundColor: .red, backgroundColor: .red.opacity(0.2)) {
                     authViewModel.signOut()
                 }
                 .padding(.horizontal)
@@ -43,7 +49,7 @@ struct AccountList: View {
         }
         .navigationBarBackButtonHidden(true)
         .listStyle(.plain)
-        .navigationTitle("Account")
+        .navigationTitle("AccountList_Account".localized)
         .navigationBarTitleDisplayMode(.large)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
@@ -66,6 +72,10 @@ extension AccountList {
     
     @ViewBuilder private var nameLabel: some View {
         Text("\(authViewModel.currentUserInfo()?.displayName ?? "Empty")")
+    }
+    
+    @ViewBuilder private var phoneLabel: some View {
+        Text("\(authViewModel.currentUserInfo()?.phoneNumber ?? "Empty")")
     }
 }
 

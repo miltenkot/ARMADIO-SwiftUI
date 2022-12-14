@@ -74,6 +74,7 @@ extension GeneralOverviewDetailsChart {
 }
 
 struct GeneralOverviewDetails: View {
+    @Environment(\.dismiss) var dismiss
     @FetchRequest var clothes: FetchedResults<Clothe>
     @State private var timeRange: TimeRange = .lastYear
     @State private var showAverageLine: Bool = false
@@ -101,6 +102,14 @@ struct GeneralOverviewDetails: View {
         }
         .listStyle(.plain)
         .navigationBarTitle("Total Clothes Number", displayMode: .inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                NavigationButton(type: .back) {
+                    dismiss()
+                }
+            }
+        }
     }
 }
 

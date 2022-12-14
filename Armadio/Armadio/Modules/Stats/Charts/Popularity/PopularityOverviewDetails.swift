@@ -35,6 +35,7 @@ struct PopularityOverviewDetailsChart: View {
 }
 
 struct PopularityOverviewDetails: View {
+    @Environment(\.dismiss) var dismiss
     @FetchRequest var clothes: FetchedResults<Clothe>
     @State private var timeRange: TimeRange = .lastYear
 
@@ -56,6 +57,14 @@ struct PopularityOverviewDetails: View {
         }
         .listStyle(.plain)
         .navigationBarTitle("Most popular", displayMode: .inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                NavigationButton(type: .back) {
+                    dismiss()
+                }
+            }
+        }
     }
 }
 

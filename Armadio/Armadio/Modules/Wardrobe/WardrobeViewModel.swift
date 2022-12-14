@@ -18,7 +18,7 @@ final class WardrobeViewModel: ObservableObject {
     @Published var activeModalView: ModalView? = nil
     
     enum ModalView: String, Identifiable {
-        case addNew, stats, outfits, list
+        case addNew, stats, list
         
         var id: String {
             return self.rawValue

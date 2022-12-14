@@ -28,7 +28,7 @@ struct SelectYourClotheView: View {
                 if !clothes.isEmpty {
                     FilteredListView(selectedClothe: $selectedClothe)
                 } else {
-                    Text("No content")
+                    Text("SelectYourClotheView_NoContent".localized)
                         .textStyle(TitleStyle())
                 }
             }

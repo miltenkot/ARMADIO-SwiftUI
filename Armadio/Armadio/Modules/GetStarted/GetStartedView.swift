@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 struct GetStartedView: View {
+    @Namespace var ns
     @Environment(\.colorScheme) var colorScheme
     @StateObject var viewModel = GetStartedViewModel()
     internal let inspection = Inspection<Self>()
@@ -16,56 +17,77 @@ struct GetStartedView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Group {
-                    if colorScheme == .light {
-                        backgroundGradientLight
-                    } else {
-                        backgroundGradientDark
+                Image("background")
+                    .resizable()
+                    .ignoresSafeArea()
+                VStack {
+                    
+                    if viewModel.splashState == .begin {
+                        logoImage()
+                            .resizable()
+                            .scaledToFit()
+                            .matchedGeometryEffect(id: "splashAnimation", in: ns)
+                            .padding()
                     }
-                }.ignoresSafeArea()
-                
-                
-                VStack(spacing: 10) {
-                    Text("GetStartedView_Armadio".localized)
-                        .textStyle(TitleStyle())
-                    Spacer()
-                    Image("default")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    Spacer()
-                    Text("GetStartedView_Welcome".localized)
-                        .textStyle(TitleStyle(foregroundColor: Color.themeColor(.primaryText)))
-                    Text("GetStartedView_Enjoy".localized)
-                        .textStyle(NormalStyle())
-                        .multilineTextAlignment(.center)
-                    Spacer()
-                    Button("GetStartedView_Get".localized) {
-                        viewModel.showingSheet.toggle()
+                    
+                    if viewModel.splashState == .end {
+                        VStack(spacing: Constants.spacingSmall) {
+                            logoImage()
+                                .resizable()
+                                .scaledToFit()
+                                .matchedGeometryEffect(id: "splashAnimation", in: ns)
+                                .padding(.top, Constants.paddingTopMedium)
+                                .padding(.horizontal, Constants.paddingHorizontalMedium)
+                            Group {
+                                Spacer()
+                                Image("wardrobe")
+                                    .resizable()
+                                    .scaledToFit()
+                                Spacer()
+                                Text("GetStartedView_Welcome".localized)
+                                    .textStyle(TitleStyle(foregroundColor: Color.themeColor(.primaryText)))
+                                Text("GetStartedView_Enjoy".localized)
+                                    .textStyle(NormalStyle())
+                                    .multilineTextAlignment(.center)
+                                Spacer()
+                                Button("GetStartedView_Get".localized) {
+                                    viewModel.showingSheet.toggle()
+                                }
+                                .sheet(isPresented: $viewModel.showingSheet) {
+                                    LoginOptionsView()
+                                        .presentationDetents([.large])
+                                        .presentationDragIndicator(.visible)
+                                }
+                                .buttonStyle(RoundedButtonStyle(
+                                    foregroundColor: .white,
+                                    backgroundColor: Color.themeColor(.primaryColor)
+                                ))
+                            }
+                            .opacity(viewModel.opacity.rawValue)
+                        }
+                        .padding()
                     }
-                    .sheet(isPresented: $viewModel.showingSheet) {
-                        LoginOptionsView()
-                            .presentationDetents([.large])
-                            .presentationDragIndicator(.visible)
-                    }
-                    .buttonStyle(RoundedButtonStyle(foregroundColor: .white, backgroundColor: .purple))
                 }
-                .padding()
             }
             .onReceive(inspection.notice) { self.inspection.visit(self, $0) }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    withAnimation(.easeIn(duration: 1.2)) {
+                        viewModel.splashState = .end
+                    }
+                }
+            }
+            .onAnimationCompleted(for: viewModel.splashState.rawValue) {
+                viewModel.opacity = .fullyOpaque
+            }
         }
     }
-    
-    //MARK: - LinearGradient Background
-    
-    private let backgroundGradientLight = LinearGradient(
-        colors: [Color.purple, Color.red],
-        startPoint: .top, endPoint: .bottom
-    )
-    
-    private let backgroundGradientDark = LinearGradient(
-        colors: [Color.purple, Color.black],
-        startPoint: .top, endPoint: .bottom
-    )
+}
+
+extension GetStartedView {
+    private func logoImage() -> Image {
+        (colorScheme == .dark) ? Image("armadio_white") : Image("armadio_black")
+    }
 }
 
 //MARK: - Preview

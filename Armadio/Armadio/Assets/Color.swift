@@ -12,6 +12,7 @@ enum ArmadioColor {
     case primarySheet
     case primaryButtonBColor
     case primaryButtonFColor
+    case primaryColor
 }
 
 extension Color {
@@ -21,6 +22,7 @@ extension Color {
         case .primarySheet: return Color("PrimarySheetColor")
         case .primaryButtonBColor: return Color("PrimaryButtonBColor")
         case .primaryButtonFColor: return Color("PrimaryButtonFColor")
+        case .primaryColor: return Color("PrimaryColor")
         }
     }
 }

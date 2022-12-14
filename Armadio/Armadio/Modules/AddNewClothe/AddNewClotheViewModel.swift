@@ -26,7 +26,7 @@ final class AddNewClotheViewModel: ObservableObject {
     @Published var selectedPrice: LocalPrice = .init(amount: 0.0, currency: .pln)
     @Published var selectedItem: PhotosPickerItem? = nil
     @Published var selectedDate = Date()
-    @Published var selectedColor: Color = .red
+    @Published var selectedColor: Color = .brown
     @Published var description = ""
     @Published var selectedSize = LocalClothe.sizesMock.first!
     @Published var isReceiptRecognizing = false

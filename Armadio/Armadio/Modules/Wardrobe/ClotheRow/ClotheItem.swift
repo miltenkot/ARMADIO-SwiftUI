@@ -34,7 +34,7 @@ struct ClotheItem: View {
            let imageData = UIImage(data: image){
             return Image(uiImage: imageData)
         } else {
-            return Image("clothe1")
+            return Image("open_wardrobe")
         }
     }
 }

@@ -8,6 +8,9 @@
 import Foundation
 
 struct UserInfo: Codable {
-    var email: String
+    var uid: String?
+    var email: String?
     var displayName: String?
+    var phoneNumber: String?
+    var photo: URL?
 }
