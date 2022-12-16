@@ -44,7 +44,7 @@ struct PopularityOverviewDetails: View {
             VStack(alignment: .leading) {
                 TimeRangePicker(value: $timeRange)
                     .padding(.bottom)
-                Text("Most popular")
+                Text("PopularityOverviewDetails_MostPopular".localized)
                     .font(.callout)
                     .foregroundStyle(.secondary)
                 Text(clothes.first?.brand ?? "Empty")
@@ -56,7 +56,7 @@ struct PopularityOverviewDetails: View {
             .listRowSeparator(.hidden)
         }
         .listStyle(.plain)
-        .navigationBarTitle("Most popular", displayMode: .inline)
+        .navigationBarTitle("PopularityOverviewDetails_MostPopular".localized, displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {

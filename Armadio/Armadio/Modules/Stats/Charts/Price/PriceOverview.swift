@@ -64,7 +64,7 @@ struct PriceOverview: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Total price")
+            Text("PriceOverview_TotalPrice".localized)
                 .font(.callout)
                 .foregroundStyle(.secondary)
             Text("\(totalAmount, specifier: "%.2f") PLN")

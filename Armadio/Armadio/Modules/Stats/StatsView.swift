@@ -41,7 +41,7 @@ struct StatsView: View {
                     }
                 }
             }
-            .navigationTitle("Statistics")
+            .navigationTitle("StatsView_Statistics".localized)
             .listStyle(.insetGrouped)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -53,7 +53,7 @@ struct StatsView: View {
         } detail: {
             NavigationStack {
                 switch selection ?? .empty {
-                case .empty: Text("Select data to view.")
+                case .empty: Text("StatsView_Select".localized)
                 case .general: GeneralOverviewDetails(clothes: _clothes)
                 case .price: PriceOverviewDetails(clothes: _clothes)
                 case .popularity: PopularityOverviewDetails(clothes: _clothes)

@@ -163,6 +163,7 @@
 		131AA931291AA4EB00C876C2 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		131AA934291AA87500C876C2 /* Armadio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Armadio.xcdatamodel; sourceTree = "<group>"; };
 		132CF4C8294B0D1B00D809C8 /* AppStorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKey.swift; sourceTree = "<group>"; };
+		133F0261294CA3A50008F85A /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		134747E4292C0D0F00856593 /* NowToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowToolbar.swift; sourceTree = "<group>"; };
 		1358839729102116009C8531 /* LocalModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalModels.swift; path = Armadio/Models/LocalModels.swift; sourceTree = SOURCE_ROOT; };
 		1358839A29102136009C8531 /* WardrobeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WardrobeView.swift; sourceTree = "<group>"; };
@@ -351,6 +352,14 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		133F0260294CA3920008F85A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				133F0261294CA3A50008F85A /* Secrets.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		1358839929102136009C8531 /* Wardrobe */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +500,7 @@
 		13872FEB290ACA7E0049D1D2 /* Armadio */ = {
 			isa = PBXGroup;
 			children = (
+				133F0260294CA3920008F85A /* Configuration */,
 				132CF4C7294B0D0E00D809C8 /* AppStorage */,
 				13953B58293CFB7A00BB03A0 /* EnvironmentObjects */,
 				13F89233291E955400A2E2F1 /* Info.plist */,

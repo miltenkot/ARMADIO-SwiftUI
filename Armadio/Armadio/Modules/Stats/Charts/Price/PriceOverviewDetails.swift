@@ -40,7 +40,7 @@ struct PriceOverviewDetailsChart: View {
                 )
                 .lineStyle(StrokeStyle(lineWidth: 3))
                 .annotation(position: .top, alignment: .leading) {
-                    Text("Average: \(average, specifier: "%.2f")")
+                    Text("\("PriceOverviewDetailsChart_Average".localized): \(average, specifier: "%.2f")")
                         .font(.body.bold())
                         .foregroundStyle(.blue)
                 }
@@ -87,7 +87,7 @@ struct PriceOverviewDetails: View {
             VStack(alignment: .leading) {
                 TimeRangePicker(value: $timeRange)
                     .padding(.bottom)
-                Text("Total price")
+                Text("PriceOverviewDetails_TotalPrice".localized)
                     .font(.callout)
                     .foregroundStyle(.secondary)
                 Text("\(totalAmount, specifier: "%.2f") PLN")
@@ -99,12 +99,12 @@ struct PriceOverviewDetails: View {
             }
             .listRowSeparator(.hidden)
             
-            Section("Options") {
-                Toggle("Show Daily Average", isOn: $showAverageLine)
+            Section("PriceOverviewDetails_Options".localized) {
+                Toggle("PriceOverviewDetails_ShowDailyAverage".localized, isOn: $showAverageLine)
             }
         }
         .listStyle(.plain)
-        .navigationBarTitle("Total price", displayMode: .inline)
+        .navigationBarTitle("PriceOverviewDetails_TotalPrice".localized, displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {

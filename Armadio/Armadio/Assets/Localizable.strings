@@ -99,3 +99,37 @@
 
 /* ProfileSettingsView */
 "ProfileSettingsView_Profile" = "Profile";
+
+/* PopularityOverviewChart */
+"PopularityOverviewChart_NumberOfWorn" = "Number of Worn";
+"PopularityOverviewChart_Brand" = "Brand";
+
+/* PopularityOverview */
+"PopularityOverview_MostPopular" = "Most popular";
+
+/* PopularityOverviewDetailsChart */
+"PopularityOverviewDetailsChart_NumberOfWorn" = "Number of Worn";
+"PopularityOverviewDetailsChart_Brand" = "Brand";
+
+/* PopularityOverviewDetails */
+"PopularityOverviewDetails_MostPopular" = "Most popular";
+
+/* PriceOverview */
+"PriceOverview_TotalPrice" = "Total price";
+
+/* PriceOverviewDetailsChart */
+"PriceOverviewDetailsChart_Average" = "Average";
+
+/* PriceOverviewDetails */
+"PriceOverviewDetails_TotalPrice" = "Total price";
+"PriceOverviewDetails_Options" = "Options";
+"PriceOverviewDetails_ShowDailyAverage" = "Show Daily Average";
+"PriceOverviewDetails_TotalPrice" = "Total price";
+
+/* GeneralOverview */
+"GeneralOverview_TotalClothesNumber" = "Total Clothes Number";
+"GeneralOverview_Clothes" = "Clothes";
+
+/* StatsView */
+"StatsView_Statistics" = "Statistics";
+"StatsView_Select" = "Select data to view.";

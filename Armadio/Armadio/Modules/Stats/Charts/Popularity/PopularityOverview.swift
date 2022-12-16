@@ -44,7 +44,7 @@ struct PopularityOverview: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Most popular")
+            Text("PopularityOverview_MostPopular".localized)
                 .font(.callout)
                 .foregroundStyle(.secondary)
             Text(clothes.first?.brand ?? "Empty")

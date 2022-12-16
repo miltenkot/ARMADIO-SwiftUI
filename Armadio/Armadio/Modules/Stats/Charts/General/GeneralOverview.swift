@@ -61,10 +61,10 @@ struct GeneralOverview: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Total Clothes Number")
+            Text("GeneralOverview_TotalClothesNumber".localized)
                 .font(.callout)
                 .foregroundStyle(.secondary)
-            Text("\(clothes.count) Clothes")
+            Text("\(clothes.count) \("GeneralOverview_Clothes".localized)")
                 .font(.title2.bold())
             GeneralOverviewChart(clothes: _clothes)
                 .frame(height: 100)
