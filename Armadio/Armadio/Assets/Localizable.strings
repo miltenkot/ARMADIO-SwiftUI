@@ -1,11 +1,3 @@
-/* 
-  Localizable.strings
-  Armadio
-
-  Created by Bartłomiej on 28/10/2022.
-  
-*/
-
 /* GetStartedView */
 "GetStartedView_Armadio" = "Armadio";
 "GetStartedView_Welcome" = "Welcome to Armadio";

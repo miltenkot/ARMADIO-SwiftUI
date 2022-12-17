@@ -8,6 +8,7 @@
 import SwiftUI
 import PhotosUI
 
+/// Photos Picker display list of available in device pictures using `PhotosUI` library.
 struct PhotosPickerView: View {
     @Binding var selectedItem: PhotosPickerItem?
     @Binding var selectedImageData: Data?

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View for selecting one of several login options such as `Google`, `Facebook`, `Apple`, `Email` or `Guest`.
 struct LoginOptionsView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var authViewModel: AuthenticationViewModel

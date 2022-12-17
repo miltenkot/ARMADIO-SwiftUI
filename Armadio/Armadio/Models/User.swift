@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// A struct conforming to `Codable` authenticated user info.
 struct UserInfo: Codable {
     var uid: String?
     var email: String?

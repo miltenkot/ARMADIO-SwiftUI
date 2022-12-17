@@ -8,8 +8,8 @@
 import SwiftUI
 import CoreData
 
+/// List ``FilteredListView`` of clothes grouped by categories.
 struct SelectYourClotheView: View {
-    @StateObject var viewModel = SelectYourClotheViewModel()
     @Environment(\.managedObjectContext) var context
     @FetchRequest(sortDescriptors: []) var clothes: FetchedResults<Clothe>
     @State private var text: String = ""

@@ -8,6 +8,7 @@
 import SwiftUI
 import Charts
 
+/// Details of popularity charts.
 struct PopularityOverviewDetailsChart: View {
     @FetchRequest var clothes: FetchedResults<Clothe>
     @Binding var timeRange: TimeRange
@@ -34,6 +35,7 @@ struct PopularityOverviewDetailsChart: View {
     }
 }
 
+/// List which use ``PopularityOverviewDetailsChart`` as data and ``TimeRangePicker`` as filter option.
 struct PopularityOverviewDetails: View {
     @Environment(\.dismiss) var dismiss
     @FetchRequest var clothes: FetchedResults<Clothe>

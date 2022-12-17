@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+/// Provide module navigation around `AddNew`, `Stats` and `List` views.
 final class WardrobeViewModel: ObservableObject {
     @Published var categoryName: String = ""
     @Published var menuButtonExpanded: Bool = false

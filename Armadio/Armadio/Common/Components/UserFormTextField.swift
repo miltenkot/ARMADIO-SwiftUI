@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Enum of ``UserFormTextField`` type.
 enum UserFormType {
     case email, firstName, lastName, password, repeatPassword
     
@@ -26,6 +27,7 @@ enum UserFormType {
     }
 }
 
+/// TextField which user fill during authentication of ``UserFormType``.
 struct UserFormTextField: View {
     @State private var effectAppear = false
     @FocusState private var fieldFocused: Bool

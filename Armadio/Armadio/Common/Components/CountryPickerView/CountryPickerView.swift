@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// List contains names and flags of available in application countries.
 struct CountryPickerView: View {
     
     @StateObject var viewModel = CountryPickerViewModel()

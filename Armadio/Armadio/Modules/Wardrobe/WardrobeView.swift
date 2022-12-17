@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 
+/// The wardrobe main view shows all ``Clothe`` grouped in categories and ``FloatingButton`` as an expanded menu with options.
 struct WardrobeView: View {
     @StateObject var viewModel = WardrobeViewModel()
     @Environment(\.managedObjectContext) var context

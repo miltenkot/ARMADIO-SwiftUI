@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Profile Details view showing email, first name and second name ``UserFormTextField``, ``CheckboxView`` form and next ``PrimaryAsyncButton`` button.
 struct ProfileDetailsView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel = ProfileDetailsViewModel()

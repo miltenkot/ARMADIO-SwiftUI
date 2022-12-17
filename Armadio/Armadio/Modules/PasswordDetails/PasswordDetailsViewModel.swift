@@ -8,6 +8,7 @@
 import Foundation
 import Factory
 
+/// Validate `repeatPassword` and `password` fields and provide Shake animations.
 final class PasswordDetailsViewModel: ObservableObject {
     
     @Published var isMainViewPresented = false

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Provide login options navigation around `email`, `guest`, `facebook`, `google` and `apple`.
 final class LoginOptionsViewModel: ObservableObject {
     @Published var activeModalView: ModalView? = nil
     @Published var facebookLoginNotAvailable = false

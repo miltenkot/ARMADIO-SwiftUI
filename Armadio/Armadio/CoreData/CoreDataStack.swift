@@ -9,9 +9,12 @@ import CoreData
 import SwiftUI
 import UIKit
 
-class CoreDataStack: ObservableObject {
+/// A class conforming to `ObservableObject` used to represent a core data stack using to persist clothe data.
+final class CoreDataStack: ObservableObject {
     let container: NSPersistentContainer
     
+    /// CoreDataStack Initializer for main and tests modules.
+    /// - Parameter inMemeory: should be `true` if we want use coredata inside unit tests.
     init(inMemeory: Bool = false) {
         container = NSPersistentContainer(name: "Armadio")
         
@@ -30,6 +33,18 @@ class CoreDataStack: ObservableObject {
 // MARK: - Clothe core data provider
 
 extension CoreDataStack {
+    /// Save created clothe in the local database.
+    /// - Parameters:
+    ///   - subcategoryName: selected by user subcategory/ subset of categories
+    ///   - categoryName: selected by user category
+    ///   - receiptImageData: data of selected receipt image
+    ///   - clotheBrand: selected clothe brand
+    ///   - clotheColor: selected clothe color
+    ///   - clotheDateOfPurchase: selected date of purchase
+    ///   - clotheDescription: description about clothe
+    ///   - clotheImageData:  data of selected clothe image
+    ///   - clotheMaterial: selected clothe material
+    ///   - clotheSize: selected size material
     func saveClotheMock(subcategoryName: String,
                     categoryName: String,
                     receiptImageData: Data,
@@ -67,6 +82,7 @@ extension CoreDataStack {
 }
 
 extension CoreDataStack {
+    /// persisted in memory objects used for preview only
     static var preview: CoreDataStack = {
       let coreDataStack = CoreDataStack(inMemeory: true)
         coreDataStack.saveClotheMock(subcategoryName: "Subcategory 1", categoryName: "Category 1", receiptImageData: (UIImage(named: "receipt1")?.jpegData(compressionQuality: 0.8))!, clotheBrand: "Gucci", clotheColor: .red, clotheDateOfPurchase: .now, clotheDescription: "Lorem ipsum", clotheImageData: (UIImage(named: "clothe1")?.jpegData(compressionQuality: 0.8))!, clotheMaterial: "Cotton", clotheSize: "XXL")

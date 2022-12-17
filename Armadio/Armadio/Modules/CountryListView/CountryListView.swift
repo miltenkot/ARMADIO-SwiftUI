@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Country selection list.
 struct CountryListView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel = CountryListViewModel()

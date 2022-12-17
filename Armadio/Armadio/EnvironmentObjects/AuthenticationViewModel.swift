@@ -22,10 +22,14 @@ final class AuthenticationViewModel: ObservableObject {
         self.state = .signedOut
     }
     
+    /// User info fetched from `FIRUser` firebase framework
+    /// - Returns: mapped `FIRUser` to UserInfo object
     func currentUserInfo() -> UserInfo? {
         firebaseAuthService.currentUserInfo()
     }
     
+    
+    /// Restore previous valid auth state `signedIn` or `signedOut`
     func restorePreviousSignIn() {
         Task {
             let state = await firebaseAuthService.restorePreviousSignIn()

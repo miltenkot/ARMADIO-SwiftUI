@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 
+/// Start screen with animated logo.
 struct GetStartedView: View {
     @Namespace var ns
     @Environment(\.colorScheme) var colorScheme

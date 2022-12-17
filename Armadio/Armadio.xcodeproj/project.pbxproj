@@ -15,6 +15,7 @@
 		131AA932291AA4EB00C876C2 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131AA931291AA4EB00C876C2 /* CoreDataStack.swift */; };
 		131AA935291AA87500C876C2 /* Armadio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 131AA933291AA87500C876C2 /* Armadio.xcdatamodeld */; };
 		132CF4C9294B0D1B00D809C8 /* AppStorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132CF4C8294B0D1B00D809C8 /* AppStorageKey.swift */; };
+		133F0265294DC7A40008F85A /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 133F0264294DC7A40008F85A /* Documentation.docc */; };
 		134747E5292C0D0F00856593 /* NowToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134747E4292C0D0F00856593 /* NowToolbar.swift */; };
 		1358839829102116009C8531 /* LocalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839729102116009C8531 /* LocalModels.swift */; };
 		1358839B29102136009C8531 /* WardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358839A29102136009C8531 /* WardrobeView.swift */; };
@@ -54,7 +55,6 @@
 		13873012290ADAC70049D1D2 /* Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873011290ADAC70049D1D2 /* Inspection.swift */; };
 		13873015290ADAE30049D1D2 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873014290ADAE30049D1D2 /* ButtonStyles.swift */; };
 		13873017290ADAF60049D1D2 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873016290ADAF60049D1D2 /* TextStyles.swift */; };
-		1387301E290ADB7B0049D1D2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1387301D290ADB7B0049D1D2 /* LoginView.swift */; };
 		13873020290ADB910049D1D2 /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1387301F290ADB910049D1D2 /* GetStartedView.swift */; };
 		13873022290ADBA60049D1D2 /* GetStartedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873021290ADBA60049D1D2 /* GetStartedViewModel.swift */; };
 		13873024290ADBD60049D1D2 /* LoginOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873023290ADBD60049D1D2 /* LoginOptionsView.swift */; };
@@ -72,11 +72,8 @@
 		13873045290BFE390049D1D2 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873044290BFE390049D1D2 /* Localized.swift */; };
 		13873047290BFE6B0049D1D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13873046290BFE6B0049D1D2 /* Localizable.strings */; };
 		13873049290C225A0049D1D2 /* LoginOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13873048290C225A0049D1D2 /* LoginOptionsViewModel.swift */; };
-		1392AC6D2923E508003E1934 /* NowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1392AC6C2923E508003E1934 /* NowViewModel.swift */; };
 		1392AC702923E687003E1934 /* SelectYourClotheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1392AC6F2923E687003E1934 /* SelectYourClotheView.swift */; };
-		1392AC722923E691003E1934 /* SelectYourClotheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1392AC712923E691003E1934 /* SelectYourClotheViewModel.swift */; };
 		1392AC7629240436003E1934 /* EntitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1392AC7529240436003E1934 /* EntitiesTests.swift */; };
-		13953B4A293CA6A200BB03A0 /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13953B49293CA6A200BB03A0 /* AccountListViewModel.swift */; };
 		13953B4D293CAB9200BB03A0 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 13953B4C293CAB9200BB03A0 /* GoogleSignIn */; };
 		13953B4F293CAB9200BB03A0 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 13953B4E293CAB9200BB03A0 /* GoogleSignInSwift */; };
 		13953B51293CAC5100BB03A0 /* GoogleSignInAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13953B50293CAC5100BB03A0 /* GoogleSignInAuthProvider.swift */; };
@@ -100,7 +97,6 @@
 		13A4C2072922299A00056034 /* ClotheDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4C2062922299A00056034 /* ClotheDataProvider.swift */; };
 		13A4C20A2922303800056034 /* PhotosPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4C2092922303800056034 /* PhotosPickerView.swift */; };
 		13A4C20D29229B1F00056034 /* NowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4C20C29229B1F00056034 /* NowView.swift */; };
-		13A73D35292E031900A7CFED /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A73D34292E031900A7CFED /* StatsViewModel.swift */; };
 		13A73D37292E033500A7CFED /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A73D36292E033500A7CFED /* StatsView.swift */; };
 		13AA6FB52918393B006BBDAA /* NavigationPickerDetailsDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA6FB42918393B006BBDAA /* NavigationPickerDetailsDate.swift */; };
 		13AE6F0C2912A03800D8FABA /* AddNewClotheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE6F0B2912A03800D8FABA /* AddNewClotheViewModel.swift */; };
@@ -115,7 +111,6 @@
 		13B19A7229388CEA002E8AF1 /* UserFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B19A7129388CEA002E8AF1 /* UserFormTextField.swift */; };
 		13B19A75293914D6002E8AF1 /* PasswordDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B19A74293914D6002E8AF1 /* PasswordDetailsViewModel.swift */; };
 		13B19A77293915B9002E8AF1 /* PasswordDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B19A76293915B9002E8AF1 /* PasswordDetailsView.swift */; };
-		13B19A7D293B8C04002E8AF1 /* ProfileSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B19A7C293B8C04002E8AF1 /* ProfileSettingsViewModel.swift */; };
 		13B19A7F293B8C1B002E8AF1 /* ProfileSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B19A7E293B8C1B002E8AF1 /* ProfileSettingsView.swift */; };
 		13B19A82293B91B6002E8AF1 /* AccountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B19A81293B91B6002E8AF1 /* AccountRow.swift */; };
 		13B19A87293B9FE1002E8AF1 /* AccountList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B19A86293B9FE1002E8AF1 /* AccountList.swift */; };
@@ -164,6 +159,7 @@
 		131AA934291AA87500C876C2 /* Armadio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Armadio.xcdatamodel; sourceTree = "<group>"; };
 		132CF4C8294B0D1B00D809C8 /* AppStorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKey.swift; sourceTree = "<group>"; };
 		133F0261294CA3A50008F85A /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		133F0264294DC7A40008F85A /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		134747E4292C0D0F00856593 /* NowToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowToolbar.swift; sourceTree = "<group>"; };
 		1358839729102116009C8531 /* LocalModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalModels.swift; path = Armadio/Models/LocalModels.swift; sourceTree = SOURCE_ROOT; };
 		1358839A29102136009C8531 /* WardrobeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WardrobeView.swift; sourceTree = "<group>"; };
@@ -204,7 +200,6 @@
 		13873011290ADAC70049D1D2 /* Inspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspection.swift; sourceTree = "<group>"; };
 		13873014290ADAE30049D1D2 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		13873016290ADAF60049D1D2 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
-		1387301D290ADB7B0049D1D2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1387301F290ADB910049D1D2 /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
 		13873021290ADBA60049D1D2 /* GetStartedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewModel.swift; sourceTree = "<group>"; };
 		13873023290ADBD60049D1D2 /* LoginOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsView.swift; sourceTree = "<group>"; };
@@ -222,11 +217,8 @@
 		13873044290BFE390049D1D2 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		13873046290BFE6B0049D1D2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		13873048290C225A0049D1D2 /* LoginOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsViewModel.swift; sourceTree = "<group>"; };
-		1392AC6C2923E508003E1934 /* NowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowViewModel.swift; sourceTree = "<group>"; };
 		1392AC6F2923E687003E1934 /* SelectYourClotheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectYourClotheView.swift; sourceTree = "<group>"; };
-		1392AC712923E691003E1934 /* SelectYourClotheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectYourClotheViewModel.swift; sourceTree = "<group>"; };
 		1392AC7529240436003E1934 /* EntitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesTests.swift; sourceTree = "<group>"; };
-		13953B49293CA6A200BB03A0 /* AccountListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModel.swift; sourceTree = "<group>"; };
 		13953B50293CAC5100BB03A0 /* GoogleSignInAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInAuthProvider.swift; sourceTree = "<group>"; };
 		13953B52293CAF2F00BB03A0 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		13953B54293CAFFA00BB03A0 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -245,7 +237,6 @@
 		13A4C2062922299A00056034 /* ClotheDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClotheDataProvider.swift; sourceTree = "<group>"; };
 		13A4C2092922303800056034 /* PhotosPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerView.swift; sourceTree = "<group>"; };
 		13A4C20C29229B1F00056034 /* NowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowView.swift; sourceTree = "<group>"; };
-		13A73D34292E031900A7CFED /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
 		13A73D36292E033500A7CFED /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		13AA6FB42918393B006BBDAA /* NavigationPickerDetailsDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerDetailsDate.swift; sourceTree = "<group>"; };
 		13AE6F0B2912A03800D8FABA /* AddNewClotheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewClotheViewModel.swift; sourceTree = "<group>"; };
@@ -257,7 +248,6 @@
 		13B19A7129388CEA002E8AF1 /* UserFormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormTextField.swift; sourceTree = "<group>"; };
 		13B19A74293914D6002E8AF1 /* PasswordDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailsViewModel.swift; sourceTree = "<group>"; };
 		13B19A76293915B9002E8AF1 /* PasswordDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailsView.swift; sourceTree = "<group>"; };
-		13B19A7C293B8C04002E8AF1 /* ProfileSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewModel.swift; sourceTree = "<group>"; };
 		13B19A7E293B8C1B002E8AF1 /* ProfileSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsView.swift; sourceTree = "<group>"; };
 		13B19A81293B91B6002E8AF1 /* AccountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRow.swift; sourceTree = "<group>"; };
 		13B19A86293B9FE1002E8AF1 /* AccountList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountList.swift; sourceTree = "<group>"; };
@@ -481,6 +471,7 @@
 		13872FE0290ACA7E0049D1D2 = {
 			isa = PBXGroup;
 			children = (
+				133F0264294DC7A40008F85A /* Documentation.docc */,
 				13872FEB290ACA7E0049D1D2 /* Armadio */,
 				13872FFF290ACAFD0049D1D2 /* ArmadioUnitTests */,
 				13872FEA290ACA7E0049D1D2 /* Products */,
@@ -611,7 +602,6 @@
 				135883B329111122009C8531 /* AddNewClothe */,
 				1358839929102136009C8531 /* Wardrobe */,
 				13A3A925290D2AD500A49D99 /* Home */,
-				1387301C290ADB310049D1D2 /* Login */,
 				1387301B290ADB290049D1D2 /* GetStarted */,
 				1387301A290ADB220049D1D2 /* LoginOptions */,
 				1387303C290AF7C90049D1D2 /* CountryListView */,
@@ -645,14 +635,6 @@
 				13873021290ADBA60049D1D2 /* GetStartedViewModel.swift */,
 			);
 			path = GetStarted;
-			sourceTree = "<group>";
-		};
-		1387301C290ADB310049D1D2 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				1387301D290ADB7B0049D1D2 /* LoginView.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		13873029290ADC3A0049D1D2 /* Helpers */ = {
@@ -727,7 +709,6 @@
 			isa = PBXGroup;
 			children = (
 				1392AC6F2923E687003E1934 /* SelectYourClotheView.swift */,
-				1392AC712923E691003E1934 /* SelectYourClotheViewModel.swift */,
 			);
 			path = SelectYourClothe;
 			sourceTree = "<group>";
@@ -804,7 +785,6 @@
 			isa = PBXGroup;
 			children = (
 				13A4C20C29229B1F00056034 /* NowView.swift */,
-				1392AC6C2923E508003E1934 /* NowViewModel.swift */,
 			);
 			path = Now;
 			sourceTree = "<group>";
@@ -814,7 +794,6 @@
 			children = (
 				135F5467292EA611000E6A93 /* Charts */,
 				13A73D36292E033500A7CFED /* StatsView.swift */,
-				13A73D34292E031900A7CFED /* StatsViewModel.swift */,
 			);
 			path = Stats;
 			sourceTree = "<group>";
@@ -850,7 +829,6 @@
 			isa = PBXGroup;
 			children = (
 				13B19A80293B9197002E8AF1 /* Components */,
-				13B19A7C293B8C04002E8AF1 /* ProfileSettingsViewModel.swift */,
 				13B19A7E293B8C1B002E8AF1 /* ProfileSettingsView.swift */,
 			);
 			path = ProfileSettings;
@@ -869,7 +847,6 @@
 			children = (
 				13B19A81293B91B6002E8AF1 /* AccountRow.swift */,
 				13B19A86293B9FE1002E8AF1 /* AccountList.swift */,
-				13953B49293CA6A200BB03A0 /* AccountListViewModel.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -1127,9 +1104,9 @@
 				1373D6A92924BEB3009A8930 /* FilteredListViewModel.swift in Sources */,
 				13873022290ADBA60049D1D2 /* GetStartedViewModel.swift in Sources */,
 				135883B729112FAF009C8531 /* ColorPickerDetails.swift in Sources */,
+				133F0265294DC7A40008F85A /* Documentation.docc in Sources */,
 				135883AB291043F6009C8531 /* CircleImage.swift in Sources */,
 				1373D6AC2924C059009A8930 /* SortMenuView.swift in Sources */,
-				13953B4A293CA6A200BB03A0 /* AccountListViewModel.swift in Sources */,
 				1387303E290AF7E60049D1D2 /* SelectYourCountryViewModel.swift in Sources */,
 				13873028290ADC140049D1D2 /* CountryListView.swift in Sources */,
 				135F546D292EB5C3000E6A93 /* PriceOverview.swift in Sources */,
@@ -1173,8 +1150,6 @@
 				13953B53293CAF2F00BB03A0 /* FirebaseAuthService.swift in Sources */,
 				13F8922E291E5C6B00A2E2F1 /* Category+CoreDataProperties.swift in Sources */,
 				135883B529111133009C8531 /* AddNewClotheView.swift in Sources */,
-				13A73D35292E031900A7CFED /* StatsViewModel.swift in Sources */,
-				1387301E290ADB7B0049D1D2 /* LoginView.swift in Sources */,
 				13953B63293D038200BB03A0 /* SignInViewModel.swift in Sources */,
 				13816ABC2933D2FF007AE2FB /* ClothesListViewModel.swift in Sources */,
 				13AA6FB52918393B006BBDAA /* NavigationPickerDetailsDate.swift in Sources */,
@@ -1189,7 +1164,6 @@
 				13873037290AEA250049D1D2 /* CheckboxView.swift in Sources */,
 				136E3A032933677C00595EE6 /* TimeRangePicker.swift in Sources */,
 				131AA935291AA87500C876C2 /* Armadio.xcdatamodeld in Sources */,
-				1392AC6D2923E508003E1934 /* NowViewModel.swift in Sources */,
 				136E3A012933670F00595EE6 /* GeneralOverviewDetails.swift in Sources */,
 				13873024290ADBD60049D1D2 /* LoginOptionsView.swift in Sources */,
 				13A3A927290D2B1C00A49D99 /* HomeView.swift in Sources */,
@@ -1198,7 +1172,6 @@
 				13F8921E291E484F00A2E2F1 /* Price+CoreDataClass.swift in Sources */,
 				13F8921F291E484F00A2E2F1 /* Price+CoreDataProperties.swift in Sources */,
 				13872FED290ACA7E0049D1D2 /* ArmadioApp.swift in Sources */,
-				13B19A7D293B8C04002E8AF1 /* ProfileSettingsViewModel.swift in Sources */,
 				13A4C20D29229B1F00056034 /* NowView.swift in Sources */,
 				136E39FF29326C5200595EE6 /* PriceOverviewDetails.swift in Sources */,
 				13953B652949181000BB03A0 /* User.swift in Sources */,
@@ -1208,7 +1181,6 @@
 				13F8922F291E5C6B00A2E2F1 /* Subcategory+CoreDataClass.swift in Sources */,
 				1392AC702923E687003E1934 /* SelectYourClotheView.swift in Sources */,
 				1318ADA6292BD3BD00A17550 /* Optional+Extension.swift in Sources */,
-				1392AC722923E691003E1934 /* SelectYourClotheViewModel.swift in Sources */,
 				13A73D37292E033500A7CFED /* StatsView.swift in Sources */,
 				13873043290BE5B10049D1D2 /* Color.swift in Sources */,
 				13EFA82A292D321400F89CE6 /* Stats+CoreDataClass.swift in Sources */,
@@ -1371,8 +1343,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1380,9 +1352,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = miltenkot.com.Armadio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_DOCUMENTATION_COMPILER = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1402,8 +1378,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1411,9 +1387,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = miltenkot.com.Armadio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_DOCUMENTATION_COMPILER = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

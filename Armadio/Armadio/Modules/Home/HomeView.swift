@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// TabView which display depending on the user's choice ``NowView``, ``WardrobeView``, `Marketplace`, `Chat` and `Profile`.
 struct HomeView: View {
     var body: some View {
         TabView {

@@ -9,12 +9,14 @@ import SwiftUI
 import CoreData
 import Charts
 
+/// Popularity model contains `id`, `numberOfWorn` and `brand` property.
 struct PopularityPlottableModel: Identifiable {
     let id = UUID()
     let numberOfWorn: Int32
     let brand: String
 }
 
+/// Chart represents most and least popular ``Clothe`` saved in local database.
 struct PopularityOverviewChart: View {
     @FetchRequest var clothes: FetchedResults<Clothe>
     
@@ -35,6 +37,7 @@ struct PopularityOverviewChart: View {
     }
 }
 
+/// Popularity clothes view cobined ``PopularityOverviewChart`` and description.
 struct PopularityOverview: View {
     @FetchRequest var clothes: FetchedResults<Clothe>
     

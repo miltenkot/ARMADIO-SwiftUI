@@ -9,6 +9,7 @@ import Foundation
 import CoreData
 import SwiftUI
 
+/// Methods that provide core data clothes functionality.
 protocol ClotheDataProvider {
     func updateClotheStats(clothe: Clothe, coreDataContext: NSManagedObjectContext)
     func saveClothe(subcategoryName: String?,
@@ -19,8 +20,13 @@ protocol ClotheDataProvider {
                     clotheImageData: Data?, clotheMaterial: String?, clotheSize: String?, coreDataContext: NSManagedObjectContext)
 }
 
+/// A class conforming to `ClotheDataProvider` used to work with clothes persistance using core data.
 final class ClotheDataProviderImpl: ClotheDataProvider {
     
+    /// Update `numberOfWorn` parameter adding `1`(number of uses) to it and `recentlyWornDate` to `.now`.
+    /// - Parameters:
+    ///   - clothe: NSManagedObject `Clothe` we want to update
+    ///   - coreDataContext: NSManagedObjectContext our `Clothe`
     func updateClotheStats(clothe: Clothe, coreDataContext: NSManagedObjectContext) {
         clothe.stats?.numberOfWorn += 1
         clothe.stats?.recentlyWornDate = .now
@@ -31,6 +37,20 @@ final class ClotheDataProviderImpl: ClotheDataProvider {
         }
     }
     
+    /// Save `Clothe` object with specific parameters.
+    /// - Parameters:
+    ///   - subcategoryName: optional subcategory string
+    ///   - categoryName: optional category string
+    ///   - localPrice: optional `LocalPrice` contains amount and currency
+    ///   - receiptImageData: optional data of receipt image
+    ///   - clotheBrand: optional brand string
+    ///   - clotheColor: optional color string
+    ///   - clotheDateOfPurchase: optional data of purchase string
+    ///   - clotheDescription: optional description string
+    ///   - clotheImageData: optional data of clothe image
+    ///   - clotheMaterial:  optional material string
+    ///   - clotheSize:  optional size string
+    ///   - coreDataContext: NSManagedObjectContext our `Clothe`
     func saveClothe(subcategoryName: String?,
                     categoryName: String?,
                     localPrice: LocalPrice?,

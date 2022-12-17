@@ -7,18 +7,22 @@
 
 import Foundation
 
+/// `Padding`, `Spacing` and `Size` constants.
 enum Constants {
     
     // MARK: - Padding
     
-    /// top
+    // top
     static let paddingTopSmall: Double = 20
     static let paddingTopMedium: Double = 32
-    /// horizontal
+    
+    // horizontal
     static let paddingHorizontalMedium: Double = 100
-    /// vertical
+    
+    // vertical
     static let paddingVerticalSmall: Double = 5
-    /// leading
+    
+    // leading
     static let paddingLeadingMedium: Double = 30
     static let paddingLeadingLarge: Double = 70
     
@@ -30,17 +34,18 @@ enum Constants {
     static let spacingLarge: Double = 70
     
     // MARK: - Size
-    /// height
+    
+    // height
     static let heightSmall: Double = 80
     static let heightMedium: Double = 120
     static let heightLarge: Double = 150
     
-    /// width
+    // width
     static let widthSmall: Double = 80
     static let widthMedium: Double = 120
     static let widthLarge: Double = 150
     
-    /// fonts
+    // fonts
     static let fontSmall: Double = 15
     static let fontMedium: Double = 20
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Toolbar to perform `delete`, `refresh` and `close` action.
 struct NowToolbar: View {
     let clothe: Clothe
     let deleteAction: () -> Void

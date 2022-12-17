@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 
+/// Details of selected ``Clothe`` e.g. ``Clothe/category``.
 struct ClotheDetails: View {
     @Environment(\.dismiss) var dismiss
     @State private var isReceiptModalShown = false

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Provide simpler date representation e.q. `last mount == Date.dateSubBy(-1)`
 extension Date {
     static func dateSubBy(_ months: Int) -> Self {
         Calendar.current.date(byAdding: .month, value: months, to: .now)!

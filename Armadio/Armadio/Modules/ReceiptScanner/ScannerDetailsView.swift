@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Details of saved by receipt scanner image.
 struct ScannerDetailsView: View {
     @Environment(\.dismiss) var dismiss
     @Binding var isRecognizing: Bool

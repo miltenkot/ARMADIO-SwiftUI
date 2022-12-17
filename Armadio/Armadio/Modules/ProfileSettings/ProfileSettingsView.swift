@@ -7,8 +7,8 @@
 
 import SwiftUI
 
+/// ProfileSettings view showing start point of user settings.
 struct ProfileSettingsView: View {
-    @StateObject var viewModel = ProfileSettingsViewModel()
     
     var body: some View {
         NavigationView {
@@ -30,11 +30,5 @@ struct ProfileSettingsView: View {
 struct ProfileSettingsView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileSettingsView()
-    }
-}
-
-struct FlatLinkStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
     }
 }

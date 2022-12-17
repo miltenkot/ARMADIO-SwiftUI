@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 
+/// List of clothes view showing multiple filter types by ``Clothe`` properties.
 struct ClothesListView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.managedObjectContext) var context

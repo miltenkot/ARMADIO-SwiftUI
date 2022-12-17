@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Global sorting options array.
 let sorts = [
     (
         name: "Time",
@@ -26,6 +27,7 @@ let sorts = [
     )
 ]
 
+/// Menu element which contains few sorting options.
 struct SortMenu: View {
     @Binding private var selectedSort: SelectedSort
     

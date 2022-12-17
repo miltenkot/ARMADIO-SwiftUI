@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Favorite ``Clothe`` button.
 struct FavoriteButton: View {
     @Binding var isSet: Bool
 

@@ -10,6 +10,7 @@ import PhotosUI
 import Factory
 import CoreData
 
+/// Save new clothes and perform analitics logs using `FirebaseAnalitics`.
 final class AddNewClotheViewModel: ObservableObject {
     // MARK: - Injected
     

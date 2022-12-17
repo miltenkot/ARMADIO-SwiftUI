@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Password view showing password and repeat password ``UserFormTextField`` and sign up ``PrimaryAsyncButton``.
 struct PasswordDetailsView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var authViewModel: AuthenticationViewModel

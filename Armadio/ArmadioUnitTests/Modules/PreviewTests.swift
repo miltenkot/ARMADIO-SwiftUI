@@ -18,10 +18,6 @@ final class PreviewTests: XCTestCase {
         _ = ContentView_Previews.previews
     }
     
-    func test_LoginView_Previews() {
-        _ = LoginView_Previews.previews
-    }
-    
     func test_LoginOptionsView_Previews() {
         _ = LoginOptionsView_Previews.previews
     }

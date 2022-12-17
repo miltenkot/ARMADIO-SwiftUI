@@ -8,6 +8,7 @@
 import SwiftUI
 import Factory
 
+/// View navigating to ``HomeView`` if the user is logged in or ``GetStartedView`` if  logged out.
 struct ContentView: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
     

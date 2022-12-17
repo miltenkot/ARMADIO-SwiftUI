@@ -8,9 +8,9 @@
 import SwiftUI
 import Charts
 
+/// List with individual sections regarding statistics.
 struct StatsView: View {
     @Environment(\.dismiss) var dismiss
-    @StateObject var viewModel = StatsViewModel()
     @FetchRequest(sortDescriptors: []) var clothes: FetchedResults<Clothe>
     
     private enum Destinations {

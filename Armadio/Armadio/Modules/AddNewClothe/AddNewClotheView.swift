@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Route enum represents add new clothe list elements.
 enum Route: Hashable {
     case price
     case receipt
@@ -19,6 +20,7 @@ enum Route: Hashable {
     case material
 }
 
+/// View represents a list of labels that navigate to the appropriate views where we can change ``Clothe`` properies we want to save.
 struct AddNewClotheView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.managedObjectContext) var context

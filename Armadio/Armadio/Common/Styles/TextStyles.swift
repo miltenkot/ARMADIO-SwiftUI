@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// ViewModifier used to Titles.
 struct TitleStyle: ViewModifier {
     let foregroundColor: Color
     let size: Double
@@ -23,6 +24,7 @@ struct TitleStyle: ViewModifier {
     }
 }
 
+/// ViewModifier used to normal texts.
 struct NormalStyle: ViewModifier {
     func body(content: Content) -> some View {
         content

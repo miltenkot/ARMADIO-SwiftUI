@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Get the current key window.
 extension UIApplication {
     static var keyWindow: UIWindow? {
         UIApplication.shared

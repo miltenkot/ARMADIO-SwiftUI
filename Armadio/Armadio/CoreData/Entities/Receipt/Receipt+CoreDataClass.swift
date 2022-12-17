@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+/// A class conforming to `NSManagedObject` represents receipt.
 @objc(Receipt)
 public class Receipt: NSManagedObject {
 

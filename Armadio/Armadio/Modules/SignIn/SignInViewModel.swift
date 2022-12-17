@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Validate `email` and `password` fields and provide Shake animations.
 final class SignInViewModel: ObservableObject {
     @Published var emailText = ""
     @Published var passwordText = ""

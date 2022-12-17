@@ -8,6 +8,7 @@
 import SwiftUI
 import Factory
 
+/// Validate `email`, `firstName`, `lastName` and `Checkbox` fields and provide Shake animations.
 final class ProfileDetailsViewModel: ObservableObject {
     @Injected(Container.countryFlagProvider) private var countryFlagProvider
     
@@ -37,6 +38,9 @@ final class ProfileDetailsViewModel: ObservableObject {
     
     // MARK: - Field validation
     
+    /// Get `email` as string and check it has minimum 6 characters, minimum one special and large letter
+    /// - Parameter emailAddressString: entered by the `email` user
+    /// - Returns: true if string is valid and false when it isnt't
     private func isValidEmailAddress(emailAddressString: String) -> Bool {
         
         var returnValue = true

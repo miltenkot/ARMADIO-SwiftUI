@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Default details picker.
 struct NavigationPickerDetailsDefault: View {
     @Environment(\.dismiss) var dismiss
     @State private var effectAppear = false

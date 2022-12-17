@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Primary checkbox with two states `enable` and `disable`.
 struct CheckboxView: View {
     @Environment(\.colorScheme) var colorScheme
     

@@ -11,6 +11,7 @@ import CoreData
 import GoogleSignIn
 import FirebaseCore
 
+/// Root object of app.
 @main
 struct ArmadioApp: App {
     @StateObject private var coreDataStack = CoreDataStack()

@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 
+/// Simple clothes list with multiple filters with search field and ``SortMenu``.
 struct FilteredListView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject private var viewModel = FilteredListViewModel()

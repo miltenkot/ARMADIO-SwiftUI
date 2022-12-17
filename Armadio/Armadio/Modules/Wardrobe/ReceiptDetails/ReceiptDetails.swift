@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 
+/// Displays the ``Clothe/receipt`` image of the selected ``Clothe``.
 struct ReceiptDetails: View {
     @Environment(\.dismiss) var dismiss
     let imageData: Data?

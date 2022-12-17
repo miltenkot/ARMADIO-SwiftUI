@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Details of Date picker.
 struct NavigationPickerDetailsDate: View {
     @Environment(\.dismiss) var dismiss
     @State private var isDisplayed: Bool = false

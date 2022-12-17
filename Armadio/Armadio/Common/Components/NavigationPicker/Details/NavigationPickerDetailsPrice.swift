@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Details of price picker.
 struct NavigationPickerDetailsPrice: View {
     @Environment(\.dismiss) var dismiss
     @Binding var bindingPrice: LocalPrice

@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+/// A class conforming to `NSManagedObject` represents stats.
 @objc(Stats)
 public class Stats: NSManagedObject {
 

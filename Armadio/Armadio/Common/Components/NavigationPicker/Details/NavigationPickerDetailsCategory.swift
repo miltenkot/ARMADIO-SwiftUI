@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Details of ``Clothe`` used in ``AddNewClotheView``.
 struct NavigationPickerDetailsCategory: View {
     @Environment(\.dismiss) var dismiss
     @Binding var bindCategory: LocalCategory

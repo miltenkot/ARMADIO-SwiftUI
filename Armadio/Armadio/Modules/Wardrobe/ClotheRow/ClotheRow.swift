@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Single item represents ``Clothe`` to use in ``FilteredListView``.
 struct ClotheRow: View {
     let categoryName: String
     let detailsAvailable: Bool

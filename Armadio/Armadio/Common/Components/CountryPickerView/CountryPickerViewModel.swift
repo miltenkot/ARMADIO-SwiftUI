@@ -8,6 +8,7 @@
 import Foundation
 import Factory
 
+/// Provide names and flags image to view.
 final class CountryPickerViewModel: ObservableObject {
     @Injected(Container.countryFlagProvider) private var countryFlagProvider
     

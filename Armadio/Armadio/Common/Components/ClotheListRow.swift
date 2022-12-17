@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// List that fills with ``Clothe`` data.
 struct ClotheListRow: View {
     let clothe: Clothe
     

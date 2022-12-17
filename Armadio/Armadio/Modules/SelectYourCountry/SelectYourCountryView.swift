@@ -8,6 +8,7 @@
 import SwiftUI
 import Factory
 
+/// View with country selection and privacy consent.
 struct SelectYourCountryView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel = SelectYourCountryViewModel()

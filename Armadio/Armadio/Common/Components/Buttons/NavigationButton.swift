@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Types used in ``NavigationButton`` to represent actions.
 enum NavigationButtonType {
     case close
     case back
@@ -15,6 +16,7 @@ enum NavigationButtonType {
     case refresh
 }
 
+/// Primary navigation button.
 struct NavigationButton: View {
     @Environment(\.colorScheme) var colorScheme
     let type: NavigationButtonType

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A enum represents custom colors used in application.
 enum ArmadioColor {
     case primaryText
     case primarySheet
@@ -16,6 +17,9 @@ enum ArmadioColor {
 }
 
 extension Color {
+    /// Gives access to the custom colors in the application.
+    /// - Parameter type: all available custom colors inside enum `ArmadioColor`
+    /// - Returns: color from assets
     static func themeColor(_ type: ArmadioColor) -> Color {
         switch type {
         case .primaryText: return Color("PrimaryTextColor")
@@ -27,11 +31,15 @@ extension Color {
     }
 }
 
+/// A enum represents custom gradients used in application.
 enum ArmadioGradient {
     case primary
 }
 
 extension LinearGradient {
+    /// Gives access to the custom gradients in the application.
+    /// - Parameter type: all available custom gradients inside enum `ArmadioGradient`
+    /// - Returns: `LinearGradient` from selected colors
     static func gradient(_ type: ArmadioGradient) -> LinearGradient {
         switch type {
         case .primary:

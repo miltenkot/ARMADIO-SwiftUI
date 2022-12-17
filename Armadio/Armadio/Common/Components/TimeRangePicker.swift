@@ -7,12 +7,14 @@
 
 import SwiftUI
 
+/// Enum with individual time periods.
 enum TimeRange: Int {
     case lastYear = 11
     case last2Years = 23
     case allTime = 30
 }
 
+/// Picker which use ``TimeRange`` to sort items.
 struct TimeRangePicker: View {
     @Binding var value: TimeRange
 

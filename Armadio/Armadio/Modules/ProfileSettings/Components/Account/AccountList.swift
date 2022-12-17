@@ -7,9 +7,9 @@
 
 import SwiftUI
 
+/// AccountList view showing list of ``UserInfo`` properties in settings form using ``AuthenticationViewModel``.
 struct AccountList: View {
     @Environment(\.dismiss) var dismiss
-    @StateObject var viewModel = AccountListViewModel()
     @EnvironmentObject var authViewModel: AuthenticationViewModel
     
     var body: some View {

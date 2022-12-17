@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Debug view for modules unavailable in simulator.
 struct SimulatorDefaulView: View {
     @Environment(\.dismiss) var dismiss
     

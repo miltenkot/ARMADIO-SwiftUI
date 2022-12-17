@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Button with a drop-down menu when pressed.
 struct FloatingButton: View {
     @Binding var showMenuItems: Bool
     

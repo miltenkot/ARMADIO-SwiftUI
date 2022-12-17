@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 
+/// Sheet to get preview of selected current ``Clothe`` in ``NowView``.
 struct CustomSheetView: View {
     @Environment(\.managedObjectContext) var context
     @Environment(\.dismiss) var dismiss

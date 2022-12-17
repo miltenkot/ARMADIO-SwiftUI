@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Button style with rounded corners.
 struct RoundedButtonStyle: ButtonStyle {
     let foregroundColor: Color
     let backgroundColor: Color

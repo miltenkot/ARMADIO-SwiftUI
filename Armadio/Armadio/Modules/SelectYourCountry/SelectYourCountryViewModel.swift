@@ -8,6 +8,7 @@
 import Foundation
 import Factory
 
+/// Provide shake animation and country flag properties.
 final class SelectYourCountryViewModel: ObservableObject {
     
     @Published var checkboxState = false

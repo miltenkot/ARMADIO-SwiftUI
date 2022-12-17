@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+/// A class conforming to `NSManagedObject` represents price.
 @objc(Price)
 public class Price: NSManagedObject {
 

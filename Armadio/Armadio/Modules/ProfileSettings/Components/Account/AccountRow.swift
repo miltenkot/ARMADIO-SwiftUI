@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 
+/// View showing ``UserInfo`` logo, name and login provider using ``AuthenticationViewModel``.
 struct AccountRow: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
     

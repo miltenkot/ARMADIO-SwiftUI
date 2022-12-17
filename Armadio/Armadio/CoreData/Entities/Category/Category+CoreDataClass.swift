@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+/// A class conforming to `NSManagedObject` represents category.
 @objc(Category)
 public class Category: NSManagedObject {
 

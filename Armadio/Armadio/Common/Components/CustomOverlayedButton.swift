@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Custom circle tap button used in ``NowView``.
 struct CustomOverlayedButton<CustomButton: View>: View {
     @Binding var selectedClothe: LocalClothe?
     var customButton: CustomButton

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Clothe item to use in ``ClotheRow``.
 struct ClotheItem: View {
     var clothe: Clothe
     

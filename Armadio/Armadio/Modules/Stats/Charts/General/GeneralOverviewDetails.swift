@@ -8,6 +8,7 @@
 import SwiftUI
 import Charts
 
+/// Details of chats.
 struct GeneralOverviewDetailsChart: View {
     @FetchRequest var clothes: FetchedResults<Clothe>
     @Binding var timeRange: TimeRange
@@ -57,14 +58,14 @@ struct GeneralOverviewDetailsChart: View {
 }
 
 extension GeneralOverviewDetailsChart {
-    private func getDates() -> [MouthPlottableModel] {
+    private func getDates() -> [MonthPlottableModel] {
         let clothesDate = clothes.map { $0.dateOfPurchase! }
         return getMouthPlottableValues(dates: clothesDate)
     }
     
-    private func getMouthPlottableValues(dates: [Date]) -> [MouthPlottableModel] {
+    private func getMouthPlottableValues(dates: [Date]) -> [MonthPlottableModel] {
         let calendar = Calendar.current
-        var array: [MouthPlottableModel] = []
+        var array: [MonthPlottableModel] = []
         for month in 0...timeRange.rawValue {
             let count = dates.filter({ (calendar.dateComponents([.month, .year], from: Date.dateSubBy(-month))) == (calendar.dateComponents([.month, .year], from: $0)) }).count
             array.append(.init(date: Date.dateSubBy(-month), count: count))

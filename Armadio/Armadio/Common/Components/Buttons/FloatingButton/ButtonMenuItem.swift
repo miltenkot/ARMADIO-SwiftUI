@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Circle button use to create ``FloatingButton``.
 struct ButtonMenuItem: View {
     let action: () -> Void
     var icon: String

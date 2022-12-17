@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Default custom button.
 struct PrimaryButton: View {
     let text: String
     let foregroundColor: Color
@@ -41,6 +42,7 @@ struct PrimaryButton: View {
     }
 }
 
+/// ``PrimaryButton`` with ``AsyncButton`` capability.
 struct PrimaryAsyncButton: View {
     let text: String
     let foregroundColor: Color
@@ -84,6 +86,7 @@ struct PrimaryButton_Previews: PreviewProvider {
     }
 }
 
+/// Async button capabilities.
 struct AsyncButton<Label: View>: View {
     var action: () async -> Void
     @ViewBuilder var label: () -> Label

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Keys used by `AppStorage` to identify object.
 enum AppStorageKey: String, CaseIterable {
     case avatarName
     case clotheTop

@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 import UIKit
 
+/// Represent currently displayed view as sheet.
 enum ActiveSheet: Identifiable {
     case first, second, third, fourth, five
     
@@ -17,8 +18,8 @@ enum ActiveSheet: Identifiable {
     }
 }
 
+/// Now view the first time you start the application, it shows a list of avatars to choose from. It then displays your avatar with the option to add your currently used clothes and save it to `AppStorage`.
 struct NowView: View {
-    @StateObject var viewModel = NowViewModel()
     @State private var activeSheet: ActiveSheet?
     
     @AppStorage(AppStorageKey.avatarName.rawValue)

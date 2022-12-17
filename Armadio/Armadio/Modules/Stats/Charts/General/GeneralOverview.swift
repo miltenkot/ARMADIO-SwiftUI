@@ -9,12 +9,14 @@ import SwiftUI
 import CoreData
 import Charts
 
-struct MouthPlottableModel: Identifiable {
+/// Model of month used in ``GeneralOverviewChart``.
+struct MonthPlottableModel: Identifiable {
     let id = UUID()
     let date: Date
     let count: Int
 }
 
+/// Chart represents general statistics of``Clothe`` saved in local database.
 struct GeneralOverviewChart: View {
     @FetchRequest var clothes: FetchedResults<Clothe>
 
@@ -40,14 +42,14 @@ struct GeneralOverviewChart: View {
 }
 
 extension GeneralOverviewChart {
-    private func getDates() -> [MouthPlottableModel] {
+    private func getDates() -> [MonthPlottableModel] {
         let clothesDate = clothes.map { $0.dateOfPurchase! }
         return getMouthPlottableValues(dates: clothesDate)
     }
     
-    private func getMouthPlottableValues(dates: [Date]) -> [MouthPlottableModel] {
+    private func getMouthPlottableValues(dates: [Date]) -> [MonthPlottableModel] {
         let calendar = Calendar.current
-        var array: [MouthPlottableModel] = []
+        var array: [MonthPlottableModel] = []
         for month in 0...11 {
             let count = dates.filter({ (calendar.dateComponents([.month], from: Date.dateSubBy(-month))) == (calendar.dateComponents([.month], from: $0)) }).count
             array.append(.init(date: Date.dateSubBy(-month), count: count))
@@ -56,6 +58,7 @@ extension GeneralOverviewChart {
     }
 }
 
+/// General view cobined ``GeneralOverviewChart`` and description.
 struct GeneralOverview: View {
     @FetchRequest var clothes: FetchedResults<Clothe>
     

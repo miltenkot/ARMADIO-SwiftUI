@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Log in view showing email and password ``UserFormTextField`` and sign in ``PrimaryAsyncButton``.
 struct SignInView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var authViewModel: AuthenticationViewModel

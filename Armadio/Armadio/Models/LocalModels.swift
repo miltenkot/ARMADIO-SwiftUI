@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+/// A class used to local non core data clothe used e.g `AppStorage` objects.
 struct LocalClothe: Hashable, Codable, Identifiable {
     var brand: String?
     var dateOfPurchase: Date?
@@ -21,6 +22,19 @@ struct LocalClothe: Hashable, Codable, Identifiable {
     var receipt: LocalReceipt?
     var color: Color?
     
+    /// `LocalClothe` initializer which set all properties
+    /// - Parameters:
+    ///   - brand: default nil brand of clothe
+    ///   - dateOfPurchase: default nil date of purchase
+    ///   - desc: default nil description of clothe
+    ///   - id: default nil id of clothe
+    ///   - image: default nil data of clothe image
+    ///   - material: default nil clothe material
+    ///   - size: default nil clothe size
+    ///   - price: default nil `LocalPrice` of clothe that constains amount and currency
+    ///   - category: default nil `LocalCategory` of clothe thath contains name and subcategory
+    ///   - receipt: default nil data of receipt image
+    ///   - color: default nil color of clothe
     init(brand: String? = nil, dateOfPurchase: Date? = nil, desc: String? = nil, id: UUID? = nil, image: Data? = nil, material: String? = nil, size: String? = nil, price: LocalPrice? = nil, category: LocalCategory? = nil, receipt: LocalReceipt? = nil, color: Color? = nil) {
         self.brand = brand
         self.dateOfPurchase = dateOfPurchase
@@ -35,6 +49,8 @@ struct LocalClothe: Hashable, Codable, Identifiable {
         self.color = color
     }
     
+    /// `LocalClothe` initializer which map all properties from NSManagedObject `Clothe`
+    /// - Parameter object: represent clothe in core data as NSManagedObject
     init(from object: Clothe) {
         self.brand = object.brand
         self.dateOfPurchase = object.dateOfPurchase
@@ -53,29 +69,34 @@ struct LocalClothe: Hashable, Codable, Identifiable {
 }
 
 extension LocalClothe {
-    static private(set) var brandMock: [String] = ["Gucci", "Luis", "Micheal Kors", "Armani", "TOmmy", "Adidas", "Nike"]
+    static private(set) var brandMock: [String] = ["Unknown", "Gucci", "Luis", "Micheal Kors", "Armani", "TOmmy", "Adidas", "Nike"]
     static private(set) var sizesMock: [String] = ["XSS", "XS", "S", "M", "L", "XL", "XLL"]
-    static private(set) var materialMock: [String] = ["Coton", "Whool", "Gold", "Silver", "Many", "Sos", "Ross"]
+    static private(set) var materialMock: [String] = ["Unknown", "Coton", "Whool", "Gold", "Silver", "Many", "Sos", "Ross"]
 }
 
+/// A struct conforming to `Hashable` and `Codable` represents clothe category.
 struct LocalCategory: Hashable, Codable {
     var name: String?
     var subcategory: LocalSubcategory?
 }
 
+/// A struct conforming to `Hashable` and `Codable` represents clothe subcategory.
 struct LocalSubcategory: Hashable, Codable {
     var name: String?
 }
 
+/// A struct conforming to `Hashable` and `Codable` represents clothe price.
 struct LocalPrice: Hashable, Codable {
     var amount: Double
     var currency: Currency
 }
 
+/// A struct conforming to `Hashable` and `Codable` represents data of clothe receipt.
 struct LocalReceipt: Hashable, Codable {
     var image: Data?
 }
 
+/// A enum conforming to `String`, `CaseIterable` and `Codable` represents available currencies in app.
 enum Currency: String, Codable, CaseIterable {
     case eur
     case usd
@@ -84,6 +105,7 @@ enum Currency: String, Codable, CaseIterable {
 }
 
 extension LocalPrice: CustomStringConvertible {
+    /// formated price description that constain 2 digits after `.` and currency code e.g `12.56 PLN`
     var description: String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
@@ -94,7 +116,7 @@ extension LocalPrice: CustomStringConvertible {
         return formatter.string(from: number) ?? "None"
     }
 }
-
+/// A struct conforming to `Hashable` and `Codable` represents clothe categories used in lists.
 struct ClotheCategory: Hashable, Codable {
     var name: String
     var subcategories: [LocalSubcategory]

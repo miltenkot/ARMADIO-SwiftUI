@@ -9,12 +9,14 @@ import SwiftUI
 import CoreData
 import Charts
 
+/// Price chart item which represent ``Clothe/price`` model.
 struct PricePlottableModel: Identifiable {
     let id = UUID()
     let date: Date
     let amount: Double
 }
 
+/// Chart represents dearest and cheapest popular ``Clothe`` saved in local database.
 struct PriceOverviewChart: View {
     @FetchRequest var clothes: FetchedResults<Clothe>
     
@@ -55,6 +57,7 @@ extension PriceOverviewChart {
     }
 }
 
+/// Price clothes view cobined ``PriceOverviewChart`` and description.
 struct PriceOverview: View {
     @FetchRequest var clothes: FetchedResults<Clothe>
     
@@ -75,7 +78,7 @@ struct PriceOverview: View {
     }
 }
 
-struct PriceOverview_Overview: PreviewProvider {
+struct PriceOverview_Previews: PreviewProvider {
     static var previews: some View {
         PriceOverview(clothes: .init(fetchRequest: .init(entityName: "Clothe")))
     }

@@ -8,6 +8,7 @@
 import SwiftUI
 import Charts
 
+/// Details of chart which represent ``Clothe/price``.
 struct PriceOverviewDetailsChart: View {
     @FetchRequest var clothes: FetchedResults<Clothe>
     @Binding var timeRange: TimeRange

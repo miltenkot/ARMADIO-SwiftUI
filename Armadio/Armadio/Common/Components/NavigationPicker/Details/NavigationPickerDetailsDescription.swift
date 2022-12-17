@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Details of description picker.
 struct NavigationPickerDetailsDescription: View {
     @Environment(\.dismiss) var dismiss
     @State private var text: String = ""

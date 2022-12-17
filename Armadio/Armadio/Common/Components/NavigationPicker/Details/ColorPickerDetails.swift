@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Details of selected ``Clothe`` in ``AddNewClotheView``.
 struct ColorPickerDetails: View {
     @Environment(\.dismiss) var dismiss
     @Binding var selection: Color

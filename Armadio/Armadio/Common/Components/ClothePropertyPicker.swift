@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 
+/// Items of ``ClothePropertyPicker`` contains sorting cases.
 enum ClotheProperty {
     case mostPopular
     case leastPopular
@@ -34,6 +35,7 @@ enum ClotheProperty {
     }
 }
 
+/// ``Clothe`` propery picker usign multiple filters and sort options.
 struct ClothePropertyPicker: View {
     @Namespace private var ns
     @Binding var value: ClotheProperty

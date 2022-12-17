@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Image with circle shape and shadow.
 struct CircleImage: View {
     var image: Image
 

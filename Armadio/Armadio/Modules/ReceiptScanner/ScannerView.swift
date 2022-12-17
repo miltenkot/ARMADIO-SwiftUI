@@ -7,6 +7,7 @@
 import SwiftUI
 import VisionKit
 
+/// Scanner allows user to scan receipt image and save it using `VisionKit`.
 struct ScannerView: UIViewControllerRepresentable {
     var didFinishScanning: ((_ result: Result<[UIImage], Error>) -> Void)
     var didCancelScanning: () -> Void
@@ -23,7 +24,6 @@ struct ScannerView: UIViewControllerRepresentable {
     func makeCoordinator() -> Coordinator {
         Coordinator(with: self)
     }
-    
     
     class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
         let scannerView: ScannerView

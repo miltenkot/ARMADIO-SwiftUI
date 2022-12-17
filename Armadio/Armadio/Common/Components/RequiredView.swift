@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View shows a form validation error.
 struct RequiredView: View {
     var body: some View {
         HStack {

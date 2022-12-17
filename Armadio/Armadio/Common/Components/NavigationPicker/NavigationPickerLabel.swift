@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Label used in ``AddNewClotheView`` and ``AccountList`` to repesent list element preview.
 struct NavigationPickerLabel<ContentView: View>: View {
     let title: String
     var content: ContentView

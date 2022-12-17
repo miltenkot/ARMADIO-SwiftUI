@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 import UIKit
 
+/// A class conforming to `NSManagedObject` represents clothe.
 @objc(Clothe)
 public class Clothe: NSManagedObject {
     
