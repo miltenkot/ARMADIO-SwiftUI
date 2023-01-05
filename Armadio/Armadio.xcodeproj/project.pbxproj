@@ -150,6 +150,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		130D610529673506005DC0B7 /* Armadio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Armadio.entitlements; sourceTree = "<group>"; };
 		13163D8C29193D42008D18F3 /* NavigationPickerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPickerLabel.swift; sourceTree = "<group>"; };
 		1318ADA22926D00200A17550 /* ClotheListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClotheListRow.swift; sourceTree = "<group>"; };
 		1318ADA4292BD32F00A17550 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
@@ -491,6 +492,7 @@
 		13872FEB290ACA7E0049D1D2 /* Armadio */ = {
 			isa = PBXGroup;
 			children = (
+				130D610529673506005DC0B7 /* Armadio.entitlements */,
 				133F0260294CA3920008F85A /* Configuration */,
 				132CF4C7294B0D0E00D809C8 /* AppStorage */,
 				13953B58293CFB7A00BB03A0 /* EnvironmentObjects */,
@@ -1332,6 +1334,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Armadio/Armadio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Armadio/Preview Content\"";
@@ -1367,6 +1370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Armadio/Armadio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Armadio/Preview Content\"";

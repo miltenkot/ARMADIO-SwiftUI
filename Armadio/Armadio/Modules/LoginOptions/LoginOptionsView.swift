@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import GoogleSignInSwift
+import AuthenticationServices
 
 /// View for selecting one of several login options such as `Google`, `Facebook`, `Apple`, `Email` or `Guest`.
 struct LoginOptionsView: View {
@@ -33,13 +35,6 @@ struct LoginOptionsView: View {
                     VStack(spacing: Constants.spacingZero) {
 #warning("TODO: - Add fb and apple login method")
                         
-                        PrimaryButton(text: "LoginOptionsView_Apple".localized,
-                                      foregroundColor: Color.themeColor(.primaryButtonFColor),
-                                      backgroundColor: Color.themeColor(.primaryButtonBColor),
-                                      imageName: "applelogo") {
-                            viewModel.appleLoginNotAvailable.toggle()
-                        }
-                        
                         PrimaryButton(text: "LoginOptionsView_Facebook".localized,
                                       foregroundColor: Color.themeColor(.primaryButtonFColor),
                                       backgroundColor: Color.themeColor(.primaryColor),
@@ -48,12 +43,11 @@ struct LoginOptionsView: View {
                         }
                         
                         PrimaryButton(text: "LoginOptionsView_Google".localized,
-                                      foregroundColor: Color.themeColor(.primaryColor),
+                                      foregroundColor: Color.blue,
                                       backgroundColor: Color.themeColor(.primaryButtonBColor),
                                       imageName: "g.square") {
                             authViewModel.signInWithGoogle()
                         }
-                        
                         
                         PrimaryButton(text: "LoginOptionsView_email".localized,
                                       foregroundColor: Color.themeColor(.primaryButtonFColor),
@@ -61,6 +55,14 @@ struct LoginOptionsView: View {
                                       imageName: "envelope.fill") {
                             viewModel.activeModalView = .email
                         }
+                        
+                        SignInWithAppleButton(.signIn) { request in
+                            authViewModel.handleSignInWithAppleRequest(request)
+                        } onCompletion: { result in
+                            authViewModel.handleSignInWithAppleCompletion(result)
+                        }
+                        .frame(width: 300, height: 50)
+                        .padding([.top, .bottom], 10)
                         
                         Divider().background(.white)
                         PrimaryButton(text: "LoginOptionsView_guest".localized,
@@ -80,9 +82,9 @@ struct LoginOptionsView: View {
                                       .alert("Facebook login is not available yet.", isPresented: $viewModel.facebookLoginNotAvailable, actions: {
                                           Button("OK", role: .cancel) { }
                                       })
-                                      .alert("Apple login is not available yet.", isPresented: $viewModel.appleLoginNotAvailable, actions: {
-                                          Button("OK", role: .cancel) { }
-                                      })
+//                                      .alert("Apple login is not available yet.", isPresented: $viewModel.appleLoginNotAvailable, actions: {
+//                                          Button("OK", role: .cancel) { }
+//                                      })
                     }
                 }.padding()
                     .toolbar {

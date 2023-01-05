@@ -19,7 +19,7 @@ protocol GoogleSignInAuthProvider {
 /// A class conforming to `GoogleSignInAuthProvider` used to wrap `GoogleSignIn` and `FirebaseAuth` framework and provide sign in and sign out functionality.
 final class GoogleSignInAuthProviderImpl: GoogleSignInAuthProvider {
     /// clientId used to work with authentication framewok which looks like`xyz.apps.googleusercontent.com`.
-    private let clientID = (Bundle.main.object(forInfoDictionaryKey: "CLIENT_ID") as? String) ?? ""
+    private let clientID = "483110351652-655i9bbc5ho8qr514ragps92ajs8ielf.apps.googleusercontent.com"
     
     /// GIDConfiguration which used our `clientID`.
     private lazy var configuration: GIDConfiguration = {
