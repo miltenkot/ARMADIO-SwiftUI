@@ -23,3 +23,17 @@ struct RoundedButtonStyle: ButtonStyle {
             .font(.system(size: 19, weight: .semibold))
     }
 }
+
+extension ButtonStyle where Self == RoundedButtonStyle {
+    static func roundedButton(foregroundColor: Color, backgroundColor: Color) -> Self { Self(foregroundColor: foregroundColor, backgroundColor: backgroundColor)
+    }
+}
+
+struct RoundedButtonStyle_Preview: PreviewProvider {
+    static var previews: some View {
+        Button(action: {
+        }, label: {
+            Text("Default")
+        }).buttonStyle(.roundedButton(foregroundColor: .white, backgroundColor: .red)).padding().previewLayout(.sizeThatFits)
+    }
+}

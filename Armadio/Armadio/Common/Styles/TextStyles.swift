@@ -24,6 +24,22 @@ struct TitleStyle: ViewModifier {
     }
 }
 
+extension ViewModifier where Self == TitleStyle {
+    static func titleStyle(foregroundColor: Color, size: Double) -> Self { Self(foregroundColor: foregroundColor, size: size)
+    }
+}
+
+struct TitleStyle_Preview: PreviewProvider {
+    static var previews: some View {
+        Text("Lorem ipsum")
+            .textStyle(.titleStyle(foregroundColor: Color.black, size: 24))
+            .previewLayout(.sizeThatFits)
+        Text("Lorem ipsum")
+            .textStyle(.titleStyle(foregroundColor: Color.red, size: 13))
+            .previewLayout(.sizeThatFits)
+    }
+}
+
 /// ViewModifier used to normal texts.
 struct NormalStyle: ViewModifier {
     func body(content: Content) -> some View {

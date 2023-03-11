@@ -73,12 +73,12 @@ struct UserFormTextField: View {
                 .stroke(effectAppear ? .blue : .gray,
                         lineWidth: 2)
         )
-        //.padding()
     }
 }
 
 struct UserFormTextField_Previews: PreviewProvider {
     static var previews: some View {
         UserFormTextField(text: .constant("@gmail.com"), type: .email)
+            .previewLayout(.sizeThatFits)
     }
 }

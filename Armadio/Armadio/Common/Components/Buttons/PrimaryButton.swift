@@ -82,7 +82,7 @@ struct PrimaryButton_Previews: PreviewProvider {
         Group {
             PrimaryButton(text: "Default", foregroundColor: .white, backgroundColor: .blue, imageName: "applelogo", action: {})
             PrimaryButton(text: "Default", foregroundColor: .white, backgroundColor: .blue, action: {})
-        }
+        }.previewLayout(.sizeThatFits).padding(.horizontal)
     }
 }
 

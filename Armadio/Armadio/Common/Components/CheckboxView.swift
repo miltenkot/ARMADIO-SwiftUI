@@ -33,6 +33,7 @@ struct CheckboxView: View {
                         .cornerRadius(5)
                 }
             }
+            // ...
             VStack(alignment: .leading, spacing: 10) {
                 Text("CheckboxView_Statement".localized)
                     .multilineTextAlignment(.leading)
@@ -43,6 +44,7 @@ struct CheckboxView: View {
             }
             .font(.system(size: 18, weight: .medium))
             .foregroundColor(Color.themeColor(.primaryText))
+           // ...
         }
         .foregroundColor(Color.white)
     }
@@ -64,13 +66,6 @@ struct CheckboxView_Preview: PreviewProvider {
             
             CheckboxView(readMoreAction: {
             }, checkState: .constant(true))
-        }.preferredColorScheme(.dark)
-        Group {
-            CheckboxView(readMoreAction: {
-            }, checkState: .constant(false))
-            
-            CheckboxView(readMoreAction: {
-            }, checkState: .constant(true))
-        }.preferredColorScheme(.light)
+        }.previewLayout(.sizeThatFits)
     }
 }

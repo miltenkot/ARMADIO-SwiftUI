@@ -9,7 +9,6 @@ import Foundation
 
 /// Create an localized string which supports multiple languages.
 extension String {
-    
     public var localized: String {
         NSLocalizedString(self, comment: "")
     }
